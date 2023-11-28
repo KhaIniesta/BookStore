@@ -109,6 +109,12 @@
     <Compile Include="UserControls\UC_Author.Designer.cs">
       <DependentUpon>UC_Author.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_BookItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_BookItem.Designer.cs">
+      <DependentUpon>UC_BookItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_HR.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -177,6 +183,9 @@
     <EmbeddedResource Include="UserControls\UC_Author.resx">
       <DependentUpon>UC_Author.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_BookItem.resx">
+      <DependentUpon>UC_BookItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_HR.resx">
       <DependentUpon>UC_HR.cs</DependentUpon>
     </EmbeddedResource>
@@ -228,6 +237,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
