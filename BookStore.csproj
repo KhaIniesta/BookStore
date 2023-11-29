@@ -33,9 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
-      <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    <Reference Include="Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.5\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AnalysisServices.AppLocal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.AnalysisServices.AppLocal.Tabular, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -64,6 +66,12 @@
     </Compile>
     <Compile Include="Forms\Form_Cashier.Designer.cs">
       <DependentUpon>Form_Cashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_Login.Designer.cs">
+      <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Form_SM.cs">
       <SubType>Form</SubType>
@@ -102,6 +110,18 @@
     </Compile>
     <Compile Include="UserControls\UC_Author.Designer.cs">
       <DependentUpon>UC_Author.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_BookItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_BookItem.Designer.cs">
+      <DependentUpon>UC_BookItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_BookOrderItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_BookOrderItem.Designer.cs">
+      <DependentUpon>UC_BookOrderItem.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UC_HR.cs">
       <SubType>UserControl</SubType>
@@ -145,6 +165,9 @@
     <EmbeddedResource Include="Forms\Form_Cashier.resx">
       <DependentUpon>Form_Cashier.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_Login.resx">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form_SM.resx">
       <DependentUpon>Form_SM.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +190,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Author.resx">
       <DependentUpon>UC_Author.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_BookItem.resx">
+      <DependentUpon>UC_BookItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_BookOrderItem.resx">
+      <DependentUpon>UC_BookOrderItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_HR.resx">
       <DependentUpon>UC_HR.cs</DependentUpon>
@@ -209,6 +238,7 @@
     <None Include="assets\icon _home 2_.png" />
   </ItemGroup>
   <ItemGroup>
+
     <None Include="Resources\Sửa.png" />
   </ItemGroup>
   <ItemGroup>
@@ -234,6 +264,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\house.png" />
+    
+    <None Include="Resources\background login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BookstoreLogo%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\book-order-item-delete-icon.png" />
+    <Content Include="assets\book-order-item-delete-icon2.png" />
+    <Content Include="assets\cancel-hover.png" />
+    <Content Include="assets\cancel-icon.png" />
+    <Content Include="assets\coin.png" />
+    <Content Include="assets\delete-3.png" />
+    <Content Include="assets\minus-icon.png" />
+    <Content Include="assets\plus-icon.png" />
+
+    <WCFMetadata Include="Connected Services\" />
+
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

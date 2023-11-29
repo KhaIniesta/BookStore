@@ -1,8 +1,5 @@
 ﻿using BookStore.Forms;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BookStore
@@ -17,9 +14,10 @@ namespace BookStore
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            /*Application.Run(new Form_Admin());
-            Application.Run(new Form_Cashier());*/
-            Application.Run(new Form_SM());
+
+            //Application.Run(new Form_Admin());
+            Application.Run(new Form_Cashier());
+            //Application.Run(new Form_SM());
 
         }
     }

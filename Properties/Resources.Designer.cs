@@ -63,9 +63,15 @@ namespace BookStore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+
         internal static System.Drawing.Bitmap add {
             get {
                 object obj = ResourceManager.GetObject("add", resourceCulture);
+
+        internal static System.Drawing.Bitmap _lock {
+            get {
+                object obj = ResourceManager.GetObject("lock", resourceCulture);
+
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +79,15 @@ namespace BookStore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+
         internal static System.Drawing.Bitmap addbook {
             get {
                 object obj = ResourceManager.GetObject("addbook", resourceCulture);
+
+        internal static System.Drawing.Bitmap background_login {
+            get {
+                object obj = ResourceManager.GetObject("background login", resourceCulture);
+
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +95,15 @@ namespace BookStore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+
         internal static System.Drawing.Bitmap house {
             get {
                 object obj = ResourceManager.GetObject("house", resourceCulture);
+
+        internal static System.Drawing.Bitmap BookstoreLogo_3x {
+            get {
+                object obj = ResourceManager.GetObject("BookstoreLogo@3x", resourceCulture);
+
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +111,15 @@ namespace BookStore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+
         internal static System.Drawing.Bitmap luu {
             get {
                 object obj = ResourceManager.GetObject("luu", resourceCulture);
+
+        internal static System.Drawing.Bitmap Plus {
+            get {
+                object obj = ResourceManager.GetObject("Plus", resourceCulture);
+
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,6 +127,7 @@ namespace BookStore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+
         internal static System.Drawing.Bitmap muiten {
             get {
                 object obj = ResourceManager.GetObject("muiten", resourceCulture);
@@ -146,6 +171,11 @@ namespace BookStore.Properties {
         internal static System.Drawing.Bitmap xóa {
             get {
                 object obj = ResourceManager.GetObject("xóa", resourceCulture);
+
+        internal static System.Drawing.Bitmap user__1_ {
+            get {
+                object obj = ResourceManager.GetObject("user (1)", resourceCulture);
+
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

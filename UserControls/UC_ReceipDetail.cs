@@ -16,5 +16,20 @@ namespace BookStore.UserControls
         {
             InitializeComponent();
         }
+
+        private void UC_ReceipDetail_Load(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                UC_BookItem item = new UC_BookItem();
+                pn_bookItems.Controls.Add(item);
+            }
+
+            for (int i = 0;i < 10;i++)
+            {
+                UC_BookOrderItem item = new UC_BookOrderItem();
+                flp_bookItems.Controls.Add(item);
+            }
+        }
     }
 }

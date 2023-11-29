@@ -9,22 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BookStore.UserControls
-{  
-    public partial class UC_aBook : UserControl
+{
+    public partial class UC_BookItem : UserControl
     {
-        public UC_aBook()
+        public UC_BookItem()
         {
             InitializeComponent();
-        }
-
-        private void guna2Button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

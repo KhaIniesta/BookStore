@@ -8,23 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BookStore.UserControls
-{  
-    public partial class UC_aBook : UserControl
+namespace BookStore.Forms
+{
+    public partial class Form_Login : Form
     {
-        public UC_aBook()
+        public Form_Login()
         {
             InitializeComponent();
-        }
-
-        private void guna2Button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
