@@ -66,7 +66,7 @@
             guna2ContainerControl1.Controls.Add(this.label2);
             guna2ContainerControl1.Controls.Add(this.label1);
             guna2ContainerControl1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(228)))), ((int)(((byte)(255)))));
-            guna2ContainerControl1.Location = new System.Drawing.Point(88, 69);
+            guna2ContainerControl1.Location = new System.Drawing.Point(79, 69);
             guna2ContainerControl1.Name = "guna2ContainerControl1";
             guna2ContainerControl1.ShadowDecoration.BorderRadius = 20;
             guna2ContainerControl1.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(5)))));
@@ -210,7 +210,7 @@
             this.guna2ContainerControl2.BackColor = System.Drawing.Color.Transparent;
             this.guna2ContainerControl2.BorderRadius = 10;
             this.guna2ContainerControl2.Controls.Add(this.guna2PictureBox1);
-            this.guna2ContainerControl2.Location = new System.Drawing.Point(172, 32);
+            this.guna2ContainerControl2.Location = new System.Drawing.Point(164, 32);
             this.guna2ContainerControl2.Name = "guna2ContainerControl2";
             this.guna2ContainerControl2.Size = new System.Drawing.Size(296, 213);
             this.guna2ContainerControl2.TabIndex = 2;
