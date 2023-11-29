@@ -247,6 +247,26 @@
     <None Include="assets\icon _home 2_.png" />
   </ItemGroup>
   <ItemGroup>
+
+  <ItemGroup>
+    <None Include="Resources\viewdetail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addbook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\luu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\muiten.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house.png" />
+    
+
     <None Include="Resources\background login.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -272,6 +292,7 @@
     <Content Include="assets\plus-icon.png" />
     <None Include="Resources\Plus%28white%29.png" />
     <WCFMetadata Include="Connected Services\" />
+
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
