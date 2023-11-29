@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.lbl_BookName = new System.Windows.Forms.Label();
             this.lbl_Cost = new System.Windows.Forms.Label();
             this.lbl_Money = new System.Windows.Forms.Label();
@@ -39,18 +37,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.Pb_Image)).BeginInit();
             this.SuspendLayout();
             // 
-            // guna2BorderlessForm1
-            // 
-            this.guna2BorderlessForm1.BorderRadius = 10;
-            this.guna2BorderlessForm1.ContainerControl = this;
-            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2BorderlessForm1.TransparentWhileDrag = true;
-            // 
             // lbl_BookName
             // 
             this.lbl_BookName.AutoSize = true;
             this.lbl_BookName.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BookName.Location = new System.Drawing.Point(10, 175);
+            this.lbl_BookName.Location = new System.Drawing.Point(15, 180);
             this.lbl_BookName.Name = "lbl_BookName";
             this.lbl_BookName.Size = new System.Drawing.Size(179, 20);
             this.lbl_BookName.TabIndex = 1;
@@ -61,7 +52,7 @@
             // 
             this.lbl_Cost.AutoSize = true;
             this.lbl_Cost.Font = new System.Drawing.Font("Inter Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Cost.Location = new System.Drawing.Point(5, 238);
+            this.lbl_Cost.Location = new System.Drawing.Point(18, 230);
             this.lbl_Cost.Name = "lbl_Cost";
             this.lbl_Cost.Size = new System.Drawing.Size(52, 16);
             this.lbl_Cost.TabIndex = 1;
@@ -72,7 +63,7 @@
             // 
             this.lbl_Money.AutoSize = true;
             this.lbl_Money.Font = new System.Drawing.Font("Inter Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Money.Location = new System.Drawing.Point(61, 238);
+            this.lbl_Money.Location = new System.Drawing.Point(74, 230);
             this.lbl_Money.Name = "lbl_Money";
             this.lbl_Money.Size = new System.Drawing.Size(96, 16);
             this.lbl_Money.TabIndex = 1;
@@ -102,7 +93,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Inter", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(152, 15);
+            this.label1.Location = new System.Drawing.Point(150, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 16);
             this.label1.TabIndex = 3;
@@ -125,13 +116,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Shapes1);
             this.Controls.Add(this.lbl_Money);
             this.Controls.Add(this.lbl_Cost);
             this.Controls.Add(this.lbl_BookName);
             this.Controls.Add(this.Pb_Image);
+            this.Margin = new System.Windows.Forms.Padding(15);
             this.Name = "UC_BookItem";
+            this.Padding = new System.Windows.Forms.Padding(5);
             this.Size = new System.Drawing.Size(197, 260);
             ((System.ComponentModel.ISupportInitialize)(this.Pb_Image)).EndInit();
             this.ResumeLayout(false);
@@ -140,8 +134,6 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Shapes guna2Shapes1;
         private System.Windows.Forms.Label lbl_Money;
