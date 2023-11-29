@@ -153,19 +153,11 @@ namespace BookStore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Sửa {
+
+        internal static System.Drawing.Bitmap Plus_white_ {
             get {
-                object obj = ResourceManager.GetObject("Sửa", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap thoát {
-            get {
-                object obj = ResourceManager.GetObject("thoát", resourceCulture);
+                object obj = ResourceManager.GetObject("Plus(white)", resourceCulture);
+
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
