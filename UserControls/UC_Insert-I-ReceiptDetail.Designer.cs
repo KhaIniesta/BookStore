@@ -255,7 +255,7 @@
             this.btn_update.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_update.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_update.ForeColor = System.Drawing.Color.White;
-            this.btn_update.Image = global::BookStore.Properties.Resources.thoát;
+            //this.btn_update.Image = global::BookStore.Properties.Resources.thoát;
             this.btn_update.ImageSize = new System.Drawing.Size(55, 55);
             this.btn_update.Location = new System.Drawing.Point(315, 244);
             this.btn_update.Name = "btn_update";
@@ -325,7 +325,7 @@
             this.btn_insert.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_insert.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_insert.ForeColor = System.Drawing.Color.White;
-            this.btn_insert.Image = global::BookStore.Properties.Resources.Sửa;
+            //this.btn_insert.Image = global::BookStore.Properties.Resources.Sửa;
             this.btn_insert.ImageSize = new System.Drawing.Size(60, 60);
             this.btn_insert.Location = new System.Drawing.Point(94, 244);
             this.btn_insert.Name = "btn_insert";

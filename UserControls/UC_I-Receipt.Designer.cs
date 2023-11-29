@@ -298,47 +298,7 @@ namespace BookStore.UserControls
             this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
             // 
-            // btn_update
-            // 
-            this.btn_update.Animated = true;
-            this.btn_update.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_update.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_update.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_update.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_update.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            resources.ApplyResources(this.btn_update, "btn_update");
-            this.btn_update.ForeColor = System.Drawing.Color.White;
-            this.btn_update.Image = global::BookStore.Properties.Resources.thoát;
-            this.btn_update.ImageSize = new System.Drawing.Size(55, 55);
-            this.btn_update.Name = "btn_update";
-            // 
-            // btn_delete
-            // 
-            this.btn_delete.Animated = true;
-            this.btn_delete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_delete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_delete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_delete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_delete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            resources.ApplyResources(this.btn_delete, "btn_delete");
-            this.btn_delete.ForeColor = System.Drawing.Color.White;
-            this.btn_delete.Image = global::BookStore.Properties.Resources.xóa;
-            this.btn_delete.ImageSize = new System.Drawing.Size(55, 55);
-            this.btn_delete.Name = "btn_delete";
-            // 
-            // btn_insert
-            // 
-            this.btn_insert.Animated = true;
-            this.btn_insert.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_insert.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_insert.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_insert.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_insert.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            resources.ApplyResources(this.btn_insert, "btn_insert");
-            this.btn_insert.ForeColor = System.Drawing.Color.White;
-            this.btn_insert.Image = global::BookStore.Properties.Resources.Sửa;
-            this.btn_insert.ImageSize = new System.Drawing.Size(55, 55);
-            this.btn_insert.Name = "btn_insert";
+            
             // 
             // guna2HtmlLabel5
             // 
