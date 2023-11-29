@@ -16,8 +16,8 @@ namespace BookStore
             Application.SetCompatibleTextRenderingDefault(false);
 
             //Application.Run(new Form_Admin());
-            Application.Run(new Form_Cashier());
-            //Application.Run(new Form_SM());
+            //Application.Run(new Form_Cashier());
+            Application.Run(new Form_SM());
 
         }
     }
