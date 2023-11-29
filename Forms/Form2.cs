@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BookStore.UserControls
+namespace BookStore.Forms
 {
-    public partial class UC_ViewAll_I_ReceiptDetail : UserControl
+    public partial class Form2 : Form
     {
-        public UC_ViewAll_I_ReceiptDetail()
+        public Form2()
         {
             InitializeComponent();
         }
-
     }
 }

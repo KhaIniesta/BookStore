@@ -247,7 +247,6 @@
   <ItemGroup>
     <None Include="assets\icon _home 2_.png" />
   </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\viewdetail.png" />
   </ItemGroup>
   <ItemGroup>
