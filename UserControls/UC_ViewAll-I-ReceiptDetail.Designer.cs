@@ -254,6 +254,22 @@
             this.guna2ComboBox2.Name = "guna2ComboBox2";
             this.guna2ComboBox2.Size = new System.Drawing.Size(244, 36);
             this.guna2ComboBox2.TabIndex = 46;
+            // btn_update
+            // 
+            this.btn_update.Animated = true;
+            this.btn_update.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_update.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_update.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_update.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_update.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_update.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_update.ForeColor = System.Drawing.Color.White;
+            //this.btn_update.Image = global::BookStore.Properties.Resources.thoát;
+            this.btn_update.ImageSize = new System.Drawing.Size(55, 55);
+            this.btn_update.Location = new System.Drawing.Point(308, 349);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(50, 50);
+            this.btn_update.TabIndex = 9;
             // 
             // guna2ComboBox1
             // 
@@ -380,6 +396,59 @@
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(45, 45);
             this.guna2Button1.TabIndex = 12;
+            this.guna2ComboBox1.Size = new System.Drawing.Size(261, 36);
+            this.guna2ComboBox1.TabIndex = 4;
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.Animated = true;
+            this.btn_delete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_delete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_delete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_delete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_delete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_delete.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_delete.ForeColor = System.Drawing.Color.White;
+            this.btn_delete.Image = global::BookStore.Properties.Resources.xóa;
+            this.btn_delete.ImageSize = new System.Drawing.Size(55, 55);
+            this.btn_delete.Location = new System.Drawing.Point(204, 349);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(50, 50);
+            this.btn_delete.TabIndex = 8;
+            // 
+            // guna2ComboBox2
+            // 
+            this.guna2ComboBox2.AutoRoundedCorners = true;
+            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBox2.BorderRadius = 17;
+            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.guna2ComboBox2.ItemHeight = 30;
+            this.guna2ComboBox2.Location = new System.Drawing.Point(134, 230);
+            this.guna2ComboBox2.Name = "guna2ComboBox2";
+            this.guna2ComboBox2.Size = new System.Drawing.Size(331, 36);
+            this.guna2ComboBox2.TabIndex = 5;
+            // 
+            // btn_insert
+            // 
+            this.btn_insert.Animated = true;
+            this.btn_insert.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_insert.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_insert.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_insert.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_insert.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_insert.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_insert.ForeColor = System.Drawing.Color.White;
+            //this.btn_insert.Image = global::BookStore.Properties.Resources.Sửa;
+            this.btn_insert.ImageSize = new System.Drawing.Size(55, 55);
+            this.btn_insert.Location = new System.Drawing.Point(92, 349);
+            this.btn_insert.Name = "btn_insert";
+            this.btn_insert.Size = new System.Drawing.Size(50, 50);
+            this.btn_insert.TabIndex = 7;
             // 
             // guna2DataGridView1
             // 
