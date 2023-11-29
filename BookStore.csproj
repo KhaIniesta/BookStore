@@ -56,6 +56,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.cs" />
+    <Compile Include="DatabaseConnection.cs" />
     <Compile Include="Forms\Form_Admin.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -96,6 +96,7 @@
             this.btn_login.Size = new System.Drawing.Size(180, 45);
             this.btn_login.TabIndex = 8;
             this.btn_login.Text = "Login";
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // pictureBox2
             // 
@@ -114,7 +115,7 @@
             this.txt_password.AutoRoundedCorners = true;
             this.txt_password.BorderRadius = 21;
             this.txt_password.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_password.DefaultText = "password";
+            this.txt_password.DefaultText = "";
             this.txt_password.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txt_password.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txt_password.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -125,12 +126,13 @@
             this.txt_password.Location = new System.Drawing.Point(84, 405);
             this.txt_password.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_password.Name = "txt_password";
-            this.txt_password.PasswordChar = '\0';
+            this.txt_password.PasswordChar = '●';
             this.txt_password.PlaceholderText = "";
             this.txt_password.SelectedText = "";
             this.txt_password.Size = new System.Drawing.Size(307, 45);
             this.txt_password.TabIndex = 4;
             this.txt_password.TextOffset = new System.Drawing.Point(50, 0);
+            this.txt_password.UseSystemPasswordChar = true;
             // 
             // label3
             // 
@@ -159,7 +161,7 @@
             this.txt_username.AutoRoundedCorners = true;
             this.txt_username.BorderRadius = 21;
             this.txt_username.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_username.DefaultText = "username";
+            this.txt_username.DefaultText = "";
             this.txt_username.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txt_username.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txt_username.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -248,6 +250,7 @@
             this.btn_exit.Size = new System.Drawing.Size(70, 70);
             this.btn_exit.TabIndex = 3;
             this.btn_exit.Text = "X";
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // Form_Login
             // 
