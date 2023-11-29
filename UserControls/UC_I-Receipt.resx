@@ -141,7 +141,7 @@
     <value>guna2HtmlLabel1</value>
   </data>
   <data name="&gt;&gt;guna2HtmlLabel1.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="guna2HtmlLabel2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -162,7 +162,7 @@
     <value>guna2HtmlLabel2</value>
   </data>
   <data name="&gt;&gt;guna2HtmlLabel2.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="guna2HtmlLabel3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -183,7 +183,7 @@
     <value>guna2HtmlLabel3</value>
   </data>
   <data name="&gt;&gt;guna2HtmlLabel3.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="guna2HtmlLabel5.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -204,7 +204,7 @@
     <value>guna2HtmlLabel5</value>
   </data>
   <data name="&gt;&gt;guna2HtmlLabel5.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="guna2HtmlLabel4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -225,7 +225,7 @@
     <value>guna2HtmlLabel4</value>
   </data>
   <data name="&gt;&gt;guna2HtmlLabel4.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="guna2HtmlLabel6.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -246,7 +246,7 @@
     <value>guna2HtmlLabel6</value>
   </data>
   <data name="&gt;&gt;guna2HtmlLabel6.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="guna2Button5.Font" type="System.Drawing.Font, System.Drawing">
     <value>Inter Medium, 10.2pt, style=Bold</value>
@@ -267,7 +267,7 @@
     <value>guna2Button5</value>
   </data>
   <data name="&gt;&gt;guna2Button5.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;guna2Button5.Parent" xml:space="preserve">
     <value>Panel_BookDesc</value>
@@ -294,7 +294,7 @@
     <value>guna2Button4</value>
   </data>
   <data name="&gt;&gt;guna2Button4.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;guna2Button4.Parent" xml:space="preserve">
     <value>Panel_BookDesc</value>
@@ -306,7 +306,7 @@
     <value>Inter Medium, 10.2pt, style=Bold</value>
   </data>
   <data name="guna2Button6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>77, 294</value>
+    <value>86, 312</value>
   </data>
   <data name="guna2Button6.Size" type="System.Drawing.Size, System.Drawing">
     <value>161, 40</value>
@@ -321,7 +321,7 @@
     <value>guna2Button6</value>
   </data>
   <data name="&gt;&gt;guna2Button6.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;guna2Button6.Parent" xml:space="preserve">
     <value>Panel_BookDesc</value>
@@ -348,7 +348,7 @@
     <value>guna2ComboBox3</value>
   </data>
   <data name="&gt;&gt;guna2ComboBox3.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;guna2ComboBox3.Parent" xml:space="preserve">
     <value>Panel_BookDesc</value>
@@ -375,7 +375,7 @@
     <value>guna2ComboBox2</value>
   </data>
   <data name="&gt;&gt;guna2ComboBox2.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;guna2ComboBox2.Parent" xml:space="preserve">
     <value>Panel_BookDesc</value>
@@ -402,7 +402,7 @@
     <value>guna2ComboBox1</value>
   </data>
   <data name="&gt;&gt;guna2ComboBox1.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;guna2ComboBox1.Parent" xml:space="preserve">
     <value>Panel_BookDesc</value>
@@ -432,7 +432,7 @@
     <value>guna2HtmlLabel12</value>
   </data>
   <data name="&gt;&gt;guna2HtmlLabel12.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;guna2HtmlLabel12.Parent" xml:space="preserve">
     <value>Panel_BookDesc</value>
@@ -462,7 +462,7 @@
     <value>guna2HtmlLabel11</value>
   </data>
   <data name="&gt;&gt;guna2HtmlLabel11.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;guna2HtmlLabel11.Parent" xml:space="preserve">
     <value>Panel_BookDesc</value>
@@ -492,7 +492,7 @@
     <value>guna2HtmlLabel10</value>
   </data>
   <data name="&gt;&gt;guna2HtmlLabel10.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;guna2HtmlLabel10.Parent" xml:space="preserve">
     <value>Panel_BookDesc</value>
@@ -536,7 +536,7 @@
 </value>
   </data>
   <data name="guna2Button3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>59, 226</value>
+    <value>65, 242</value>
   </data>
   <data name="guna2Button3.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 45</value>
@@ -548,7 +548,7 @@
     <value>guna2Button3</value>
   </data>
   <data name="&gt;&gt;guna2Button3.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;guna2Button3.Parent" xml:space="preserve">
     <value>Panel_BookDesc</value>
@@ -571,7 +571,7 @@
 </value>
   </data>
   <data name="guna2Button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 226</value>
+    <value>236, 242</value>
   </data>
   <data name="guna2Button2.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 45</value>
@@ -583,7 +583,7 @@
     <value>guna2Button2</value>
   </data>
   <data name="&gt;&gt;guna2Button2.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;guna2Button2.Parent" xml:space="preserve">
     <value>Panel_BookDesc</value>
@@ -613,7 +613,7 @@
 </value>
   </data>
   <data name="guna2Button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>139, 226</value>
+    <value>149, 242</value>
   </data>
   <data name="guna2Button1.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 45</value>
@@ -625,7 +625,7 @@
     <value>guna2Button1</value>
   </data>
   <data name="&gt;&gt;guna2Button1.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;guna2Button1.Parent" xml:space="preserve">
     <value>Panel_BookDesc</value>
@@ -650,7 +650,7 @@
     <value>Panel_BookDesc</value>
   </data>
   <data name="&gt;&gt;Panel_BookDesc.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2CustomGradientPanel, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2CustomGradientPanel, Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;Panel_BookDesc.Parent" xml:space="preserve">
     <value>$this</value>
@@ -707,7 +707,7 @@
     <value>guna2DataGridView1</value>
   </data>
   <data name="&gt;&gt;guna2DataGridView1.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;guna2DataGridView1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -731,7 +731,7 @@
     <value>guna2AnimateWindow1</value>
   </data>
   <data name="&gt;&gt;guna2AnimateWindow1.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2AnimateWindow, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2AnimateWindow, Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;Column1.Name" xml:space="preserve">
     <value>Column1</value>
