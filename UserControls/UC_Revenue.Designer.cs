@@ -28,35 +28,238 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Lbl = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.Panel_Date = new Guna.UI2.WinForms.Guna2Panel();
+            this.Panel_Chart = new Guna.UI2.WinForms.Guna2Panel();
+            this.Panel_Dg = new Guna.UI2.WinForms.Guna2Panel();
+            this.Btn_Day = new Guna.UI2.WinForms.Guna2Button();
+            this.Btn_Month = new Guna.UI2.WinForms.Guna2Button();
+            this.Btn_Year = new Guna.UI2.WinForms.Guna2Button();
+            this.DateTimePicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.DG_RevenueDetail = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Lbl_Role = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Panel_Date.SuspendLayout();
+            this.Panel_Chart.SuspendLayout();
+            this.Panel_Dg.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DG_RevenueDetail)).BeginInit();
             this.SuspendLayout();
             // 
-            // Lbl
+            // Panel_Date
             // 
-            this.Lbl.AutoSize = true;
-            this.Lbl.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl.Font = new System.Drawing.Font("Inter", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Lbl.Location = new System.Drawing.Point(513, 271);
-            this.Lbl.Name = "Lbl";
-            this.Lbl.Size = new System.Drawing.Size(201, 36);
-            this.Lbl.TabIndex = 6;
-            this.Lbl.Text = "UC_Revenue";
+            this.Panel_Date.BackColor = System.Drawing.Color.Transparent;
+            this.Panel_Date.BorderRadius = 12;
+            this.Panel_Date.Controls.Add(this.Lbl_Role);
+            this.Panel_Date.Controls.Add(this.DateTimePicker);
+            this.Panel_Date.Controls.Add(this.Btn_Year);
+            this.Panel_Date.Controls.Add(this.Btn_Month);
+            this.Panel_Date.Controls.Add(this.Btn_Day);
+            this.Panel_Date.FillColor = System.Drawing.Color.White;
+            this.Panel_Date.Location = new System.Drawing.Point(769, 25);
+            this.Panel_Date.Name = "Panel_Date";
+            this.Panel_Date.Size = new System.Drawing.Size(429, 263);
+            this.Panel_Date.TabIndex = 0;
+            // 
+            // Panel_Chart
+            // 
+            this.Panel_Chart.BackColor = System.Drawing.Color.Transparent;
+            this.Panel_Chart.BorderRadius = 12;
+            this.Panel_Chart.Controls.Add(this.label1);
+            this.Panel_Chart.FillColor = System.Drawing.Color.White;
+            this.Panel_Chart.Location = new System.Drawing.Point(32, 25);
+            this.Panel_Chart.Name = "Panel_Chart";
+            this.Panel_Chart.Size = new System.Drawing.Size(706, 263);
+            this.Panel_Chart.TabIndex = 0;
+            // 
+            // Panel_Dg
+            // 
+            this.Panel_Dg.BackColor = System.Drawing.Color.Transparent;
+            this.Panel_Dg.BorderRadius = 12;
+            this.Panel_Dg.Controls.Add(this.DG_RevenueDetail);
+            this.Panel_Dg.FillColor = System.Drawing.Color.White;
+            this.Panel_Dg.Location = new System.Drawing.Point(32, 318);
+            this.Panel_Dg.Name = "Panel_Dg";
+            this.Panel_Dg.Size = new System.Drawing.Size(1166, 236);
+            this.Panel_Dg.TabIndex = 0;
+            // 
+            // Btn_Day
+            // 
+            this.Btn_Day.BorderRadius = 12;
+            this.Btn_Day.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Day.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_Day.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_Day.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_Day.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_Day.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(123)))), ((int)(((byte)(213)))));
+            this.Btn_Day.Font = new System.Drawing.Font("Inter", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Day.ForeColor = System.Drawing.Color.White;
+            this.Btn_Day.Location = new System.Drawing.Point(45, 191);
+            this.Btn_Day.Name = "Btn_Day";
+            this.Btn_Day.Size = new System.Drawing.Size(100, 40);
+            this.Btn_Day.TabIndex = 0;
+            this.Btn_Day.Text = "Day";
+            // 
+            // Btn_Month
+            // 
+            this.Btn_Month.BorderRadius = 12;
+            this.Btn_Month.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Month.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_Month.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_Month.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_Month.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_Month.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(123)))), ((int)(((byte)(213)))));
+            this.Btn_Month.Font = new System.Drawing.Font("Inter", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Month.ForeColor = System.Drawing.Color.White;
+            this.Btn_Month.Location = new System.Drawing.Point(176, 191);
+            this.Btn_Month.Name = "Btn_Month";
+            this.Btn_Month.Size = new System.Drawing.Size(100, 40);
+            this.Btn_Month.TabIndex = 0;
+            this.Btn_Month.Text = "Month";
+            // 
+            // Btn_Year
+            // 
+            this.Btn_Year.BorderRadius = 12;
+            this.Btn_Year.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Year.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_Year.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_Year.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_Year.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_Year.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(123)))), ((int)(((byte)(213)))));
+            this.Btn_Year.Font = new System.Drawing.Font("Inter", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Year.ForeColor = System.Drawing.Color.White;
+            this.Btn_Year.Location = new System.Drawing.Point(299, 191);
+            this.Btn_Year.Name = "Btn_Year";
+            this.Btn_Year.Size = new System.Drawing.Size(100, 40);
+            this.Btn_Year.TabIndex = 0;
+            this.Btn_Year.Text = "Year";
+            // 
+            // DateTimePicker
+            // 
+            this.DateTimePicker.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.DateTimePicker.BorderRadius = 12;
+            this.DateTimePicker.Checked = true;
+            this.DateTimePicker.FillColor = System.Drawing.Color.Gray;
+            this.DateTimePicker.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.DateTimePicker.Location = new System.Drawing.Point(45, 120);
+            this.DateTimePicker.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.DateTimePicker.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.DateTimePicker.Name = "DateTimePicker";
+            this.DateTimePicker.Size = new System.Drawing.Size(354, 36);
+            this.DateTimePicker.TabIndex = 1;
+            this.DateTimePicker.Value = new System.DateTime(2023, 11, 28, 1, 28, 43, 532);
+            // 
+            // DG_RevenueDetail
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.DG_RevenueDetail.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DG_RevenueDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.DG_RevenueDetail.ColumnHeadersHeight = 20;
+            this.DG_RevenueDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DG_RevenueDetail.DefaultCellStyle = dataGridViewCellStyle3;
+            this.DG_RevenueDetail.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DG_RevenueDetail.Location = new System.Drawing.Point(118, 3);
+            this.DG_RevenueDetail.Name = "DG_RevenueDetail";
+            this.DG_RevenueDetail.RowHeadersVisible = false;
+            this.DG_RevenueDetail.RowHeadersWidth = 51;
+            this.DG_RevenueDetail.RowTemplate.Height = 24;
+            this.DG_RevenueDetail.Size = new System.Drawing.Size(911, 230);
+            this.DG_RevenueDetail.TabIndex = 0;
+            this.DG_RevenueDetail.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.DG_RevenueDetail.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.DG_RevenueDetail.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.DG_RevenueDetail.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.DG_RevenueDetail.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.DG_RevenueDetail.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.DG_RevenueDetail.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DG_RevenueDetail.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.DG_RevenueDetail.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.DG_RevenueDetail.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DG_RevenueDetail.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.DG_RevenueDetail.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.DG_RevenueDetail.ThemeStyle.HeaderStyle.Height = 20;
+            this.DG_RevenueDetail.ThemeStyle.ReadOnly = false;
+            this.DG_RevenueDetail.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.DG_RevenueDetail.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.DG_RevenueDetail.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DG_RevenueDetail.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.DG_RevenueDetail.ThemeStyle.RowsStyle.Height = 24;
+            this.DG_RevenueDetail.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DG_RevenueDetail.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // Lbl_Role
+            // 
+            this.Lbl_Role.AutoSize = true;
+            this.Lbl_Role.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_Role.Font = new System.Drawing.Font("Inter SemiBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Role.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Lbl_Role.Location = new System.Drawing.Point(25, 23);
+            this.Lbl_Role.Name = "Lbl_Role";
+            this.Lbl_Role.Size = new System.Drawing.Size(188, 34);
+            this.Lbl_Role.TabIndex = 6;
+            this.Lbl_Role.Text = "Choose date";
+            this.Lbl_Role.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Inter SemiBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(23, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(92, 34);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Chart";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UC_Revenue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.Lbl);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
+            this.Controls.Add(this.Panel_Dg);
+            this.Controls.Add(this.Panel_Chart);
+            this.Controls.Add(this.Panel_Date);
             this.Name = "UC_Revenue";
             this.Size = new System.Drawing.Size(1222, 578);
+            this.Panel_Date.ResumeLayout(false);
+            this.Panel_Date.PerformLayout();
+            this.Panel_Chart.ResumeLayout(false);
+            this.Panel_Chart.PerformLayout();
+            this.Panel_Dg.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DG_RevenueDetail)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label Lbl;
+        private Guna.UI2.WinForms.Guna2Panel Panel_Date;
+        private Guna.UI2.WinForms.Guna2Panel Panel_Chart;
+        private Guna.UI2.WinForms.Guna2Panel Panel_Dg;
+        private Guna.UI2.WinForms.Guna2Button Btn_Day;
+        private Guna.UI2.WinForms.Guna2Button Btn_Year;
+        private Guna.UI2.WinForms.Guna2Button Btn_Month;
+        private Guna.UI2.WinForms.Guna2DateTimePicker DateTimePicker;
+        private Guna.UI2.WinForms.Guna2DataGridView DG_RevenueDetail;
+        private System.Windows.Forms.Label Lbl_Role;
+        private System.Windows.Forms.Label label1;
     }
 }
