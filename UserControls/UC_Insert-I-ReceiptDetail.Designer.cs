@@ -292,22 +292,7 @@
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(141, 27);
             this.guna2HtmlLabel6.TabIndex = 17;
             this.guna2HtmlLabel6.Text = "Quantity:";
-            // btn_update
-            // 
-            this.btn_update.Animated = true;
-            this.btn_update.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_update.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_update.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_update.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_update.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_update.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_update.ForeColor = System.Drawing.Color.White;
-            //this.btn_update.Image = global::BookStore.Properties.Resources.thoát;
-            this.btn_update.ImageSize = new System.Drawing.Size(55, 55);
-            this.btn_update.Location = new System.Drawing.Point(315, 244);
-            this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(50, 50);
-            this.btn_update.TabIndex = 9;
+            
             // 
             // guna2ComboBox1
             // 
@@ -344,25 +329,6 @@
             this.guna2ComboBox2.TabIndex = 19;
             this.guna2ComboBox2.Size = new System.Drawing.Size(323, 36);
             this.guna2ComboBox2.TabIndex = 5;
-            // 
-            // btn_insert
-            // 
-            this.btn_insert.Animated = true;
-            this.btn_insert.AutoRoundedCorners = true;
-            this.btn_insert.BorderRadius = 24;
-            this.btn_insert.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_insert.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_insert.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_insert.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_insert.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_insert.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_insert.ForeColor = System.Drawing.Color.White;
-            //this.btn_insert.Image = global::BookStore.Properties.Resources.Sửa;
-            this.btn_insert.ImageSize = new System.Drawing.Size(60, 60);
-            this.btn_insert.Location = new System.Drawing.Point(94, 244);
-            this.btn_insert.Name = "btn_insert";
-            this.btn_insert.Size = new System.Drawing.Size(50, 50);
-            this.btn_insert.TabIndex = 7;
             // 
             // guna2ContextMenuStrip1
             // 
