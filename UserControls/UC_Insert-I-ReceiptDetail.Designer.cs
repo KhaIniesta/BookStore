@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Insert_I_ReceiptDetail));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -154,6 +154,7 @@
             this.btn_save.BorderColor = System.Drawing.Color.Transparent;
             this.btn_save.BorderRadius = 15;
             this.btn_save.BorderThickness = 2;
+            this.btn_save.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_save.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_save.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_save.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -175,6 +176,7 @@
             this.btn_add.BorderColor = System.Drawing.Color.Transparent;
             this.btn_add.BorderRadius = 15;
             this.btn_add.BorderThickness = 2;
+            this.btn_add.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_add.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_add.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_add.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -269,6 +271,7 @@
             this.btn_insert.BackColor = System.Drawing.Color.Transparent;
             this.btn_insert.BorderColor = System.Drawing.Color.Empty;
             this.btn_insert.BorderRadius = 10;
+            this.btn_insert.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_insert.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_insert.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_insert.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -289,6 +292,7 @@
             // 
             this.btn_delete.BackColor = System.Drawing.Color.Transparent;
             this.btn_delete.BorderRadius = 10;
+            this.btn_delete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_delete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_delete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_delete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -307,6 +311,7 @@
             // 
             this.btn_update.BackColor = System.Drawing.Color.Transparent;
             this.btn_update.BorderRadius = 10;
+            this.btn_update.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_update.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_update.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_update.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -323,30 +328,30 @@
             // 
             // dtg_insertreceiptdetail
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
-            this.dtg_insertreceiptdetail.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtg_insertreceiptdetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            this.dtg_insertreceiptdetail.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtg_insertreceiptdetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtg_insertreceiptdetail.ColumnHeadersHeight = 35;
             this.dtg_insertreceiptdetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dtg_insertreceiptdetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.col_bookid,
             this.Column2});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtg_insertreceiptdetail.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtg_insertreceiptdetail.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtg_insertreceiptdetail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtg_insertreceiptdetail.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.dtg_insertreceiptdetail.Location = new System.Drawing.Point(0, 0);

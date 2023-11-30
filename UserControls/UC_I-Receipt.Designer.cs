@@ -43,6 +43,7 @@ namespace BookStore.UserControls
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Panel_BookDesc = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.dtp_date = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.txt_receiptid = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_viewdetail = new Guna.UI2.WinForms.Guna2Button();
             this.btn_addbook = new Guna.UI2.WinForms.Guna2Button();
@@ -59,7 +60,6 @@ namespace BookStore.UserControls
             this.PublisherID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
-            this.dtp_date = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.Panel_BookDesc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_receipt)).BeginInit();
             this.SuspendLayout();
@@ -118,7 +118,19 @@ namespace BookStore.UserControls
             this.Panel_BookDesc.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(249)))), ((int)(((byte)(252)))));
             this.Panel_BookDesc.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(123)))), ((int)(((byte)(213)))));
             this.Panel_BookDesc.Name = "Panel_BookDesc";
-            this.Panel_BookDesc.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel_BookDesc_Paint);
+            // 
+            // dtp_date
+            // 
+            this.dtp_date.BackColor = System.Drawing.Color.Transparent;
+            this.dtp_date.BorderRadius = 12;
+            this.dtp_date.Checked = true;
+            this.dtp_date.FillColor = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.dtp_date, "dtp_date");
+            this.dtp_date.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtp_date.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtp_date.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtp_date.Name = "dtp_date";
+            this.dtp_date.Value = new System.DateTime(2023, 11, 28, 1, 28, 43, 532);
             // 
             // txt_receiptid
             // 
@@ -145,6 +157,7 @@ namespace BookStore.UserControls
             this.btn_viewdetail.BorderColor = System.Drawing.Color.Transparent;
             this.btn_viewdetail.BorderRadius = 15;
             this.btn_viewdetail.BorderThickness = 2;
+            this.btn_viewdetail.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_viewdetail.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_viewdetail.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_viewdetail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -162,6 +175,7 @@ namespace BookStore.UserControls
             this.btn_addbook.BorderColor = System.Drawing.Color.Transparent;
             this.btn_addbook.BorderRadius = 15;
             this.btn_addbook.BorderThickness = 2;
+            this.btn_addbook.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_addbook.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_addbook.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_addbook.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -179,6 +193,7 @@ namespace BookStore.UserControls
             this.btn_save.BorderColor = System.Drawing.Color.Transparent;
             this.btn_save.BorderRadius = 15;
             this.btn_save.BorderThickness = 2;
+            this.btn_save.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_save.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_save.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_save.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -226,6 +241,7 @@ namespace BookStore.UserControls
             this.btn_insert.BackColor = System.Drawing.Color.Transparent;
             this.btn_insert.BorderColor = System.Drawing.Color.Empty;
             this.btn_insert.BorderRadius = 10;
+            this.btn_insert.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_insert.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_insert.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_insert.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -243,6 +259,7 @@ namespace BookStore.UserControls
             // 
             this.btn_delete.BackColor = System.Drawing.Color.Transparent;
             this.btn_delete.BorderRadius = 10;
+            this.btn_delete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_delete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_delete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_delete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -258,6 +275,7 @@ namespace BookStore.UserControls
             // 
             this.btn_update.BackColor = System.Drawing.Color.Transparent;
             this.btn_update.BorderRadius = 10;
+            this.btn_update.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_update.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_update.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_update.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -322,7 +340,6 @@ namespace BookStore.UserControls
             this.dtg_receipt.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.dtg_receipt.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dtg_receipt.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_receipt_CellClick);
-            this.dtg_receipt.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_receipt_CellContentClick);
             // 
             // ReceiptID
             // 
@@ -356,19 +373,6 @@ namespace BookStore.UserControls
             this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             resources.ApplyResources(this.guna2ContextMenuStrip1, "guna2ContextMenuStrip1");
-            // 
-            // dtp_date
-            // 
-            this.dtp_date.BackColor = System.Drawing.Color.Transparent;
-            this.dtp_date.BorderRadius = 12;
-            this.dtp_date.Checked = true;
-            this.dtp_date.FillColor = System.Drawing.Color.Gray;
-            resources.ApplyResources(this.dtp_date, "dtp_date");
-            this.dtp_date.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtp_date.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtp_date.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtp_date.Name = "dtp_date";
-            this.dtp_date.Value = new System.DateTime(2023, 11, 28, 1, 28, 43, 532);
             // 
             // UC_I_Receipt
             // 

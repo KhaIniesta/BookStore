@@ -22,7 +22,9 @@ namespace BookStore.UserControls
         private void clearInput()
         {
             cb_receiptID.Text = string.Empty;
+            cb_receiptID.SelectedIndex = -1;
             cb_bookID.Text = string.Empty;
+            cb_bookID.SelectedIndex = -1;
             txt_quantity.Text = string.Empty;
         }
 
@@ -38,13 +40,10 @@ namespace BookStore.UserControls
             cb_receiptID.DisplayMember = "MaPhieuNhap";
             cb_receiptID.ValueMember = "MaPhieuNhap";
             cb_receiptID.DataSource = dataCon.GetTable("SELECT MaPhieuNhap FROM PhieuNhap");    
-
-/*            cb_bookID.DisplayMember = "MaSach";
-            cb_bookID.ValueMember = "MaSach";
-            cb_bookID.DataSource = dataCon.GetTable($"SELECT * FROM Sach s\r\nINNER JOIN PhieuNhap pn ON s.MaNXB = pn.MaNXB\r\nWHERE pn.MaPhieuNhap = '{cb_receiptID.Text}'");
-*/
             control = "empty";
             clearInput();
+            cb_receiptID.SelectedIndex = -1;
+            cb_bookID.SelectedIndex = -1;
         }
 
         private void UpdateBookIDDataSource(string selectedReceiptID)

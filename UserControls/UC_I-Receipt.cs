@@ -32,6 +32,7 @@ namespace BookStore.UserControls
         {
             txt_receiptid.Text = string.Empty;
             cb_publisherid.Text = string.Empty;
+            cb_publisherid.SelectedIndex = -1;
             dtp_date.Text = string.Empty;
         }
         private void ResetData()
@@ -42,13 +43,12 @@ namespace BookStore.UserControls
             txt_receiptid.Enabled = false;
             cb_publisherid.Enabled = false;
             dtp_date.Enabled = false;
-
             cb_publisherid.DisplayMember = "MaNXB";
             cb_publisherid.ValueMember = "MaNXB";
             cb_publisherid.DataSource = dataCon.GetTable("SELECT MaNXB FROM NhaXuatBan");
-
             control = "empty";
             clearInput();
+            cb_publisherid.SelectedIndex = -1;
         }
         private void dtg_receipt_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -214,20 +214,13 @@ namespace BookStore.UserControls
                 Panel_BookDesc.Hide();
             }
             UC_Insert_I_ReceiptDetail ucInsertIReceiptDetail = new UC_Insert_I_ReceiptDetail();
-
             if (!Controls.Contains(ucInsertIReceiptDetail))
             {
                 Controls.Add(ucInsertIReceiptDetail);
                 ucInsertIReceiptDetail.Dock = DockStyle.Fill;
                 ucInsertIReceiptDetail.BringToFront();
             }
-
             ucInsertIReceiptDetail.Show();
-
-        }
-
-        private void Panel_BookDesc_Paint(object sender, PaintEventArgs e)
-        {
 
         }
 
