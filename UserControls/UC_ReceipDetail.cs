@@ -12,6 +12,40 @@ namespace BookStore.UserControls
 {
     public partial class UC_ReceipDetail : UserControl
     {
+        private DatabaseConnection DBConnection = new DatabaseConnection();
+        private DataTable dt;
+
+        private void ResetDuLieu()
+        {
+            DBConnection.Open();
+            pn_bookItems.Dock = DockStyle.Fill;
+            pn_bookItems.Controls.Clear();
+
+            string sql = "Select * from V_HienChiTietSach";
+            dt = DBConnection.GetTable(sql);
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                String BookID = dr["MaSach"].ToString();
+                String ItemName = dr["TenSach"].ToString();
+                String Price = dr["Gia"].ToString();
+                String Quantity = dr["SoLuongSach"].ToString();
+                Image BookImage = null;
+                try
+                {
+                    BookImage = Utils.GenerateImageFromData((byte[])dr["Anh"]);
+
+                }
+                catch (Exception ex)
+                {
+                    System.Console.WriteLine(ex);
+                }
+
+                UC_BookItem uC_BookItem = new UC_BookItem(BookID, ItemName, Price, Quantity, BookImage);
+                pn_bookItems.Controls.Add(uC_BookItem);
+            }
+            DBConnection.Close();
+        }
         public UC_ReceipDetail()
         {
             InitializeComponent();

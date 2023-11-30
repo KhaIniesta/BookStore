@@ -168,6 +168,7 @@
     <Compile Include="UserControls\UC_ViewAll-I-ReceiptDetail.Designer.cs">
       <DependentUpon>UC_ViewAll-I-ReceiptDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils.cs" />
     <EmbeddedResource Include="Forms\Form_Admin.resx">
       <DependentUpon>Form_Admin.cs</DependentUpon>
     </EmbeddedResource>

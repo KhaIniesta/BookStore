@@ -53,6 +53,7 @@
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Pb_Image = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pn_container = new System.Windows.Forms.Panel();
+            this.Btn_Logout = new Guna.UI2.WinForms.Guna2Button();
             this.Panel_Header.SuspendLayout();
             this.Panel_BookDesc.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -62,6 +63,7 @@
             // 
             // Panel_Header
             // 
+            this.Panel_Header.Controls.Add(this.Btn_Logout);
             this.Panel_Header.Controls.Add(this.Txt_Searchbox);
             this.Panel_Header.Controls.Add(this.guna2Panel1);
             this.Panel_Header.Dock = System.Windows.Forms.DockStyle.Top;
@@ -446,6 +448,29 @@
             this.pn_container.Size = new System.Drawing.Size(1422, 601);
             this.pn_container.TabIndex = 3;
             // 
+            // Btn_Logout
+            // 
+            this.Btn_Logout.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_Logout.BorderColor = System.Drawing.Color.BlanchedAlmond;
+            this.Btn_Logout.BorderRadius = 12;
+            this.Btn_Logout.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(57)))), ((int)(((byte)(184)))));
+            this.Btn_Logout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Logout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_Logout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_Logout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_Logout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_Logout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(123)))), ((int)(((byte)(213)))));
+            this.Btn_Logout.Font = new System.Drawing.Font("Inter SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Logout.ForeColor = System.Drawing.Color.Transparent;
+            this.Btn_Logout.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Logout.Image")));
+            this.Btn_Logout.ImageSize = new System.Drawing.Size(28, 28);
+            this.Btn_Logout.Location = new System.Drawing.Point(1240, 18);
+            this.Btn_Logout.Name = "Btn_Logout";
+            this.Btn_Logout.Size = new System.Drawing.Size(170, 56);
+            this.Btn_Logout.TabIndex = 4;
+            this.Btn_Logout.TextOffset = new System.Drawing.Point(16, 0);
+            this.Btn_Logout.Click += new System.EventHandler(this.Btn_Logout_Click);
+            // 
             // Form_Cashier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -492,5 +517,6 @@
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private System.Windows.Forms.Panel pn_container;
+        private Guna.UI2.WinForms.Guna2Button Btn_Logout;
     }
 }
