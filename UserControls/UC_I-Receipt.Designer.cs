@@ -43,24 +43,25 @@ namespace BookStore.UserControls
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Panel_BookDesc = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ComboBox3 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txt_receiptid = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btn_viewdetail = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_addbook = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_save = new Guna.UI2.WinForms.Guna2Button();
+            this.cb_publisherid = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_insert = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_delete = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_update = new Guna.UI2.WinForms.Guna2Button();
+            this.dtg_receipt = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.ReceiptID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PublisherID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.dtp_date = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.Panel_BookDesc.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_receipt)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2HtmlLabel1
@@ -101,109 +102,106 @@ namespace BookStore.UserControls
             // 
             // Panel_BookDesc
             // 
-            this.Panel_BookDesc.Controls.Add(this.guna2Button5);
-            this.Panel_BookDesc.Controls.Add(this.guna2Button4);
-            this.Panel_BookDesc.Controls.Add(this.guna2Button6);
-            this.Panel_BookDesc.Controls.Add(this.guna2ComboBox3);
-            this.Panel_BookDesc.Controls.Add(this.guna2ComboBox2);
-            this.Panel_BookDesc.Controls.Add(this.guna2ComboBox1);
+            this.Panel_BookDesc.Controls.Add(this.dtp_date);
+            this.Panel_BookDesc.Controls.Add(this.txt_receiptid);
+            this.Panel_BookDesc.Controls.Add(this.btn_viewdetail);
+            this.Panel_BookDesc.Controls.Add(this.btn_addbook);
+            this.Panel_BookDesc.Controls.Add(this.btn_save);
+            this.Panel_BookDesc.Controls.Add(this.cb_publisherid);
             this.Panel_BookDesc.Controls.Add(this.guna2HtmlLabel12);
             this.Panel_BookDesc.Controls.Add(this.guna2HtmlLabel11);
             this.Panel_BookDesc.Controls.Add(this.guna2HtmlLabel10);
-            this.Panel_BookDesc.Controls.Add(this.guna2Button3);
-            this.Panel_BookDesc.Controls.Add(this.guna2Button2);
-            this.Panel_BookDesc.Controls.Add(this.guna2Button1);
+            this.Panel_BookDesc.Controls.Add(this.btn_insert);
+            this.Panel_BookDesc.Controls.Add(this.btn_delete);
+            this.Panel_BookDesc.Controls.Add(this.btn_update);
             resources.ApplyResources(this.Panel_BookDesc, "Panel_BookDesc");
             this.Panel_BookDesc.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(249)))), ((int)(((byte)(252)))));
             this.Panel_BookDesc.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(123)))), ((int)(((byte)(213)))));
             this.Panel_BookDesc.Name = "Panel_BookDesc";
+            this.Panel_BookDesc.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel_BookDesc_Paint);
             // 
-            // guna2Button5
+            // txt_receiptid
             // 
-            this.guna2Button5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button5.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button5.BorderRadius = 15;
-            this.guna2Button5.BorderThickness = 2;
-            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button5.FocusedColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.guna2Button5, "guna2Button5");
-            this.guna2Button5.ForeColor = System.Drawing.Color.White;
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.PressedColor = System.Drawing.Color.Transparent;
+            this.txt_receiptid.AutoRoundedCorners = true;
+            this.txt_receiptid.BackColor = System.Drawing.Color.Transparent;
+            this.txt_receiptid.BorderRadius = 17;
+            this.txt_receiptid.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_receiptid.DefaultText = "";
+            this.txt_receiptid.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_receiptid.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_receiptid.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_receiptid.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_receiptid.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            resources.ApplyResources(this.txt_receiptid, "txt_receiptid");
+            this.txt_receiptid.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_receiptid.Name = "txt_receiptid";
+            this.txt_receiptid.PasswordChar = '\0';
+            this.txt_receiptid.PlaceholderText = "";
+            this.txt_receiptid.SelectedText = "";
             // 
-            // guna2Button4
+            // btn_viewdetail
             // 
-            this.guna2Button4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button4.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button4.BorderRadius = 15;
-            this.guna2Button4.BorderThickness = 2;
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FocusedColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.guna2Button4, "guna2Button4");
-            this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.PressedColor = System.Drawing.Color.Transparent;
+            this.btn_viewdetail.BackColor = System.Drawing.Color.Transparent;
+            this.btn_viewdetail.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_viewdetail.BorderRadius = 15;
+            this.btn_viewdetail.BorderThickness = 2;
+            this.btn_viewdetail.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_viewdetail.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_viewdetail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_viewdetail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_viewdetail.FocusedColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btn_viewdetail, "btn_viewdetail");
+            this.btn_viewdetail.ForeColor = System.Drawing.Color.White;
+            this.btn_viewdetail.Name = "btn_viewdetail";
+            this.btn_viewdetail.PressedColor = System.Drawing.Color.Transparent;
+            this.btn_viewdetail.Click += new System.EventHandler(this.btn_viewdetail_Click);
             // 
-            // guna2Button6
+            // btn_addbook
             // 
-            this.guna2Button6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button6.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button6.BorderRadius = 15;
-            this.guna2Button6.BorderThickness = 2;
-            this.guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button6.FocusedColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.guna2Button6, "guna2Button6");
-            this.guna2Button6.ForeColor = System.Drawing.Color.White;
-            this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.PressedColor = System.Drawing.Color.Transparent;
+            this.btn_addbook.BackColor = System.Drawing.Color.Transparent;
+            this.btn_addbook.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_addbook.BorderRadius = 15;
+            this.btn_addbook.BorderThickness = 2;
+            this.btn_addbook.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_addbook.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_addbook.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_addbook.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_addbook.FocusedColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btn_addbook, "btn_addbook");
+            this.btn_addbook.ForeColor = System.Drawing.Color.White;
+            this.btn_addbook.Name = "btn_addbook";
+            this.btn_addbook.PressedColor = System.Drawing.Color.Transparent;
+            this.btn_addbook.Click += new System.EventHandler(this.btn_addbook_Click_1);
             // 
-            // guna2ComboBox3
+            // btn_save
             // 
-            this.guna2ComboBox3.AutoRoundedCorners = true;
-            this.guna2ComboBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox3.BorderRadius = 17;
-            this.guna2ComboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox3.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            resources.ApplyResources(this.guna2ComboBox3, "guna2ComboBox3");
-            this.guna2ComboBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox3.Name = "guna2ComboBox3";
+            this.btn_save.BackColor = System.Drawing.Color.Transparent;
+            this.btn_save.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_save.BorderRadius = 15;
+            this.btn_save.BorderThickness = 2;
+            this.btn_save.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_save.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_save.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_save.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_save.FocusedColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btn_save, "btn_save");
+            this.btn_save.ForeColor = System.Drawing.Color.White;
+            this.btn_save.Name = "btn_save";
+            this.btn_save.PressedColor = System.Drawing.Color.Transparent;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
-            // guna2ComboBox2
+            // cb_publisherid
             // 
-            this.guna2ComboBox2.AutoRoundedCorners = true;
-            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.BorderRadius = 17;
-            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            resources.ApplyResources(this.guna2ComboBox2, "guna2ComboBox2");
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox2.Name = "guna2ComboBox2";
-            // 
-            // guna2ComboBox1
-            // 
-            this.guna2ComboBox1.AutoRoundedCorners = true;
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderRadius = 17;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            resources.ApplyResources(this.guna2ComboBox1, "guna2ComboBox1");
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
+            this.cb_publisherid.AutoRoundedCorners = true;
+            this.cb_publisherid.BackColor = System.Drawing.Color.Transparent;
+            this.cb_publisherid.BorderRadius = 17;
+            this.cb_publisherid.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_publisherid.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_publisherid.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb_publisherid.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            resources.ApplyResources(this.cb_publisherid, "cb_publisherid");
+            this.cb_publisherid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cb_publisherid.Name = "cb_publisherid";
             // 
             // guna2HtmlLabel12
             // 
@@ -223,74 +221,58 @@ namespace BookStore.UserControls
             this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
             // 
-            // guna2Button3
+            // btn_insert
             // 
-            this.guna2Button3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.BorderColor = System.Drawing.Color.Empty;
-            this.guna2Button3.BorderRadius = 10;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FocusedColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.guna2Button3, "guna2Button3");
-            this.guna2Button3.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button3.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button3.Image")));
-            this.guna2Button3.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.PressedColor = System.Drawing.Color.White;
+            this.btn_insert.BackColor = System.Drawing.Color.Transparent;
+            this.btn_insert.BorderColor = System.Drawing.Color.Empty;
+            this.btn_insert.BorderRadius = 10;
+            this.btn_insert.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_insert.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_insert.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_insert.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_insert.FocusedColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btn_insert, "btn_insert");
+            this.btn_insert.ForeColor = System.Drawing.Color.Black;
+            this.btn_insert.Image = ((System.Drawing.Image)(resources.GetObject("btn_insert.Image")));
+            this.btn_insert.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_insert.Name = "btn_insert";
+            this.btn_insert.PressedColor = System.Drawing.Color.White;
+            this.btn_insert.Click += new System.EventHandler(this.btn_insert_Click);
             // 
-            // guna2Button2
+            // btn_delete
             // 
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderRadius = 10;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            resources.ApplyResources(this.guna2Button2, "guna2Button2");
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.Image")));
-            this.guna2Button2.ImageSize = new System.Drawing.Size(18, 18);
-            this.guna2Button2.Name = "guna2Button2";
-            
+            this.btn_delete.BackColor = System.Drawing.Color.Transparent;
+            this.btn_delete.BorderRadius = 10;
+            this.btn_delete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_delete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_delete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_delete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            resources.ApplyResources(this.btn_delete, "btn_delete");
+            this.btn_delete.ForeColor = System.Drawing.Color.White;
+            this.btn_delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.Image")));
+            this.btn_delete.ImageSize = new System.Drawing.Size(18, 18);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
-            // guna2HtmlLabel5
+            // btn_update
             // 
-            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.guna2HtmlLabel5, "guna2HtmlLabel5");
-            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            this.btn_update.BackColor = System.Drawing.Color.Transparent;
+            this.btn_update.BorderRadius = 10;
+            this.btn_update.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_update.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_update.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_update.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            resources.ApplyResources(this.btn_update, "btn_update");
+            this.btn_update.ForeColor = System.Drawing.Color.White;
+            this.btn_update.Image = ((System.Drawing.Image)(resources.GetObject("btn_update.Image")));
+            this.btn_update.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
-            // guna2HtmlLabel4
-            // 
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.guna2HtmlLabel4, "guna2HtmlLabel4");
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            // 
-            // guna2HtmlLabel6
-            // 
-            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.guna2HtmlLabel6, "guna2HtmlLabel6");
-            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            resources.ApplyResources(this.guna2Button1, "guna2Button1");
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button1.Name = "guna2Button1";
-            // 
-            // guna2DataGridView1
+            // dtg_receipt
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtg_receipt.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -298,13 +280,13 @@ namespace BookStore.UserControls
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            resources.ApplyResources(this.guna2DataGridView1, "guna2DataGridView1");
-            this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
+            this.dtg_receipt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            resources.ApplyResources(this.dtg_receipt, "dtg_receipt");
+            this.dtg_receipt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dtg_receipt.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ReceiptID,
+            this.PublisherID,
+            this.Date});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -312,58 +294,92 @@ namespace BookStore.UserControls
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.guna2DataGridView1.Name = "guna2DataGridView1";
-            this.guna2DataGridView1.RowHeadersVisible = false;
-            this.guna2DataGridView1.RowTemplate.Height = 24;
-            this.guna2DataGridView1.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Light;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 35;
-            this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 24;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dtg_receipt.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dtg_receipt.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
+            this.dtg_receipt.Name = "dtg_receipt";
+            this.dtg_receipt.RowHeadersVisible = false;
+            this.dtg_receipt.RowTemplate.Height = 24;
+            this.dtg_receipt.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Light;
+            this.dtg_receipt.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            this.dtg_receipt.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dtg_receipt.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dtg_receipt.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dtg_receipt.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dtg_receipt.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dtg_receipt.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
+            this.dtg_receipt.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            this.dtg_receipt.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dtg_receipt.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtg_receipt.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
+            this.dtg_receipt.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dtg_receipt.ThemeStyle.HeaderStyle.Height = 35;
+            this.dtg_receipt.ThemeStyle.ReadOnly = false;
+            this.dtg_receipt.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dtg_receipt.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtg_receipt.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtg_receipt.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dtg_receipt.ThemeStyle.RowsStyle.Height = 24;
+            this.dtg_receipt.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            this.dtg_receipt.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dtg_receipt.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_receipt_CellClick);
+            this.dtg_receipt.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_receipt_CellContentClick);
             // 
-            // Column1
+            // ReceiptID
             // 
-            resources.ApplyResources(this.Column1, "Column1");
-            this.Column1.Name = "Column1";
+            this.ReceiptID.DataPropertyName = "MaPhieuNhap";
+            resources.ApplyResources(this.ReceiptID, "ReceiptID");
+            this.ReceiptID.Name = "ReceiptID";
             // 
-            // Column2
+            // PublisherID
             // 
-            resources.ApplyResources(this.Column2, "Column2");
-            this.Column2.Name = "Column2";
+            this.PublisherID.DataPropertyName = "MaNXB";
+            resources.ApplyResources(this.PublisherID, "PublisherID");
+            this.PublisherID.Name = "PublisherID";
             // 
-            // Column3
+            // Date
             // 
-            resources.ApplyResources(this.Column3, "Column3");
-            this.Column3.Name = "Column3";
+            this.Date.DataPropertyName = "NgayNhap";
+            resources.ApplyResources(this.Date, "Date");
+            this.Date.Name = "Date";
+            // 
+            // guna2ContextMenuStrip1
+            // 
+            this.guna2ContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.guna2ContextMenuStrip1.Name = "guna2ContextMenuStrip1";
+            this.guna2ContextMenuStrip1.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.guna2ContextMenuStrip1.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.guna2ContextMenuStrip1.RenderStyle.ColorTable = null;
+            this.guna2ContextMenuStrip1.RenderStyle.RoundedEdges = true;
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            resources.ApplyResources(this.guna2ContextMenuStrip1, "guna2ContextMenuStrip1");
+            // 
+            // dtp_date
+            // 
+            this.dtp_date.BackColor = System.Drawing.Color.Transparent;
+            this.dtp_date.BorderRadius = 12;
+            this.dtp_date.Checked = true;
+            this.dtp_date.FillColor = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.dtp_date, "dtp_date");
+            this.dtp_date.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtp_date.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtp_date.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtp_date.Name = "dtp_date";
+            this.dtp_date.Value = new System.DateTime(2023, 11, 28, 1, 28, 43, 532);
             // 
             // UC_I_Receipt
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.guna2DataGridView1);
+            this.Controls.Add(this.dtg_receipt);
             this.Controls.Add(this.Panel_BookDesc);
             this.Name = "UC_I_Receipt";
+            this.Load += new System.EventHandler(this.UC_I_Receipt_Load);
             this.Panel_BookDesc.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_receipt)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -382,21 +398,22 @@ namespace BookStore.UserControls
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel Panel_BookDesc;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btn_insert;
+        private Guna.UI2.WinForms.Guna2Button btn_delete;
+        private Guna.UI2.WinForms.Guna2Button btn_update;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button6;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private Guna.UI2.WinForms.Guna2ComboBox cb_publisherid;
+        private Guna.UI2.WinForms.Guna2Button btn_save;
+        private Guna.UI2.WinForms.Guna2Button btn_viewdetail;
+        private Guna.UI2.WinForms.Guna2Button btn_addbook;
+        private Guna.UI2.WinForms.Guna2DataGridView dtg_receipt;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
+        private Guna.UI2.WinForms.Guna2TextBox txt_receiptid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ReceiptID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PublisherID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtp_date;
     }
 }
