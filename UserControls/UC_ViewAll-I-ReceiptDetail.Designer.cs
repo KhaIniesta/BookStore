@@ -246,9 +246,7 @@
             this.cb_receiptID.Name = "cb_receiptID";
             this.cb_receiptID.Size = new System.Drawing.Size(245, 36);
             this.cb_receiptID.TabIndex = 4;
-<<<<<<< HEAD
             this.cb_receiptID.SelectedIndexChanged += new System.EventHandler(this.cb_receiptID_SelectedIndexChanged);
-=======
             // guna2Button4
             // 
             this.guna2Button4.CustomBorderColor = System.Drawing.Color.Transparent;
@@ -376,7 +374,6 @@
             this.guna2ComboBox1.Name = "guna2ComboBox1";
             this.guna2ComboBox1.Size = new System.Drawing.Size(244, 36);
             this.guna2ComboBox1.TabIndex = 45;
->>>>>>> 50beedf108c452a5662d27b7584ac857ae8226e5
             // 
             // guna2HtmlLabel16
             // 
@@ -433,9 +430,6 @@
             this.guna2HtmlLabel20.TabIndex = 40;
             this.guna2HtmlLabel20.Text = "I-Receipt ID:";
             // 
-<<<<<<< HEAD
-            // dtg_viewallreceipt
-=======
             // btn_insert
             // 
             this.btn_insert.BackColor = System.Drawing.Color.Transparent;
@@ -567,7 +561,6 @@
             this.guna2ComboBox2.TabIndex = 5;
             // 
             // guna2DataGridView1
->>>>>>> 50beedf108c452a5662d27b7584ac857ae8226e5
             // 
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
             this.dtg_viewallreceipt.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
