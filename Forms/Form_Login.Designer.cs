@@ -263,6 +263,7 @@
             this.Controls.Add(this.btn_exit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_Login";
             guna2ContainerControl1.ResumeLayout(false);
             guna2ContainerControl1.PerformLayout();

@@ -133,7 +133,7 @@ namespace BookStore.UserControls
                 try
                 {
                     Image image = null;
-                    image = Utils.ChuyenVeHinhAnh((byte[])DG_Books.CurrentRow.Cells[7].Value);
+                    image = Utils.GenerateImageFromData((byte[])DG_Books.CurrentRow.Cells[7].Value);
                     PictureBox.Image = image;
 
                 }
@@ -181,7 +181,7 @@ namespace BookStore.UserControls
                 cmd.Parameters.AddWithValue("@Gia", Txt_Price.Text);
                 cmd.Parameters.AddWithValue("@TheLoai", Txt_Genre.Text);
 
-                byte[] imageData = Utils.TaoDataImageTuLinkFile(PictureBox.ImageLocation);
+                byte[] imageData = Utils.GenerateDataImageFromPath(PictureBox.ImageLocation);
                 cmd.Parameters.AddWithValue("@Anh", imageData);
 
                 try
@@ -214,7 +214,7 @@ namespace BookStore.UserControls
                 cmd.Parameters.AddWithValue("@Gia", gia);
                 cmd.Parameters.AddWithValue("@TheLoai", Txt_Genre.Text);
 
-                byte[] imageData = Utils.TaoDataImageTuLinkFile(PictureBox.ImageLocation);
+                byte[] imageData = Utils.GenerateDataImageFromPath(PictureBox.ImageLocation);
                 cmd.Parameters.AddWithValue("@Anh", imageData);
 
 

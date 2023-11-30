@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace BookStore
 {
-    public class Utils
+    public static class Utils
     {
-        public static byte[] TaoDataImageTuLinkFile(String AvartarDirec)
+        public static byte[] GenerateDataImageFromPath(String Path)
         {
             byte[] imageData = null;
             try
             {
-                using (FileStream fs = new FileStream(AvartarDirec, FileMode.Open, FileAccess.Read))
+                using (FileStream fs = new FileStream(Path, FileMode.Open, FileAccess.Read))
                 {
                     imageData = new byte[fs.Length];
                     fs.Read(imageData, 0, (int)fs.Length);
@@ -29,11 +29,10 @@ namespace BookStore
             }
         }
 
-
-        public static Image ChuyenVeHinhAnh(byte[] hinh)
+        public static Image GenerateImageFromData(byte[] ImageData)
 
         {
-            MemoryStream ms = new MemoryStream(hinh);
+            MemoryStream ms = new MemoryStream(ImageData);
             Image result = Image.FromStream(ms);
             return result;
         }
