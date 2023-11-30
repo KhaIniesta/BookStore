@@ -125,9 +125,7 @@
             this.Btn_ReceiptTab.Size = new System.Drawing.Size(170, 56);
             this.Btn_ReceiptTab.TabIndex = 2;
             this.Btn_ReceiptTab.Text = "I-Receipt";
-            this.Btn_ReceiptTab.TextOffset = new System.Drawing.Point(16, 0);
-            this.Btn_ReceiptTab.Click += new System.EventHandler(this.Btn_ReceiptTab_Click);
-            // 
+            this.Btn_ReceiptTab.TextOffset = new System.Drawing.Point(16, 0);            // 
             // Btn_AuthorTab
             // 
             this.Btn_AuthorTab.BorderColor = System.Drawing.Color.BlanchedAlmond;
