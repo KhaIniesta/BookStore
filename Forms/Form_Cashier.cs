@@ -1,7 +1,6 @@
 ﻿using BookStore.UserControls;
 using System;
 using System.Data;
-using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
 namespace BookStore.Forms
@@ -10,7 +9,7 @@ namespace BookStore.Forms
     {
         public static void LoadBookDetail(DataRow dr)
         {
-            
+
         }
         private void AddUserControl(UserControl userControl)
         {
@@ -41,7 +40,15 @@ namespace BookStore.Forms
         private void Btn_receipt_detail_click(object sender, EventArgs e)
         {
             UC_ReceipDetail uC_ReceipDetail = new UC_ReceipDetail();
+            uC_ReceipDetail.ReturnUC_Casher += UC_ReceipDetail_ReturnUC_Casher;
             AddUserControl(uC_ReceipDetail);
+        }
+
+        private void UC_ReceipDetail_ReturnUC_Casher(object sender, EventArgs e)
+        {
+            UC_Cashier uC_Cashier = new UC_Cashier();
+            uC_Cashier.Btn_receipt_detail_click += Btn_receipt_detail_click;
+            AddUserControl(uC_Cashier);
         }
     }
 }

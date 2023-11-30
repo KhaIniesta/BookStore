@@ -121,7 +121,7 @@
   <data name="resource.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
-        1AAADdQB75G6FQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAD2TSURBVHhe7d1b
+        0AAADdABEGw9BwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAD2TSURBVHhe7d1b
         jGTXXe9xfMG2EuPgoyObcGIHK/L0vbuqu2r6CihI60iRbQVWBHGCpYiICAmkICA8EIVLMMIoMS8WwkRI
         kYOCZO7ETpDiJI4vUSywIw5xbMXGkBhi2VievtXFjmfcfdau7prZvfvX3XVZVbX3Wt+Hz4P/nJczmf79
         fjNTtfcP7O7uAsg7ay5xrnEmnB93fsb5kPNbzp3OPc7fOvc5X3Qech5zvuF8y/l353nnJWfDaTjnzoyd
@@ -387,7 +387,7 @@
         n0semLNf6H9RX1r4o8bywq+4P7nf5Ip9kq/XAUWw+wP/H25BOfyyHAD8AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="guna2ImageButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_DeleteReceipt.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAACd
         eQAAnXkBQ2G0TQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADGLSURBVHhe7d0L
