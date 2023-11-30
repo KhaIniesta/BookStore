@@ -1,5 +1,4 @@
-﻿using BookStore.Forms;
-using System;
+﻿using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -116,6 +115,32 @@ namespace BookStore.UserControls
             return -1;
         }
 
+        private int DeleteBookFromReceiptDetail(string ReceiptID, string BookID)
+        {
+            DBConnection.Open();
+            cmd = new SqlCommand("Proc_XoaSachCTHD", DBConnection.GetConnection());
+            try
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@MaHD", SqlDbType.NChar).Value = ReceiptID.Trim();
+                cmd.Parameters.Add("@MaSach", SqlDbType.NChar).Value = BookID.Trim();
+
+                int count = cmd.ExecuteNonQuery();
+                DBConnection.Close();
+                return count;
+            }
+            catch (Exception ex)
+            {
+                DBConnection.Close();
+                MessageBox.Show(ex.Message, "Thông báo!");
+            }
+            finally
+            {
+                DBConnection.Close();
+            }
+            return -1;
+        }
+
         private void DeleteReceipt(String ReceiptID)
         {
             cmd = new SqlCommand("Proc_XoaHoaDon", DBConnection.GetConnection());
@@ -128,6 +153,7 @@ namespace BookStore.UserControls
         private void UC_ReceipDetail_Load(object sender, EventArgs e)
         {
             ResetDuLieu();
+            lbl_datetime.Text = DateTime.Now.ToString();
 
             cmd = new SqlCommand("Proc_ThemMaHoaDon", DBConnection.GetConnection());
             DBConnection.Open();
@@ -155,8 +181,9 @@ namespace BookStore.UserControls
                         String ReceiptID = lbl_ReceiptID.Text.Trim();
 
                         UC_BookOrderItem uC_BookOrderItem = new UC_BookOrderItem(BookID, Name, Price);
-                        uC_BookOrderItem.IncreaseButtonClicked += UC_BookOrderItem_Click;
-                        uC_BookOrderItem.DescreaseButtonClicked += UC_BookOrderItem_Click;
+                        uC_BookOrderItem.IncreaseButtonClicked += UpdateBookOrder;
+                        uC_BookOrderItem.DescreaseButtonClicked += UpdateBookOrder;
+                        uC_BookOrderItem.DeleteBookFromReceiptClicked += DeleteBookOrder;
 
                         String Quantity = uC_BookOrderItem.GetBoughtQuantity();
                         int count = InsertBookIntoReceiptDetail(ReceiptID, BookID, Quantity);
@@ -166,6 +193,7 @@ namespace BookStore.UserControls
                             flp_bookItems.Controls.Add(uC_BookOrderItem);
                             UpdateTotalReceiptPrice(ReceiptID);
                         }
+                        UpdateTotalBill(ReceiptID);
                     }
                 }
             }
@@ -179,7 +207,7 @@ namespace BookStore.UserControls
             ReturnUC_Casher?.Invoke(this, EventArgs.Empty);
         }
 
-        public void UC_BookOrderItem_Click(object sender, EventArgs e)
+        public void UpdateBookOrder(object sender, EventArgs e)
         {
             if (sender is UC_BookOrderItem clicked_UCBookOrderItem)
             {
@@ -192,8 +220,56 @@ namespace BookStore.UserControls
                 if (count > 0)
                 {
                     UpdateTotalReceiptPrice(ReceiptID);
+                    UpdateTotalBill(ReceiptID);
                 }
             }
+        }
+        public void DeleteBookOrder(object sender, EventArgs e)
+        {
+            if (sender is UC_BookOrderItem clicked_UCBookOrderItem)
+            {
+                String BookID = clicked_UCBookOrderItem.GetBookID();
+                String ReceiptID = lbl_ReceiptID.Text.Trim();
+
+                int count = DeleteBookFromReceiptDetail(ReceiptID, BookID);
+                flp_bookItems.Controls.Remove(clicked_UCBookOrderItem);
+                if (count > 0)
+                {
+                    UpdateTotalReceiptPrice(ReceiptID);
+                    UpdateTotalBill(ReceiptID);
+                }
+            }
+        }
+
+        public void UpdateTotalBill(String ReceiptID)
+        {
+            double subtotalbill = double.Parse(lbl_Subtotal.Text);
+            if (subtotalbill >= 1000000)
+            {
+                lbl_Sale.Text = "10%";
+            }
+            else if (subtotalbill >= 2500000)
+            {
+                lbl_Sale.Text = "20%";
+            }
+            else if (subtotalbill >= 3500000)
+            {
+                lbl_Sale.Text = "30%";
+            }
+            else
+            {
+                lbl_Sale.Text = "0%";
+            }
+            double sale = double.Parse(lbl_Sale.Text.Replace("%", "")) / 100;
+            decimal TotalBill = (Decimal)(subtotalbill - subtotalbill * sale);
+
+            DBConnection.Open();
+            string sql = $"update HoaDon set TongHD = {TotalBill} " +
+                $"where MaHD = {ReceiptID}";
+            cmd.ExecuteNonQuery();
+            DBConnection.Close();
+
+            lbl_Total.Text = TotalBill.ToString();
         }
     }
 }

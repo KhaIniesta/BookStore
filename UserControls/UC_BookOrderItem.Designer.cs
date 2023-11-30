@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_BookOrderItem));
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_DeleteBook = new Guna.UI2.WinForms.Guna2Button();
             this.lbl_BookName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbl_BookPrice = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
@@ -39,28 +39,29 @@
             this.guna2GradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // guna2Button1
+            // btn_DeleteBook
             // 
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 20;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.Empty;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.Silver;
-            this.guna2Button1.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button1.Location = new System.Drawing.Point(13, 3);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.BorderRadius = 21;
-            this.guna2Button1.Size = new System.Drawing.Size(42, 42);
-            this.guna2Button1.TabIndex = 0;
+            this.btn_DeleteBook.AutoRoundedCorners = true;
+            this.btn_DeleteBook.BackColor = System.Drawing.Color.Transparent;
+            this.btn_DeleteBook.BorderRadius = 20;
+            this.btn_DeleteBook.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_DeleteBook.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_DeleteBook.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_DeleteBook.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_DeleteBook.FillColor = System.Drawing.Color.Empty;
+            this.btn_DeleteBook.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_DeleteBook.ForeColor = System.Drawing.Color.White;
+            this.btn_DeleteBook.HoverState.BorderColor = System.Drawing.Color.Silver;
+            this.btn_DeleteBook.HoverState.ForeColor = System.Drawing.Color.Silver;
+            this.btn_DeleteBook.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btn_DeleteBook.Image = ((System.Drawing.Image)(resources.GetObject("btn_DeleteBook.Image")));
+            this.btn_DeleteBook.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_DeleteBook.Location = new System.Drawing.Point(13, 3);
+            this.btn_DeleteBook.Name = "btn_DeleteBook";
+            this.btn_DeleteBook.ShadowDecoration.BorderRadius = 21;
+            this.btn_DeleteBook.Size = new System.Drawing.Size(42, 42);
+            this.btn_DeleteBook.TabIndex = 0;
+            this.btn_DeleteBook.Click += new System.EventHandler(this.btn_DeleteBook_Click);
             // 
             // lbl_BookName
             // 
@@ -151,7 +152,7 @@
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.lbl_BookPrice);
             this.Controls.Add(this.lbl_BookName);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.btn_DeleteBook);
             this.Name = "UC_BookOrderItem";
             this.Size = new System.Drawing.Size(634, 51);
             this.guna2GradientPanel1.ResumeLayout(false);
@@ -162,7 +163,7 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btn_DeleteBook;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbl_BookName;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbl_BookPrice;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;

@@ -52,7 +52,7 @@ namespace BookStore.UserControls
 
         public event EventHandler IncreaseButtonClicked;
         public event EventHandler DescreaseButtonClicked;
-
+        public event EventHandler DeleteBookFromReceiptClicked;
         private void btn_IncreaseQuantity_Click(object sender, EventArgs e)
         {
             int newquantity = int.Parse(lbl_BookQuantity.Text) + 1;
@@ -72,6 +72,11 @@ namespace BookStore.UserControls
                 _quantity = lbl_BookQuantity.Text.Trim();
             }
             DescreaseButtonClicked?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void btn_DeleteBook_Click(object sender, EventArgs e)
+        {
+            DeleteBookFromReceiptClicked?.Invoke(this, EventArgs.Empty);
         }
     }
 }
