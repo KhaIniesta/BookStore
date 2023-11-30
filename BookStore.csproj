@@ -56,7 +56,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+
+
     <Compile Include="Account.cs" />
+
     <Compile Include="DatabaseConnection.cs" />
     <Compile Include="Forms\Form_Admin.cs">
       <SubType>Form</SubType>
@@ -168,6 +171,7 @@
     <Compile Include="UserControls\UC_ViewAll-I-ReceiptDetail.Designer.cs">
       <DependentUpon>UC_ViewAll-I-ReceiptDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils.cs" />
     <EmbeddedResource Include="Forms\Form_Admin.resx">
       <DependentUpon>Form_Admin.cs</DependentUpon>
     </EmbeddedResource>
