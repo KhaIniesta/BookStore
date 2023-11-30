@@ -42,7 +42,7 @@ namespace BookStore.UserControls
 
         private void btn_addbook_Click_1(object sender, EventArgs e)
         {
-            btn_addbook.Checked = true;
+           /* btn_addbook.Checked = true;*/
             UserControl user = new UC_Insert_I_ReceiptDetail();
             // Kích hoạt sự kiện AddControlButtonClick khi nút được click
             AddControlButtonClick?.Invoke(this, EventArgs.Empty);
@@ -50,7 +50,7 @@ namespace BookStore.UserControls
 
         private void btn_viewdetail_Click_1(object sender, EventArgs e)
         {
-            btn_viewdetail.Checked = true;
+            /*btn_viewdetail.Checked = true;*/
             UserControl user = new UC_ViewAll_I_ReceiptDetail();
             AddControlButtonClick?.Invoke(this, EventArgs.Empty);
         }
