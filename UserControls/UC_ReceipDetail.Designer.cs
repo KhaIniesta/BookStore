@@ -32,21 +32,22 @@
             this.pn_bookItems = new System.Windows.Forms.FlowLayoutPanel();
             this.flp_bookItems = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.lbl_ReceiptID = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.label11 = new System.Windows.Forms.Label();
+            this.lbl_Subtotal = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lbl_Total = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btn_DeleteReceipt = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -77,6 +78,7 @@
             this.guna2GradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2GradientPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.guna2GradientPanel1.BorderRadius = 20;
+            this.guna2GradientPanel1.Controls.Add(this.lbl_ReceiptID);
             this.guna2GradientPanel1.Controls.Add(this.label2);
             this.guna2GradientPanel1.Controls.Add(this.label1);
             this.guna2GradientPanel1.CustomizableEdges.BottomLeft = false;
@@ -88,9 +90,19 @@
             this.guna2GradientPanel1.Size = new System.Drawing.Size(656, 81);
             this.guna2GradientPanel1.TabIndex = 6;
             // 
+            // lbl_ReceiptID
+            // 
+            this.lbl_ReceiptID.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ReceiptID.ForeColor = System.Drawing.Color.White;
+            this.lbl_ReceiptID.Location = new System.Drawing.Point(348, 50);
+            this.lbl_ReceiptID.Name = "lbl_ReceiptID";
+            this.lbl_ReceiptID.Size = new System.Drawing.Size(293, 20);
+            this.lbl_ReceiptID.TabIndex = 1;
+            this.lbl_ReceiptID.Text = "HD01";
+            this.lbl_ReceiptID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(32, 50);
@@ -115,15 +127,15 @@
             this.guna2GradientPanel2.BorderColor = System.Drawing.Color.Red;
             this.guna2GradientPanel2.BorderRadius = 15;
             this.guna2GradientPanel2.Controls.Add(this.label11);
-            this.guna2GradientPanel2.Controls.Add(this.label10);
+            this.guna2GradientPanel2.Controls.Add(this.lbl_Subtotal);
             this.guna2GradientPanel2.Controls.Add(this.label9);
             this.guna2GradientPanel2.Controls.Add(this.label8);
             this.guna2GradientPanel2.Controls.Add(this.label7);
-            this.guna2GradientPanel2.Controls.Add(this.label6);
+            this.guna2GradientPanel2.Controls.Add(this.lbl_Total);
             this.guna2GradientPanel2.Controls.Add(this.label5);
             this.guna2GradientPanel2.Controls.Add(this.label4);
             this.guna2GradientPanel2.Controls.Add(this.label3);
-            this.guna2GradientPanel2.Controls.Add(this.guna2ImageButton1);
+            this.guna2GradientPanel2.Controls.Add(this.btn_DeleteReceipt);
             this.guna2GradientPanel2.Controls.Add(this.guna2TextBox1);
             this.guna2GradientPanel2.Controls.Add(this.guna2GradientButton1);
             this.guna2GradientPanel2.CustomizableEdges.TopLeft = false;
@@ -135,20 +147,123 @@
             this.guna2GradientPanel2.Size = new System.Drawing.Size(656, 200);
             this.guna2GradientPanel2.TabIndex = 7;
             // 
-            // guna2ImageButton1
+            // label11
             // 
-            this.guna2ImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.Location = new System.Drawing.Point(13, 130);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(64, 54);
-            this.guna2ImageButton1.TabIndex = 13;
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(422, 60);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(66, 20);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "Sale : ";
+            // 
+            // lbl_Subtotal
+            // 
+            this.lbl_Subtotal.AutoSize = true;
+            this.lbl_Subtotal.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Subtotal.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Subtotal.Location = new System.Drawing.Point(420, 13);
+            this.lbl_Subtotal.Name = "lbl_Subtotal";
+            this.lbl_Subtotal.Size = new System.Drawing.Size(103, 20);
+            this.lbl_Subtotal.TabIndex = 21;
+            this.lbl_Subtotal.Text = "Subtotal : ";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label9.Location = new System.Drawing.Point(596, 66);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(45, 20);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "15%";
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label8.Location = new System.Drawing.Point(535, 12);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(106, 24);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "0";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Inter Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(290, 93);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(123, 28);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "20 000 Đ";
+            // 
+            // lbl_Total
+            // 
+            this.lbl_Total.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Total.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Total.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lbl_Total.Location = new System.Drawing.Point(273, 11);
+            this.lbl_Total.Name = "lbl_Total";
+            this.lbl_Total.Size = new System.Drawing.Size(140, 28);
+            this.lbl_Total.TabIndex = 17;
+            this.lbl_Total.Text = "0";
+            this.lbl_Total.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Inter Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(127, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 24);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Total : ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Inter Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(121, 96);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(109, 24);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Change : ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Inter Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(121, 60);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(126, 24);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Received : ";
+            // 
+            // btn_DeleteReceipt
+            // 
+            this.btn_DeleteReceipt.BackColor = System.Drawing.Color.Transparent;
+            this.btn_DeleteReceipt.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn_DeleteReceipt.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btn_DeleteReceipt.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn_DeleteReceipt.Image = ((System.Drawing.Image)(resources.GetObject("btn_DeleteReceipt.Image")));
+            this.btn_DeleteReceipt.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_DeleteReceipt.ImageRotate = 0F;
+            this.btn_DeleteReceipt.Location = new System.Drawing.Point(13, 130);
+            this.btn_DeleteReceipt.Name = "btn_DeleteReceipt";
+            this.btn_DeleteReceipt.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn_DeleteReceipt.Size = new System.Drawing.Size(64, 54);
+            this.btn_DeleteReceipt.TabIndex = 13;
+            this.btn_DeleteReceipt.Click += new System.EventHandler(this.btn_DeleteReceipt_Click);
             // 
             // guna2TextBox1
             // 
@@ -196,108 +311,6 @@
             this.guna2GradientButton1.TabIndex = 3;
             this.guna2GradientButton1.Text = "Export receipt";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Inter Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(121, 60);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 24);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Received : ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Inter Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(121, 96);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 24);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Change : ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Inter Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(127, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 24);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Total : ";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Inter Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(273, 11);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(140, 28);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "680 000 Đ";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Inter Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(290, 93);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(123, 28);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "20 000 Đ";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label8.Location = new System.Drawing.Point(535, 15);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 20);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "800 000 Đ";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label9.Location = new System.Drawing.Point(596, 66);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(45, 20);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "15%";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(426, 13);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(103, 20);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "Subtotal : ";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(439, 60);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(66, 20);
-            this.label11.TabIndex = 22;
-            this.label11.Text = "Sale : ";
-            // 
             // UC_ReceipDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -325,17 +338,18 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Guna.UI2.WinForms.Guna2ImageButton btn_DeleteReceipt;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lbl_Subtotal;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbl_Total;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_ReceiptID;
     }
 }

@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using BookStore.Forms;
+using System;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BookStore.UserControls
@@ -14,11 +11,12 @@ namespace BookStore.UserControls
     {
         private DatabaseConnection DBConnection = new DatabaseConnection();
         private DataTable dt;
-
+        private SqlCommand cmd;
+        public event EventHandler Btn_delete_receipt_click;
         private void ResetDuLieu()
         {
             DBConnection.Open();
-            pn_bookItems.Dock = DockStyle.Fill;
+            //pn_bookItems.Dock = DockStyle.Fill;
             pn_bookItems.Controls.Clear();
 
             string sql = "Select * from V_HienChiTietSach";
@@ -43,6 +41,7 @@ namespace BookStore.UserControls
 
                 UC_BookItem uC_BookItem = new UC_BookItem(BookID, ItemName, Price, Quantity, BookImage);
                 pn_bookItems.Controls.Add(uC_BookItem);
+                uC_BookItem.Clicked += UC_BookItem_Clicked;
             }
             DBConnection.Close();
         }
@@ -51,18 +50,151 @@ namespace BookStore.UserControls
             InitializeComponent();
         }
 
+        private void UpdateTotalReceiptPrice(string ReceiptID)
+        {
+            cmd = new SqlCommand("Proc_TimKiemTheoMaHD", DBConnection.GetConnection());
+            DBConnection.Open();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@MaHD", SqlDbType.NChar).Value = ReceiptID.Trim();
+            ;
+            string total = cmd.ExecuteScalar()?.ToString();
+            lbl_Subtotal.Text = total;
+            DBConnection.Close();
+
+        }
+
+        private int InsertBookIntoReceiptDetail(string ReceiptID, string BookID, string Quantity)
+        {
+            DBConnection.Open();
+            cmd = new SqlCommand("Proc_ThemSachCTHD", DBConnection.GetConnection());
+            try
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@MaHD", SqlDbType.NChar).Value = ReceiptID.Trim();
+                cmd.Parameters.Add("@MaSach", SqlDbType.NChar).Value = BookID.Trim();
+                cmd.Parameters.Add("@SoLuongBan", SqlDbType.Int).Value = Quantity.Trim();
+
+                int count = cmd.ExecuteNonQuery();
+                DBConnection.Close();
+                return count;
+            }
+            catch (Exception ex)
+            {
+                DBConnection.Close();
+                MessageBox.Show(ex.Message, "Thông báo!");
+            }
+            finally
+            {
+                DBConnection.Close();
+            }
+            return -1;
+        }
+        private int UpdateBookIntoReceiptDetail(string ReceiptID, string BookID, string Quantity)
+        {
+            DBConnection.Open();
+            cmd = new SqlCommand("Proc_CapNhatSachCTHD", DBConnection.GetConnection());
+            try
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@MaHD", SqlDbType.NChar).Value = ReceiptID.Trim();
+                cmd.Parameters.Add("@MaSach", SqlDbType.NChar).Value = BookID.Trim();
+                cmd.Parameters.Add("@SoLuongBan", SqlDbType.Int).Value = Quantity.Trim();
+
+                int count = cmd.ExecuteNonQuery();
+                DBConnection.Close();
+                return count;
+            }
+            catch (Exception ex)
+            {
+                DBConnection.Close();
+                MessageBox.Show(ex.Message, "Thông báo!");
+            }
+            finally
+            {
+                DBConnection.Close();
+            }
+            return -1;
+        }
+
+        private void DeleteReceipt(String ReceiptID)
+        {
+            cmd = new SqlCommand("Proc_XoaHoaDon", DBConnection.GetConnection());
+            DBConnection.Open();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@MaHD", SqlDbType.NChar).Value = ReceiptID.Trim();
+            cmd.ExecuteNonQuery();
+            DBConnection.Close();
+        }
         private void UC_ReceipDetail_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < 10; i++)
-            {
-                UC_BookItem item = new UC_BookItem();
-                pn_bookItems.Controls.Add(item);
-            }
+            ResetDuLieu();
 
-            for (int i = 0;i < 10;i++)
+            cmd = new SqlCommand("Proc_ThemMaHoaDon", DBConnection.GetConnection());
+            DBConnection.Open();
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            if (dr.Read())
             {
-                UC_BookOrderItem item = new UC_BookOrderItem();
-                flp_bookItems.Controls.Add(item);
+                lbl_ReceiptID.Text = dr["MaHD"].ToString();
+            }
+            DBConnection.Close();
+        }
+
+        private void UC_BookItem_Clicked(object sender, EventArgs e)
+        {
+            if (sender is UC_BookItem clickedUC_BookItem)
+            {
+                foreach (DataRow dr in dt.Rows)
+                {
+                    if (dr["MaSach"].ToString() == clickedUC_BookItem.GetBookID())
+                    {
+                        String BookID = dr["MaSach"].ToString();
+                        String Name = dr["TenSach"].ToString();
+                        String Price = dr["Gia"].ToString();
+                        String ReceiptID = lbl_ReceiptID.Text.Trim();
+
+                        UC_BookOrderItem uC_BookOrderItem = new UC_BookOrderItem(BookID, Name, Price);
+                        uC_BookOrderItem.IncreaseButtonClicked += UC_BookOrderItem_Click;
+                        String Quantity = uC_BookOrderItem.GetBoughtQuantity();
+                        int count = InsertBookIntoReceiptDetail(ReceiptID, BookID, Quantity);
+
+                        if (count > 0)
+                        {
+                            flp_bookItems.Controls.Add(uC_BookOrderItem);
+                            UpdateTotalReceiptPrice(ReceiptID);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void btn_DeleteReceipt_Click(object sender, EventArgs e)
+        {
+            Form_Cashier form_Cashier = new Form_Cashier();
+            pn_bookItems.Controls.Clear();
+            UC_Cashier uC_Cashier = new UC_Cashier();
+            uC_Cashier.Btn_receipt_detail_click += Btn_delete_receipt_click;
+
+            string ReceiptID = lbl_ReceiptID.Text.Trim();
+            DeleteReceipt(ReceiptID);
+            Btn_delete_receipt_click?.Invoke(this, EventArgs.Empty);
+        }
+
+        public void UC_BookOrderItem_Click(object sender, EventArgs e)
+        {
+            if (sender is UC_BookOrderItem clicked_UCBookOrderItem)
+            {
+                String BookID = clicked_UCBookOrderItem.GetBookID();
+                String ReceiptID = lbl_ReceiptID.Text.Trim();
+                String Quantity = clicked_UCBookOrderItem.GetBoughtQuantity();
+
+                int count = UpdateBookIntoReceiptDetail(ReceiptID, BookID, Quantity);
+
+                if (count > 0)
+                {
+                    UpdateTotalReceiptPrice(ReceiptID);
+                }
             }
         }
     }

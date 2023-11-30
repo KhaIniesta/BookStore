@@ -1,7 +1,6 @@
 ﻿using BookStore.UserControls;
 using System;
 using System.Data;
-using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
 namespace BookStore.Forms
@@ -10,7 +9,7 @@ namespace BookStore.Forms
     {
         public static void LoadBookDetail(DataRow dr)
         {
-            
+
         }
         private void AddUserControl(UserControl userControl)
         {
@@ -42,6 +41,12 @@ namespace BookStore.Forms
         {
             UC_ReceipDetail uC_ReceipDetail = new UC_ReceipDetail();
             AddUserControl(uC_ReceipDetail);
+        }
+
+        private void Btn_DeleteReceipt_Click(object sender, EventArgs e)
+        {
+            UC_Cashier uC_Cashier = new UC_Cashier();
+            AddUserControl(uC_Cashier);
         }
     }
 }
