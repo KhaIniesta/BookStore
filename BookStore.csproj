@@ -57,6 +57,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+
+
+    <Compile Include="Account.cs" />
+
     <Compile Include="DatabaseConnection.cs" />
     <Compile Include="Forms\Form_Admin.cs">
       <SubType>Form</SubType>
@@ -250,7 +254,6 @@
   <ItemGroup>
     <None Include="assets\icon _home 2_.png" />
   </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\viewdetail.png" />
   </ItemGroup>
   <ItemGroup>
