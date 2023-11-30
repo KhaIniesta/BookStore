@@ -28,16 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Author));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Panel_BookDesc = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.dtg_tacgia = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.col_MaTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_MaNXBAu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_TenTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_LienHeAu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.txt_maTG = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_huy = new Guna.UI2.WinForms.Guna2Button();
@@ -52,9 +47,14 @@
             this.txt_lienHe = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.dtg_tacgia = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.col_MaTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_MaNXBAu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_TenTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_LienHeAu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Panel_BookDesc.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtg_tacgia)).BeginInit();
             this.guna2CustomGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_tacgia)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel_BookDesc
@@ -67,101 +67,6 @@
             this.Panel_BookDesc.Name = "Panel_BookDesc";
             this.Panel_BookDesc.Size = new System.Drawing.Size(394, 578);
             this.Panel_BookDesc.TabIndex = 3;
-            // 
-            // dtg_tacgia
-            // 
-            this.dtg_tacgia.AllowUserToResizeColumns = false;
-            this.dtg_tacgia.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dtg_tacgia.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtg_tacgia.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dtg_tacgia.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtg_tacgia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dtg_tacgia.ColumnHeadersHeight = 35;
-            this.dtg_tacgia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dtg_tacgia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.col_MaTG,
-            this.col_MaNXBAu,
-            this.col_TenTG,
-            this.col_LienHeAu});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtg_tacgia.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dtg_tacgia.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dtg_tacgia.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtg_tacgia.Location = new System.Drawing.Point(0, 0);
-            this.dtg_tacgia.Name = "dtg_tacgia";
-            this.dtg_tacgia.ReadOnly = true;
-            this.dtg_tacgia.RowHeadersVisible = false;
-            this.dtg_tacgia.RowHeadersWidth = 51;
-            this.dtg_tacgia.RowTemplate.Height = 24;
-            this.dtg_tacgia.Size = new System.Drawing.Size(828, 578);
-            this.dtg_tacgia.TabIndex = 8;
-            this.dtg_tacgia.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dtg_tacgia.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dtg_tacgia.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dtg_tacgia.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dtg_tacgia.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dtg_tacgia.ThemeStyle.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.dtg_tacgia.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtg_tacgia.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dtg_tacgia.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtg_tacgia.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtg_tacgia.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dtg_tacgia.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dtg_tacgia.ThemeStyle.HeaderStyle.Height = 35;
-            this.dtg_tacgia.ThemeStyle.ReadOnly = true;
-            this.dtg_tacgia.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dtg_tacgia.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtg_tacgia.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtg_tacgia.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dtg_tacgia.ThemeStyle.RowsStyle.Height = 24;
-            this.dtg_tacgia.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtg_tacgia.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // col_MaTG
-            // 
-            this.col_MaTG.DataPropertyName = "MaTG";
-            this.col_MaTG.HeaderText = "Author ID";
-            this.col_MaTG.MinimumWidth = 6;
-            this.col_MaTG.Name = "col_MaTG";
-            this.col_MaTG.ReadOnly = true;
-            // 
-            // col_MaNXBAu
-            // 
-            this.col_MaNXBAu.DataPropertyName = "MaNXB";
-            this.col_MaNXBAu.HeaderText = "Publisher ID";
-            this.col_MaNXBAu.MinimumWidth = 6;
-            this.col_MaNXBAu.Name = "col_MaNXBAu";
-            this.col_MaNXBAu.ReadOnly = true;
-            // 
-            // col_TenTG
-            // 
-            this.col_TenTG.DataPropertyName = "TenTG";
-            this.col_TenTG.HeaderText = "Name";
-            this.col_TenTG.MinimumWidth = 6;
-            this.col_TenTG.Name = "col_TenTG";
-            this.col_TenTG.ReadOnly = true;
-            // 
-            // col_LienHeAu
-            // 
-            this.col_LienHeAu.DataPropertyName = "LienHe";
-            this.col_LienHeAu.HeaderText = "Contact";
-            this.col_LienHeAu.MinimumWidth = 6;
-            this.col_LienHeAu.Name = "col_LienHeAu";
-            this.col_LienHeAu.ReadOnly = true;
             // 
             // guna2CustomGradientPanel1
             // 
@@ -225,6 +130,7 @@
             this.btn_huy.Name = "btn_huy";
             this.btn_huy.Size = new System.Drawing.Size(45, 45);
             this.btn_huy.TabIndex = 47;
+            this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
             // 
             // btn_sua
             // 
@@ -245,6 +151,7 @@
             this.btn_sua.PressedColor = System.Drawing.Color.White;
             this.btn_sua.Size = new System.Drawing.Size(45, 45);
             this.btn_sua.TabIndex = 48;
+            this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
             // 
             // btn_themAu
             // 
@@ -264,6 +171,7 @@
             this.btn_themAu.Size = new System.Drawing.Size(171, 35);
             this.btn_themAu.TabIndex = 43;
             this.btn_themAu.Text = "New Author";
+            this.btn_themAu.Click += new System.EventHandler(this.btn_themAu_Click);
             // 
             // btn_xoa
             // 
@@ -281,6 +189,7 @@
             this.btn_xoa.Name = "btn_xoa";
             this.btn_xoa.Size = new System.Drawing.Size(45, 45);
             this.btn_xoa.TabIndex = 46;
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
             // btn_luu
             // 
@@ -301,6 +210,7 @@
             this.btn_luu.Size = new System.Drawing.Size(161, 35);
             this.btn_luu.TabIndex = 49;
             this.btn_luu.Text = "Save";
+            this.btn_luu.Click += new System.EventHandler(this.btn_luu_Click);
             // 
             // label1
             // 
@@ -414,6 +324,103 @@
             this.label3.TabIndex = 35;
             this.label3.Text = "Publisher ID :";
             // 
+            // dtg_tacgia
+            // 
+            this.dtg_tacgia.AllowUserToResizeColumns = false;
+            this.dtg_tacgia.AllowUserToResizeRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dtg_tacgia.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dtg_tacgia.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dtg_tacgia.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtg_tacgia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dtg_tacgia.ColumnHeadersHeight = 35;
+            this.dtg_tacgia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dtg_tacgia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.col_MaTG,
+            this.col_MaNXBAu,
+            this.col_TenTG,
+            this.col_LienHeAu});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(8);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtg_tacgia.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dtg_tacgia.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dtg_tacgia.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtg_tacgia.Location = new System.Drawing.Point(0, 0);
+            this.dtg_tacgia.Name = "dtg_tacgia";
+            this.dtg_tacgia.ReadOnly = true;
+            this.dtg_tacgia.RowHeadersVisible = false;
+            this.dtg_tacgia.RowHeadersWidth = 51;
+            this.dtg_tacgia.RowTemplate.Height = 24;
+            this.dtg_tacgia.Size = new System.Drawing.Size(828, 578);
+            this.dtg_tacgia.TabIndex = 8;
+            this.dtg_tacgia.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dtg_tacgia.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dtg_tacgia.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dtg_tacgia.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dtg_tacgia.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dtg_tacgia.ThemeStyle.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dtg_tacgia.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtg_tacgia.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtg_tacgia.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dtg_tacgia.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtg_tacgia.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dtg_tacgia.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dtg_tacgia.ThemeStyle.HeaderStyle.Height = 35;
+            this.dtg_tacgia.ThemeStyle.ReadOnly = true;
+            this.dtg_tacgia.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dtg_tacgia.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtg_tacgia.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtg_tacgia.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dtg_tacgia.ThemeStyle.RowsStyle.Height = 24;
+            this.dtg_tacgia.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtg_tacgia.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dtg_tacgia.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_tacgia_CellClick);
+            // 
+            // col_MaTG
+            // 
+            this.col_MaTG.DataPropertyName = "MaTG";
+            this.col_MaTG.HeaderText = "Author ID";
+            this.col_MaTG.MinimumWidth = 6;
+            this.col_MaTG.Name = "col_MaTG";
+            this.col_MaTG.ReadOnly = true;
+            // 
+            // col_MaNXBAu
+            // 
+            this.col_MaNXBAu.DataPropertyName = "MaNXB";
+            this.col_MaNXBAu.HeaderText = "Publisher ID";
+            this.col_MaNXBAu.MinimumWidth = 6;
+            this.col_MaNXBAu.Name = "col_MaNXBAu";
+            this.col_MaNXBAu.ReadOnly = true;
+            // 
+            // col_TenTG
+            // 
+            this.col_TenTG.DataPropertyName = "TenTG";
+            this.col_TenTG.HeaderText = "Name";
+            this.col_TenTG.MinimumWidth = 6;
+            this.col_TenTG.Name = "col_TenTG";
+            this.col_TenTG.ReadOnly = true;
+            // 
+            // col_LienHeAu
+            // 
+            this.col_LienHeAu.DataPropertyName = "LienHe";
+            this.col_LienHeAu.HeaderText = "Contact";
+            this.col_LienHeAu.MinimumWidth = 6;
+            this.col_LienHeAu.Name = "col_LienHeAu";
+            this.col_LienHeAu.ReadOnly = true;
+            // 
             // UC_Author
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -422,10 +429,11 @@
             this.Controls.Add(this.Panel_BookDesc);
             this.Name = "UC_Author";
             this.Size = new System.Drawing.Size(1222, 578);
+            this.Load += new System.EventHandler(this.UC_Author_Load);
             this.Panel_BookDesc.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtg_tacgia)).EndInit();
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_tacgia)).EndInit();
             this.ResumeLayout(false);
 
         }

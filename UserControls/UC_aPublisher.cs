@@ -39,10 +39,10 @@ namespace BookStore.UserControls
 
         private void Clear()
         {
-            txt_name.ResetText();
-            txt_diaChi.ResetText();
-            txt_lienHe.ResetText();
-            txt_maNXB.ResetText();
+            txt_name.Clear();
+            txt_diaChi.Clear();
+            txt_lienHe.Clear();
+            txt_maNXB.Clear();
         }
 
         private void LoadDataNXB()

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,204 @@ namespace BookStore.UserControls
     {
         public UC_Author()
         {
+            con = kn.GetConnection();
             InitializeComponent();
         }
+        DatabaseConnection kn = new DatabaseConnection();
+        private SqlConnection con;
+        private SqlCommand cmd;
+        private String dieuKhien = "trong";
+
+        private void ResetButton()
+        {
+            txt_name.Enabled = false;
+            txt_maTG.Enabled = false;
+            txt_lienHe.Enabled = false;
+            cb_maNXB.Enabled = false;
+            btn_sua.Enabled = true;
+            btn_themAu.Enabled = true;
+            btn_xoa.Enabled = true;
+            btn_luu.Enabled = false;
+            btn_huy.Enabled = false;
+        }
+
+        private void Clear()
+        {
+            txt_name.Clear();
+            txt_lienHe.Clear();
+            txt_maTG.Clear();
+            cb_maNXB.SelectedIndex = -1;
+        }
+
+        private void LoadDataTG()
+        {
+            kn.Open();
+            string sql = "Select * from TacGia";
+            dtg_tacgia.DataSource = kn.GetTable(sql);
+
+            cb_maNXB.DataSource = kn.GetTable("SELECT MaNXB FROM NhaXuatBan");
+            cb_maNXB.DisplayMember = "MaNXB";
+            cb_maNXB.ValueMember = "MaNXB";
+            kn.Close();
+            ResetButton();
+            Clear();
+        }
+        private void UC_Author_Load(object sender, EventArgs e)
+        {
+            LoadDataTG();
+            
+        }
+
+        private void dtg_tacgia_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            cb_maNXB.SelectedIndex = -1;
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                txt_maTG.Text = Convert.ToString(dtg_tacgia.CurrentRow.Cells["col_MaTG"].Value);
+                cb_maNXB.Text = Convert.ToString(dtg_tacgia.CurrentRow.Cells["col_MaNXBAu"].Value);
+                txt_name.Text = Convert.ToString(dtg_tacgia.CurrentRow.Cells["col_TenTG"].Value);
+                txt_lienHe.Text = Convert.ToString(dtg_tacgia.CurrentRow.Cells["col_LienHeAu"].Value);
+
+            }
+        }
+
+        private void btn_themAu_Click(object sender, EventArgs e)
+        {
+            Clear();
+            dieuKhien = "them";
+            cb_maNXB.Enabled = true;
+            txt_maTG.Enabled = true;
+            txt_lienHe.Enabled = true;
+            txt_name.Enabled = true;
+            btn_sua.Enabled = false;
+            btn_xoa.Enabled = false;
+            btn_luu.Enabled = true;
+            btn_huy.Enabled = true;
+        }
+
+        private void btn_sua_Click(object sender, EventArgs e)
+        {
+            dieuKhien = "capnhat";
+            cb_maNXB.Enabled = true;
+            txt_maTG.Enabled = false;
+            txt_lienHe.Enabled = true;
+            txt_name.Enabled = true;
+            btn_luu.Enabled = false;
+            btn_xoa.Enabled = false;
+            btn_luu.Enabled = true;
+            btn_huy.Enabled = true;
+        }
+        private void btn_xoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                cmd = new SqlCommand("XoaTacGia", con);
+                kn.Open();
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter p = new SqlParameter("@MaTG", txt_maTG.Text);
+                cmd.Parameters.Add(p);
+                int count = cmd.ExecuteNonQuery();
+                kn.Close();
+                if (count > 0)
+                {
+                    MessageBox.Show("Xóa tác giả thành công!!");
+                    LoadDataTG();                    
+                }
+                else
+                {
+                    MessageBox.Show("Xóa không thành công!!");
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Lỗi khi thực thi câu lệnh SQL: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+
+            kn.Close();
+        }
+
+        private void btn_luu_Click(object sender, EventArgs e)
+        {
+            if (dieuKhien == "them")
+            {
+                try
+                {
+                    cmd = new SqlCommand("ThemTacGia", con);
+                    con.Open();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@MaTG", SqlDbType.NChar).Value = txt_maTG.Text.Trim();
+                    cmd.Parameters.Add("@MaNXB", SqlDbType.NChar).Value = cb_maNXB.Text.Trim();
+                    cmd.Parameters.Add("@TenTG", SqlDbType.NVarChar).Value = txt_name.Text.Trim();
+                    cmd.Parameters.Add("@LienHe", SqlDbType.NChar).Value = txt_lienHe.Text.Trim();
+
+                    int count = cmd.ExecuteNonQuery();
+                    con.Close();
+
+                    if (count > 0)
+                    {
+                        MessageBox.Show("Thêm tác giả thành công!!");
+                        LoadDataTG();
+                        txt_maTG.Text = "";
+                        txt_maTG.Focus();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không thể thêm tác giả mới!!");
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Lỗi: " + ex.Message);
+                }
+                con.Close();
+
+
+            }
+
+            else if (dieuKhien == "capnhat")
+            {
+
+                cmd = new SqlCommand("CapNhatTacGia", con);
+                con.Open();
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@MaTG", txt_maTG.Text);
+                cmd.Parameters.AddWithValue("@MaNXB", cb_maNXB.Text);
+                cmd.Parameters.AddWithValue("@TenTG", txt_name.Text);
+                cmd.Parameters.AddWithValue("@LienHe", txt_lienHe.Text);
+
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Cập nhật tác giả thành công!!");
+                    txt_maTG.Text = "";
+                    txt_maTG.Focus();
+
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Lỗi khi thực thi câu lệnh SQL: " + ex.Message);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi: " + ex.Message);
+                }
+
+                LoadDataTG();
+                con.Close();
+            }
+        }
+
+        private void btn_huy_Click(object sender, EventArgs e)
+        {
+            Clear();
+            ResetButton();
+        }
+
+        
     }
 }
