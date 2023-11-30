@@ -1,4 +1,5 @@
-﻿using BookStore.UserControls;
+﻿using BookStore.Forms;
+using BookStore.UserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,11 +46,19 @@ namespace BookStore
             AddUserControl(UC);
         }
 
-        private void Panel_Container_Paint(object sender, PaintEventArgs e)
+        private void Btn_Logout_Click(object sender, EventArgs e)
         {
-
+            this.Close();
+            Form form = new Form_Login();
+            form.Show();
         }
-    
+
+        private void Btn_ReceiptTab_Click(object sender, EventArgs e)
+        {
+            Btn_ReceiptTab.Checked = true;
+            UC_I_Receipt UC = new UC_I_Receipt();
+            AddUserControl(UC);
+        }
     }
 
 }
