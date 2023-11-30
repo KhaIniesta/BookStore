@@ -28,25 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbl_BookName = new System.Windows.Forms.Label();
+            this.lb_name = new System.Windows.Forms.Label();
             this.lbl_Cost = new System.Windows.Forms.Label();
-            this.lbl_Money = new System.Windows.Forms.Label();
+            this.lbl_price = new System.Windows.Forms.Label();
             this.guna2Shapes1 = new Guna.UI2.WinForms.Guna2Shapes();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lb_quantity = new System.Windows.Forms.Label();
             this.Pb_Image = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Pb_Image)).BeginInit();
             this.SuspendLayout();
             // 
-            // lbl_BookName
+            // lb_name
             // 
-            this.lbl_BookName.AutoSize = true;
-            this.lbl_BookName.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BookName.Location = new System.Drawing.Point(15, 180);
-            this.lbl_BookName.Name = "lbl_BookName";
-            this.lbl_BookName.Size = new System.Drawing.Size(179, 20);
-            this.lbl_BookName.TabIndex = 1;
-            this.lbl_BookName.Text = "Lorem ipsum dolor";
-            this.lbl_BookName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lb_name.AutoEllipsis = true;
+            this.lb_name.AutoSize = true;
+            this.lb_name.Font = new System.Drawing.Font("Inter", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_name.Location = new System.Drawing.Point(28, 170);
+            this.lb_name.MaximumSize = new System.Drawing.Size(142, 0);
+            this.lb_name.Name = "lb_name";
+            this.lb_name.Size = new System.Drawing.Size(142, 19);
+            this.lb_name.TabIndex = 1;
+            this.lb_name.Text = "Lorem ipsum dolor";
             // 
             // lbl_Cost
             // 
@@ -59,16 +60,16 @@
             this.lbl_Cost.Text = "Price :";
             this.lbl_Cost.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbl_Money
+            // lbl_price
             // 
-            this.lbl_Money.AutoSize = true;
-            this.lbl_Money.Font = new System.Drawing.Font("Inter Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Money.Location = new System.Drawing.Point(74, 230);
-            this.lbl_Money.Name = "lbl_Money";
-            this.lbl_Money.Size = new System.Drawing.Size(96, 16);
-            this.lbl_Money.TabIndex = 1;
-            this.lbl_Money.Text = "100.000.000";
-            this.lbl_Money.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_price.AutoSize = true;
+            this.lbl_price.Font = new System.Drawing.Font("Inter Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_price.Location = new System.Drawing.Point(74, 230);
+            this.lbl_price.Name = "lbl_price";
+            this.lbl_price.Size = new System.Drawing.Size(96, 16);
+            this.lbl_price.TabIndex = 1;
+            this.lbl_price.Text = "100.000.000";
+            this.lbl_price.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2Shapes1
             // 
@@ -88,16 +89,16 @@
             this.guna2Shapes1.UseTransparentBackground = true;
             this.guna2Shapes1.Zoom = 80;
             // 
-            // label1
+            // lb_quantity
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Inter", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(150, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 16);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "100";
+            this.lb_quantity.AutoSize = true;
+            this.lb_quantity.BackColor = System.Drawing.Color.White;
+            this.lb_quantity.Font = new System.Drawing.Font("Inter", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_quantity.Location = new System.Drawing.Point(150, 14);
+            this.lb_quantity.Name = "lb_quantity";
+            this.lb_quantity.Size = new System.Drawing.Size(29, 16);
+            this.lb_quantity.TabIndex = 3;
+            this.lb_quantity.Text = "100";
             // 
             // Pb_Image
             // 
@@ -117,16 +118,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lb_quantity);
             this.Controls.Add(this.guna2Shapes1);
-            this.Controls.Add(this.lbl_Money);
+            this.Controls.Add(this.lbl_price);
             this.Controls.Add(this.lbl_Cost);
-            this.Controls.Add(this.lbl_BookName);
+            this.Controls.Add(this.lb_name);
             this.Controls.Add(this.Pb_Image);
             this.Margin = new System.Windows.Forms.Padding(15);
             this.Name = "UC_BookItem";
             this.Padding = new System.Windows.Forms.Padding(5);
             this.Size = new System.Drawing.Size(197, 260);
+            this.Click += new System.EventHandler(this.UC_BookItem_Click);
             ((System.ComponentModel.ISupportInitialize)(this.Pb_Image)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -134,11 +136,11 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lb_quantity;
         private Guna.UI2.WinForms.Guna2Shapes guna2Shapes1;
-        private System.Windows.Forms.Label lbl_Money;
+        private System.Windows.Forms.Label lbl_price;
         private System.Windows.Forms.Label lbl_Cost;
-        private System.Windows.Forms.Label lbl_BookName;
+        private System.Windows.Forms.Label lb_name;
         private Guna.UI2.WinForms.Guna2PictureBox Pb_Image;
     }
 }

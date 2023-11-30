@@ -18,6 +18,7 @@ namespace BookStore.Forms
         public Form_Login()
         {
             InitializeComponent();
+            txt_username.Select();
         }
 
         private void btn_exit_Click(object sender, EventArgs e)

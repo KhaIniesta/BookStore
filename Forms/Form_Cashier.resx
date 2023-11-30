@@ -118,6 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Btn_Logout.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DgAACw4BQL7hQQAAAORJREFUSEvVlsERgjAURCnBUijBUizBDrQDLcFOLMESLMESwtv4PagB8hMm4pvZ
+        Q2A3OwQCdD8lhNCjba4s5ofwDnk5WdwHwcszH0tz9EB3i/sgGMtsOIuKWpZdJRv68JZV8TdlxHzboLSM
+        yF45ONiheTCXlm3QTVnIK8RYs4y+QkxfZQz1Wkpt6JS0nNroYroQQ6osHitk/KHh5BJX9uJoU6TBsNQ9
+        my4SmIrKiPiKBMbSMi2hyCsSmGuWsc0bpIhVl2Ft9z3DWv+lhs/NOqaqfxBN4OVscT+E3/4LZ9RbbG10
+        3QB9usd5eRiuegAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="Txt_Searchbox.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL

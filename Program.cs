@@ -14,11 +14,11 @@ namespace BookStore
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
             Application.Run(new Form_Login());
             //Application.Run(new Form_Admin());
             //Application.Run(new Form_Cashier());
             Application.Run(new Form_SM());
-
         }
     }
 }
