@@ -135,7 +135,7 @@ namespace BookStore.UserControls
                 {
                     Cap = 1;
                 }
-                else if (CB_Position.Text == "Thu ngân")
+                else if (CB_Position.Text == "Nhân viên thu ngân")
                 {
                     Cap = 2;
                 }
@@ -176,7 +176,7 @@ namespace BookStore.UserControls
                 {
                     Cap = 1;
                 }
-                else if (CB_Position.Text == "Thu ngân")
+                else if (CB_Position.Text == "Nhân viên thu ngân")
                 {
                     Cap = 2;
                 }
