@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Net.Configuration;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BookStore.UserControls
@@ -59,7 +53,7 @@ namespace BookStore.UserControls
         {
             if (sender is UC_BookItem clickedUC_BookItem)
             {
-                foreach(DataRow dr in dt.Rows)
+                foreach (DataRow dr in dt.Rows)
                 {
                     if (dr["MaSach"].ToString() == clickedUC_BookItem.GetBookID())
                     {

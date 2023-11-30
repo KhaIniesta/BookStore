@@ -193,6 +193,7 @@ namespace BookStore.UserControls
                             flp_bookItems.Controls.Add(uC_BookOrderItem);
                             UpdateTotalReceiptPrice(ReceiptID);
                         }
+                        UpdateTotalBill(ReceiptID);
                     }
                 }
             }
@@ -219,6 +220,7 @@ namespace BookStore.UserControls
                 if (count > 0)
                 {
                     UpdateTotalReceiptPrice(ReceiptID);
+                    UpdateTotalBill(ReceiptID);
                 }
             }
         }
@@ -234,8 +236,40 @@ namespace BookStore.UserControls
                 if (count > 0)
                 {
                     UpdateTotalReceiptPrice(ReceiptID);
+                    UpdateTotalBill(ReceiptID);
                 }
             }
+        }
+
+        public void UpdateTotalBill(String ReceiptID)
+        {
+            double subtotalbill = double.Parse(lbl_Subtotal.Text);
+            if (subtotalbill >= 1000000)
+            {
+                lbl_Sale.Text = "10%";
+            }
+            else if (subtotalbill >= 2500000)
+            {
+                lbl_Sale.Text = "20%";
+            }
+            else if (subtotalbill >= 3500000)
+            {
+                lbl_Sale.Text = "30%";
+            }
+            else
+            {
+                lbl_Sale.Text = "0%";
+            }
+            double sale = double.Parse(lbl_Sale.Text.Replace("%", "")) / 100;
+            decimal TotalBill = (Decimal)(subtotalbill - subtotalbill * sale);
+
+            DBConnection.Open();
+            string sql = $"update HoaDon set TongHD = {TotalBill} " +
+                $"where MaHD = {ReceiptID}";
+            cmd.ExecuteNonQuery();
+            DBConnection.Close();
+
+            lbl_Total.Text = TotalBill.ToString();
         }
     }
 }
