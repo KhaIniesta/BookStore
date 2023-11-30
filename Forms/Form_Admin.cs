@@ -73,6 +73,7 @@ namespace BookStore
         {
             Btn_HRTab.Checked = true;
             UC_HR UC = new UC_HR();
+            UC.ReturnLoginForm += Btn_Logout_Click;
             AddUserControl(UC);
         }
 
