@@ -33,6 +33,7 @@ namespace BookStore.UserControls
                 ", Anh as 'Picture'" +
                 " FROM dbo.Func_LayBangSach()";
             DG_Books.DataSource = DBC.GetTable(sql);
+            Btn_ChoosePic.Enabled = false;
         }
         private void EnableTextbox()
         {
@@ -43,6 +44,7 @@ namespace BookStore.UserControls
             Txt_Quantity.Enabled = true;
             Txt_Genre.Enabled = true;
             Txt_Price.Enabled = true;
+            Btn_ChoosePic.Enabled = true;
         }
         private void DisableTextbox()
         {
@@ -53,6 +55,7 @@ namespace BookStore.UserControls
             Txt_Quantity.Enabled = false;
             Txt_Genre.Enabled = false;
             Txt_Price.Enabled = false;
+            Btn_ChoosePic.Enabled = false;
         }
         private void ResetTextbox()
         {
@@ -126,8 +129,8 @@ namespace BookStore.UserControls
             Txt_Quantity.Text = DG_Books.SelectedRows[0].Cells[4].Value.ToString();
             Txt_Genre.Text = DG_Books.SelectedRows[0].Cells[6].Value.ToString();
             Txt_Price.Text = DG_Books.SelectedRows[0].Cells[5].Value.ToString();
+            PictureBox.Image = null;
 
-            //PictureBox.Image = Utils.ChuyenVeHinhAnh((byte[])DG_Books.SelectedRows[0].Cells[5].Value);
             if (DG_Books.CurrentRow.Cells[5].Value != DBNull.Value)
             {
                 try
@@ -270,6 +273,18 @@ namespace BookStore.UserControls
 
             ResetDataGridView();
             DBC.Close();
+        }
+
+        private void Btn_ChoosePic_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "jpg|*.jpg|png|*.png|gif|*.gif|All Files(*.*)|*.*";
+
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+
+                PictureBox.ImageLocation = openFileDialog1.FileName;
+                openFileDialog1.Dispose();
+            }
         }
     }
 }

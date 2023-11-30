@@ -262,9 +262,11 @@
             this.Controls.Add(guna2ContainerControl1);
             this.Controls.Add(this.btn_exit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "Form_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_Login";
+            this.Load += new System.EventHandler(this.Form_Login_Load);
             guna2ContainerControl1.ResumeLayout(false);
             guna2ContainerControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

@@ -1,4 +1,5 @@
-﻿using BookStore.UserControls;
+﻿using BookStore.Forms;
+using BookStore.UserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -73,6 +74,18 @@ namespace BookStore
             Btn_HRTab.Checked = true;
             UC_HR UC = new UC_HR();
             AddUserControl(UC);
+        }
+
+        private void Btn_Logout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form form = new Form_Login();
+            form.Show();
+        }
+
+        private void Btn_Quit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

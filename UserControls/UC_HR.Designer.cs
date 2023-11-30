@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_HR));
             this.Panel_Dg = new Guna.UI2.WinForms.Guna2Panel();
-            this.Panel_Picture = new Guna.UI2.WinForms.Guna2Panel();
             this.DG_AccountDetail = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Panel_Picture = new Guna.UI2.WinForms.Guna2Panel();
             this.Picturebox_ProfilePic = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.CB_Position = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -45,9 +45,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.Btn_UpdateBook = new Guna.UI2.WinForms.Guna2Button();
+            this.Btn_ResetTxt = new Guna.UI2.WinForms.Guna2Button();
+            this.Btn_DeleteBook = new Guna.UI2.WinForms.Guna2Button();
+            this.Btn_Save = new Guna.UI2.WinForms.Guna2Button();
+            this.Btn_ChoosePic = new Guna.UI2.WinForms.Guna2Button();
+            this.Btn_Newbook = new Guna.UI2.WinForms.Guna2Button();
             this.Panel_Dg.SuspendLayout();
-            this.Panel_Picture.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_AccountDetail)).BeginInit();
+            this.Panel_Picture.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picturebox_ProfilePic)).BeginInit();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -58,44 +64,33 @@
             this.Panel_Dg.BorderRadius = 12;
             this.Panel_Dg.Controls.Add(this.DG_AccountDetail);
             this.Panel_Dg.FillColor = System.Drawing.Color.White;
-            this.Panel_Dg.Location = new System.Drawing.Point(28, 318);
+            this.Panel_Dg.Location = new System.Drawing.Point(28, 351);
             this.Panel_Dg.Name = "Panel_Dg";
-            this.Panel_Dg.Size = new System.Drawing.Size(1166, 236);
+            this.Panel_Dg.Size = new System.Drawing.Size(1166, 203);
             this.Panel_Dg.TabIndex = 8;
-            // 
-            // Panel_Picture
-            // 
-            this.Panel_Picture.BackColor = System.Drawing.Color.Transparent;
-            this.Panel_Picture.BorderRadius = 12;
-            this.Panel_Picture.Controls.Add(this.Picturebox_ProfilePic);
-            this.Panel_Picture.FillColor = System.Drawing.Color.White;
-            this.Panel_Picture.Location = new System.Drawing.Point(789, 25);
-            this.Panel_Picture.Name = "Panel_Picture";
-            this.Panel_Picture.Size = new System.Drawing.Size(405, 267);
-            this.Panel_Picture.TabIndex = 10;
             // 
             // DG_AccountDetail
             // 
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
-            this.DG_AccountDetail.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DG_AccountDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.DG_AccountDetail.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DG_AccountDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.DG_AccountDetail.ColumnHeadersHeight = 20;
             this.DG_AccountDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DG_AccountDetail.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DG_AccountDetail.DefaultCellStyle = dataGridViewCellStyle15;
             this.DG_AccountDetail.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DG_AccountDetail.Location = new System.Drawing.Point(128, 3);
             this.DG_AccountDetail.Name = "DG_AccountDetail";
@@ -126,11 +121,23 @@
             this.DG_AccountDetail.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DG_AccountDetail.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // Panel_Picture
+            // 
+            this.Panel_Picture.BackColor = System.Drawing.Color.Transparent;
+            this.Panel_Picture.BorderRadius = 12;
+            this.Panel_Picture.Controls.Add(this.Btn_ChoosePic);
+            this.Panel_Picture.Controls.Add(this.Picturebox_ProfilePic);
+            this.Panel_Picture.FillColor = System.Drawing.Color.Gainsboro;
+            this.Panel_Picture.Location = new System.Drawing.Point(789, 25);
+            this.Panel_Picture.Name = "Panel_Picture";
+            this.Panel_Picture.Size = new System.Drawing.Size(405, 267);
+            this.Panel_Picture.TabIndex = 10;
+            // 
             // Picturebox_ProfilePic
             // 
             this.Picturebox_ProfilePic.Image = ((System.Drawing.Image)(resources.GetObject("Picturebox_ProfilePic.Image")));
             this.Picturebox_ProfilePic.ImageRotate = 0F;
-            this.Picturebox_ProfilePic.Location = new System.Drawing.Point(56, 19);
+            this.Picturebox_ProfilePic.Location = new System.Drawing.Point(60, 9);
             this.Picturebox_ProfilePic.Name = "Picturebox_ProfilePic";
             this.Picturebox_ProfilePic.Size = new System.Drawing.Size(297, 221);
             this.Picturebox_ProfilePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -250,7 +257,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(64, 200);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 24);
+            this.label4.Size = new System.Drawing.Size(102, 24);
             this.label4.TabIndex = 3;
             this.label4.Text = "Position:";
             // 
@@ -262,7 +269,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Location = new System.Drawing.Point(64, 146);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 24);
+            this.label3.Size = new System.Drawing.Size(77, 24);
             this.label3.TabIndex = 4;
             this.label3.Text = "Name:";
             // 
@@ -274,7 +281,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(64, 93);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 24);
+            this.label2.Size = new System.Drawing.Size(121, 24);
             this.label2.TabIndex = 5;
             this.label2.Text = "Password:";
             // 
@@ -286,22 +293,145 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(64, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 24);
+            this.label1.Size = new System.Drawing.Size(124, 24);
             this.label1.TabIndex = 6;
             this.label1.Text = "Username:";
+            // 
+            // Btn_UpdateBook
+            // 
+            this.Btn_UpdateBook.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_UpdateBook.BorderColor = System.Drawing.Color.Empty;
+            this.Btn_UpdateBook.BorderRadius = 10;
+            this.Btn_UpdateBook.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_UpdateBook.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_UpdateBook.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_UpdateBook.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_UpdateBook.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_UpdateBook.Enabled = false;
+            this.Btn_UpdateBook.FocusedColor = System.Drawing.Color.Transparent;
+            this.Btn_UpdateBook.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Btn_UpdateBook.ForeColor = System.Drawing.Color.Black;
+            this.Btn_UpdateBook.Image = ((System.Drawing.Image)(resources.GetObject("Btn_UpdateBook.Image")));
+            this.Btn_UpdateBook.ImageSize = new System.Drawing.Size(30, 30);
+            this.Btn_UpdateBook.Location = new System.Drawing.Point(309, 298);
+            this.Btn_UpdateBook.Name = "Btn_UpdateBook";
+            this.Btn_UpdateBook.PressedColor = System.Drawing.Color.White;
+            this.Btn_UpdateBook.Size = new System.Drawing.Size(45, 45);
+            this.Btn_UpdateBook.TabIndex = 17;
+            // 
+            // Btn_ResetTxt
+            // 
+            this.Btn_ResetTxt.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_ResetTxt.BorderRadius = 10;
+            this.Btn_ResetTxt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_ResetTxt.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_ResetTxt.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_ResetTxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_ResetTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_ResetTxt.Enabled = false;
+            this.Btn_ResetTxt.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Btn_ResetTxt.ForeColor = System.Drawing.Color.White;
+            this.Btn_ResetTxt.Image = ((System.Drawing.Image)(resources.GetObject("Btn_ResetTxt.Image")));
+            this.Btn_ResetTxt.ImageSize = new System.Drawing.Size(18, 18);
+            this.Btn_ResetTxt.Location = new System.Drawing.Point(516, 298);
+            this.Btn_ResetTxt.Name = "Btn_ResetTxt";
+            this.Btn_ResetTxt.Size = new System.Drawing.Size(45, 45);
+            this.Btn_ResetTxt.TabIndex = 16;
+            // 
+            // Btn_DeleteBook
+            // 
+            this.Btn_DeleteBook.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_DeleteBook.BorderRadius = 10;
+            this.Btn_DeleteBook.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_DeleteBook.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_DeleteBook.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_DeleteBook.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_DeleteBook.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_DeleteBook.Enabled = false;
+            this.Btn_DeleteBook.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Btn_DeleteBook.ForeColor = System.Drawing.Color.White;
+            this.Btn_DeleteBook.Image = ((System.Drawing.Image)(resources.GetObject("Btn_DeleteBook.Image")));
+            this.Btn_DeleteBook.ImageSize = new System.Drawing.Size(30, 30);
+            this.Btn_DeleteBook.Location = new System.Drawing.Point(420, 298);
+            this.Btn_DeleteBook.Name = "Btn_DeleteBook";
+            this.Btn_DeleteBook.Size = new System.Drawing.Size(45, 45);
+            this.Btn_DeleteBook.TabIndex = 15;
+            // 
+            // Btn_Save
+            // 
+            this.Btn_Save.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_Save.BorderColor = System.Drawing.Color.Transparent;
+            this.Btn_Save.BorderRadius = 15;
+            this.Btn_Save.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Save.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_Save.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_Save.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_Save.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_Save.FocusedColor = System.Drawing.Color.Transparent;
+            this.Btn_Save.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Save.ForeColor = System.Drawing.Color.White;
+            this.Btn_Save.Location = new System.Drawing.Point(597, 305);
+            this.Btn_Save.Name = "Btn_Save";
+            this.Btn_Save.PressedColor = System.Drawing.Color.Transparent;
+            this.Btn_Save.Size = new System.Drawing.Size(169, 35);
+            this.Btn_Save.TabIndex = 46;
+            this.Btn_Save.Text = "Save";
+            // 
+            // Btn_ChoosePic
+            // 
+            this.Btn_ChoosePic.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_ChoosePic.BorderRadius = 12;
+            this.Btn_ChoosePic.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_ChoosePic.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_ChoosePic.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_ChoosePic.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_ChoosePic.FillColor = System.Drawing.Color.White;
+            this.Btn_ChoosePic.FocusedColor = System.Drawing.Color.Transparent;
+            this.Btn_ChoosePic.Font = new System.Drawing.Font("Inter Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_ChoosePic.ForeColor = System.Drawing.Color.Black;
+            this.Btn_ChoosePic.Location = new System.Drawing.Point(124, 236);
+            this.Btn_ChoosePic.Name = "Btn_ChoosePic";
+            this.Btn_ChoosePic.Size = new System.Drawing.Size(180, 28);
+            this.Btn_ChoosePic.TabIndex = 18;
+            this.Btn_ChoosePic.Text = "Choose Picture";
+            // 
+            // Btn_Newbook
+            // 
+            this.Btn_Newbook.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_Newbook.BorderColor = System.Drawing.Color.Transparent;
+            this.Btn_Newbook.BorderRadius = 15;
+            this.Btn_Newbook.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Newbook.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_Newbook.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_Newbook.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_Newbook.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_Newbook.FocusedColor = System.Drawing.Color.Transparent;
+            this.Btn_Newbook.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Newbook.ForeColor = System.Drawing.Color.White;
+            this.Btn_Newbook.Location = new System.Drawing.Point(96, 300);
+            this.Btn_Newbook.Name = "Btn_Newbook";
+            this.Btn_Newbook.PressedColor = System.Drawing.Color.Transparent;
+            this.Btn_Newbook.Size = new System.Drawing.Size(137, 35);
+            this.Btn_Newbook.TabIndex = 47;
+            this.Btn_Newbook.Text = "New Book ";
             // 
             // UC_HR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.Btn_Newbook);
+            this.Controls.Add(this.Btn_Save);
+            this.Controls.Add(this.Btn_UpdateBook);
+            this.Controls.Add(this.Btn_ResetTxt);
+            this.Controls.Add(this.Btn_DeleteBook);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.Panel_Dg);
             this.Controls.Add(this.Panel_Picture);
             this.Name = "UC_HR";
             this.Size = new System.Drawing.Size(1222, 578);
             this.Panel_Dg.ResumeLayout(false);
-            this.Panel_Picture.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DG_AccountDetail)).EndInit();
+            this.Panel_Picture.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Picturebox_ProfilePic)).EndInit();
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
@@ -324,5 +454,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2Button Btn_UpdateBook;
+        private Guna.UI2.WinForms.Guna2Button Btn_ResetTxt;
+        private Guna.UI2.WinForms.Guna2Button Btn_DeleteBook;
+        private Guna.UI2.WinForms.Guna2Button Btn_Save;
+        private Guna.UI2.WinForms.Guna2Button Btn_ChoosePic;
+        private Guna.UI2.WinForms.Guna2Button Btn_Newbook;
     }
 }
