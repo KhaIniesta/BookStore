@@ -121,7 +121,7 @@
   <data name="Picturebox_ProfilePic.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAPIAAADqCAYAAACY7RhSAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAABCFJREFUeF7t2tFRG1cYgFGVQAkuISW4BJdACXRgOog7IB3gJ4TyohmQ4HFFBZRA
+        DgAACw4BQL7hQQAABCFJREFUeF7t2tFRG1cYgFGVQAkuISW4BJdACXRgOog7IB3gJ4TyohmQ4HFFBZRA
         CYmWrD0xs7HjJMTSN+efOU93d3n65u5dsfgns7wf3gCvY8rsv53L9XByvRnOru92l9fb3ePeb8DrWm12
         T/vm1svtcLpc/4u4x4BX9w/vnx8484eA/9XFdwe9vB3eChgO0N1wNmX69VltH97PPgA4COOb8pTr/IgY
         jsPq7uHnKdsvZ3z/nrsBOFBzr9n7BV+k4Yistrun8aP0lPB+N94Op3MXAodt3+75lPF+N97shrmLgMP2
@@ -142,7 +142,7 @@
         AAAASUVORK5CYII=
 </value>
   </data>
-  <data name="Btn_UpdateBook.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_update_account.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAABjhJREFUeF7t
         neurZlMcx48SxxinOUwRSpQG08mUhppMTcorJiZkkiYll8llKOWFMn+AF17wal7KkSEhSblfpyg0uaRQ
@@ -174,7 +174,7 @@
         L4khgPB5/60QQgghhBBCCCGEEKJ/zMz8DT+9tEY95+1iAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="Btn_ResetTxt.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_canncel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAAUNJREFUSEvFlu1tg0AQBSmBElKiO04phDnNCtm8AwwnZaSVTvsxL84vJliWZV7r
@@ -185,7 +185,7 @@
         WnCrI9H9rn4UWuDQ9Un8rh4SWuDSWWx+Hmvxy6m5NQey90/TH3m3sKv1lOo2AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="Btn_DeleteBook.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_delete_account.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABGdBTUEAALGPC/xhBQAAAvJJREFUeF7t
         3e1R21AQhWGXkBIogRLoIHSQlJAOoAMogVLoADqADpIOnD0+G0/GK39hZtG132dGfyxbfq82A44ychYA
@@ -203,4 +203,7 @@
         fjnPaRhqUZPa+D8HAAAAAAAAAAAAgE+yWPwFj4MDVlH3QogAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

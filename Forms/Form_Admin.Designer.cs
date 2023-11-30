@@ -39,10 +39,10 @@
             this.Btn_HomeTab = new Guna.UI2.WinForms.Guna2Button();
             this.Panel_Header = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.Btn_Quit = new Guna.UI2.WinForms.Guna2Button();
             this.Lbl_Role = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.Panel_Container = new Guna.UI2.WinForms.Guna2Panel();
+            this.Btn_AuthorTab = new Guna.UI2.WinForms.Guna2Button();
             this.Panel_Side.SuspendLayout();
             this.Panel_Header.SuspendLayout();
             this.SuspendLayout();
@@ -51,6 +51,7 @@
             // 
             this.Panel_Side.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(123)))), ((int)(((byte)(213)))));
             this.Panel_Side.Controls.Add(this.Btn_Logout);
+            this.Panel_Side.Controls.Add(this.Btn_AuthorTab);
             this.Panel_Side.Controls.Add(this.Btn_HRTab);
             this.Panel_Side.Controls.Add(this.Btn_RevenueTab);
             this.Panel_Side.Controls.Add(this.Btn_ReceiptTab);
@@ -78,7 +79,7 @@
             this.Btn_Logout.ForeColor = System.Drawing.Color.White;
             this.Btn_Logout.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Logout.Image")));
             this.Btn_Logout.ImageSize = new System.Drawing.Size(28, 28);
-            this.Btn_Logout.Location = new System.Drawing.Point(12, 500);
+            this.Btn_Logout.Location = new System.Drawing.Point(12, 510);
             this.Btn_Logout.Name = "Btn_Logout";
             this.Btn_Logout.Size = new System.Drawing.Size(170, 56);
             this.Btn_Logout.TabIndex = 2;
@@ -102,7 +103,7 @@
             this.Btn_HRTab.Image = ((System.Drawing.Image)(resources.GetObject("Btn_HRTab.Image")));
             this.Btn_HRTab.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Btn_HRTab.ImageSize = new System.Drawing.Size(25, 25);
-            this.Btn_HRTab.Location = new System.Drawing.Point(12, 420);
+            this.Btn_HRTab.Location = new System.Drawing.Point(12, 438);
             this.Btn_HRTab.Name = "Btn_HRTab";
             this.Btn_HRTab.Size = new System.Drawing.Size(170, 56);
             this.Btn_HRTab.TabIndex = 2;
@@ -127,7 +128,7 @@
             this.Btn_RevenueTab.Image = ((System.Drawing.Image)(resources.GetObject("Btn_RevenueTab.Image")));
             this.Btn_RevenueTab.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Btn_RevenueTab.ImageSize = new System.Drawing.Size(25, 25);
-            this.Btn_RevenueTab.Location = new System.Drawing.Point(12, 340);
+            this.Btn_RevenueTab.Location = new System.Drawing.Point(12, 366);
             this.Btn_RevenueTab.Name = "Btn_RevenueTab";
             this.Btn_RevenueTab.Size = new System.Drawing.Size(170, 56);
             this.Btn_RevenueTab.TabIndex = 2;
@@ -152,7 +153,7 @@
             this.Btn_ReceiptTab.Image = ((System.Drawing.Image)(resources.GetObject("Btn_ReceiptTab.Image")));
             this.Btn_ReceiptTab.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Btn_ReceiptTab.ImageSize = new System.Drawing.Size(25, 25);
-            this.Btn_ReceiptTab.Location = new System.Drawing.Point(12, 260);
+            this.Btn_ReceiptTab.Location = new System.Drawing.Point(12, 294);
             this.Btn_ReceiptTab.Name = "Btn_ReceiptTab";
             this.Btn_ReceiptTab.Size = new System.Drawing.Size(170, 56);
             this.Btn_ReceiptTab.TabIndex = 2;
@@ -177,7 +178,7 @@
             this.Btn_PublisherTab.Image = ((System.Drawing.Image)(resources.GetObject("Btn_PublisherTab.Image")));
             this.Btn_PublisherTab.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Btn_PublisherTab.ImageSize = new System.Drawing.Size(25, 25);
-            this.Btn_PublisherTab.Location = new System.Drawing.Point(12, 180);
+            this.Btn_PublisherTab.Location = new System.Drawing.Point(12, 222);
             this.Btn_PublisherTab.Name = "Btn_PublisherTab";
             this.Btn_PublisherTab.Size = new System.Drawing.Size(170, 56);
             this.Btn_PublisherTab.TabIndex = 2;
@@ -202,7 +203,7 @@
             this.Btn_BookTab.Image = ((System.Drawing.Image)(resources.GetObject("Btn_BookTab.Image")));
             this.Btn_BookTab.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Btn_BookTab.ImageSize = new System.Drawing.Size(25, 25);
-            this.Btn_BookTab.Location = new System.Drawing.Point(12, 100);
+            this.Btn_BookTab.Location = new System.Drawing.Point(12, 78);
             this.Btn_BookTab.Name = "Btn_BookTab";
             this.Btn_BookTab.Size = new System.Drawing.Size(170, 56);
             this.Btn_BookTab.TabIndex = 2;
@@ -227,7 +228,7 @@
             this.Btn_HomeTab.Image = ((System.Drawing.Image)(resources.GetObject("Btn_HomeTab.Image")));
             this.Btn_HomeTab.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Btn_HomeTab.ImageSize = new System.Drawing.Size(25, 25);
-            this.Btn_HomeTab.Location = new System.Drawing.Point(12, 20);
+            this.Btn_HomeTab.Location = new System.Drawing.Point(12, 6);
             this.Btn_HomeTab.Name = "Btn_HomeTab";
             this.Btn_HomeTab.Size = new System.Drawing.Size(170, 56);
             this.Btn_HomeTab.TabIndex = 2;
@@ -238,7 +239,6 @@
             // Panel_Header
             // 
             this.Panel_Header.Controls.Add(this.guna2Panel2);
-            this.Panel_Header.Controls.Add(this.Btn_Quit);
             this.Panel_Header.Controls.Add(this.Lbl_Role);
             this.Panel_Header.Controls.Add(this.guna2Panel1);
             this.Panel_Header.Dock = System.Windows.Forms.DockStyle.Top;
@@ -256,33 +256,10 @@
             this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2Panel2.BackgroundImage")));
             this.guna2Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.guna2Panel2.Location = new System.Drawing.Point(1253, 35);
+            this.guna2Panel2.Location = new System.Drawing.Point(1369, 33);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(44, 34);
             this.guna2Panel2.TabIndex = 7;
-            // 
-            // Btn_Quit
-            // 
-            this.Btn_Quit.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_Quit.BorderColor = System.Drawing.Color.Transparent;
-            this.Btn_Quit.BorderRadius = 12;
-            this.Btn_Quit.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(57)))), ((int)(((byte)(184)))));
-            this.Btn_Quit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Quit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_Quit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_Quit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Btn_Quit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Btn_Quit.FillColor = System.Drawing.Color.Transparent;
-            this.Btn_Quit.Font = new System.Drawing.Font("Inter SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Quit.ForeColor = System.Drawing.Color.White;
-            this.Btn_Quit.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Quit.Image")));
-            this.Btn_Quit.ImageSize = new System.Drawing.Size(28, 28);
-            this.Btn_Quit.Location = new System.Drawing.Point(1354, 22);
-            this.Btn_Quit.Name = "Btn_Quit";
-            this.Btn_Quit.Size = new System.Drawing.Size(56, 48);
-            this.Btn_Quit.TabIndex = 6;
-            this.Btn_Quit.TextOffset = new System.Drawing.Point(16, 0);
-            this.Btn_Quit.Click += new System.EventHandler(this.Btn_Quit_Click);
             // 
             // Lbl_Role
             // 
@@ -290,7 +267,7 @@
             this.Lbl_Role.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_Role.Font = new System.Drawing.Font("Inter", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Role.ForeColor = System.Drawing.SystemColors.Control;
-            this.Lbl_Role.Location = new System.Drawing.Point(1144, 33);
+            this.Lbl_Role.Location = new System.Drawing.Point(1260, 31);
             this.Lbl_Role.Name = "Lbl_Role";
             this.Lbl_Role.Size = new System.Drawing.Size(109, 36);
             this.Lbl_Role.TabIndex = 5;
@@ -314,6 +291,31 @@
             this.Panel_Container.Name = "Panel_Container";
             this.Panel_Container.Size = new System.Drawing.Size(1222, 578);
             this.Panel_Container.TabIndex = 2;
+            // 
+            // Btn_AuthorTab
+            // 
+            this.Btn_AuthorTab.BorderColor = System.Drawing.Color.BlanchedAlmond;
+            this.Btn_AuthorTab.BorderRadius = 12;
+            this.Btn_AuthorTab.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.Btn_AuthorTab.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(57)))), ((int)(((byte)(184)))));
+            this.Btn_AuthorTab.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_AuthorTab.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_AuthorTab.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_AuthorTab.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_AuthorTab.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_AuthorTab.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(123)))), ((int)(((byte)(213)))));
+            this.Btn_AuthorTab.Font = new System.Drawing.Font("Inter SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_AuthorTab.ForeColor = System.Drawing.Color.White;
+            this.Btn_AuthorTab.Image = ((System.Drawing.Image)(resources.GetObject("Btn_AuthorTab.Image")));
+            this.Btn_AuthorTab.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_AuthorTab.ImageSize = new System.Drawing.Size(25, 25);
+            this.Btn_AuthorTab.Location = new System.Drawing.Point(12, 150);
+            this.Btn_AuthorTab.Name = "Btn_AuthorTab";
+            this.Btn_AuthorTab.Size = new System.Drawing.Size(170, 56);
+            this.Btn_AuthorTab.TabIndex = 3;
+            this.Btn_AuthorTab.Text = "Author";
+            this.Btn_AuthorTab.TextOffset = new System.Drawing.Point(16, 0);
+            this.Btn_AuthorTab.Click += new System.EventHandler(this.Btn_AuthorTab_Click);
             // 
             // Form_Admin
             // 
@@ -346,9 +348,9 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel Panel_Container;
         private Guna.UI2.WinForms.Guna2Button Btn_Logout;
-        private Guna.UI2.WinForms.Guna2Button Btn_Quit;
         private System.Windows.Forms.Label Lbl_Role;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2Button Btn_AuthorTab;
     }
 }
 

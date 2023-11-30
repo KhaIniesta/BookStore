@@ -1,4 +1,5 @@
-﻿using BookStore.UserControls;
+﻿using BookStore.Forms;
+using BookStore.UserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,25 +46,18 @@ namespace BookStore
             AddUserControl(UC);
         }
 
+        private void Btn_Logout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form form = new Form_Login();
+            form.Show();
+        }
+
         private void Btn_ReceiptTab_Click(object sender, EventArgs e)
         {
             Btn_ReceiptTab.Checked = true;
             UC_I_Receipt UC = new UC_I_Receipt();
-            UC.AddControlButtonClick += UC_I_Receipt_AddControlButtonClick;
             AddUserControl(UC);
-        }
-
-        private void Panel_Container_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        private void UC_I_Receipt_AddControlButtonClick(object sender, EventArgs e)
-        {
-            // Tạo và thêm UserControl mới vào Panel khi nút được click trong UC_I_Receipt
-            UC_Insert_I_ReceiptDetail UC1 = new UC_Insert_I_ReceiptDetail();
-            AddUserControl(UC1);
-            UC_ViewAll_I_ReceiptDetail UC2 = new UC_ViewAll_I_ReceiptDetail();
-            AddUserControl(UC2);
         }
     }
 

@@ -30,16 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_SM));
             this.Panel_Side = new Guna.UI2.WinForms.Guna2Panel();
-            this.Panel_Header = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.Panel_Container = new Guna.UI2.WinForms.Guna2Panel();
             this.Btn_Logout = new Guna.UI2.WinForms.Guna2Button();
             this.Btn_ReceiptTab = new Guna.UI2.WinForms.Guna2Button();
             this.Btn_AuthorTab = new Guna.UI2.WinForms.Guna2Button();
             this.Btn_BookTab = new Guna.UI2.WinForms.Guna2Button();
             this.Btn_HomeTab = new Guna.UI2.WinForms.Guna2Button();
-            this.Btn_Quit = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.Panel_Header = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.Panel_Container = new Guna.UI2.WinForms.Guna2Panel();
+            this.Lbl_Role = new System.Windows.Forms.Label();
             this.Panel_Side.SuspendLayout();
             this.Panel_Header.SuspendLayout();
             this.SuspendLayout();
@@ -57,30 +57,6 @@
             this.Panel_Side.Name = "Panel_Side";
             this.Panel_Side.Size = new System.Drawing.Size(200, 578);
             this.Panel_Side.TabIndex = 4;
-            // 
-            // Panel_Header
-            // 
-            this.Panel_Header.Controls.Add(this.guna2Button1);
-            this.Panel_Header.Controls.Add(this.Btn_Quit);
-            this.Panel_Header.Controls.Add(this.guna2Panel1);
-            this.Panel_Header.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Panel_Header.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(123)))), ((int)(((byte)(213)))));
-            this.Panel_Header.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(123)))), ((int)(((byte)(213)))));
-            this.Panel_Header.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(123)))), ((int)(((byte)(213)))));
-            this.Panel_Header.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
-            this.Panel_Header.Location = new System.Drawing.Point(0, 0);
-            this.Panel_Header.Name = "Panel_Header";
-            this.Panel_Header.Size = new System.Drawing.Size(1422, 95);
-            this.Panel_Header.TabIndex = 3;
-            // 
-            // Panel_Container
-            // 
-            this.Panel_Container.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Panel_Container.Location = new System.Drawing.Point(200, 95);
-            this.Panel_Container.Name = "Panel_Container";
-            this.Panel_Container.Size = new System.Drawing.Size(1222, 578);
-            this.Panel_Container.TabIndex = 5;
-            this.Panel_Container.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel_Container_Paint);
             // 
             // Btn_Logout
             // 
@@ -102,6 +78,7 @@
             this.Btn_Logout.Size = new System.Drawing.Size(170, 56);
             this.Btn_Logout.TabIndex = 3;
             this.Btn_Logout.TextOffset = new System.Drawing.Point(16, 0);
+            this.Btn_Logout.Click += new System.EventHandler(this.Btn_Logout_Click);
             // 
             // Btn_ReceiptTab
             // 
@@ -203,38 +180,20 @@
             this.Btn_HomeTab.TextOffset = new System.Drawing.Point(16, 0);
             this.Btn_HomeTab.Click += new System.EventHandler(this.Btn_HomeTab_Click);
             // 
-            // Btn_Quit
+            // Panel_Header
             // 
-            this.Btn_Quit.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_Quit.BorderColor = System.Drawing.Color.Transparent;
-            this.Btn_Quit.BorderRadius = 12;
-            this.Btn_Quit.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(57)))), ((int)(((byte)(184)))));
-            this.Btn_Quit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Quit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_Quit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_Quit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Btn_Quit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Btn_Quit.FillColor = System.Drawing.Color.Transparent;
-            this.Btn_Quit.Font = new System.Drawing.Font("Inter SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Quit.ForeColor = System.Drawing.Color.White;
-            this.Btn_Quit.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Quit.Image")));
-            this.Btn_Quit.ImageSize = new System.Drawing.Size(28, 28);
-            this.Btn_Quit.Location = new System.Drawing.Point(1352, 22);
-            this.Btn_Quit.Name = "Btn_Quit";
-            this.Btn_Quit.Size = new System.Drawing.Size(58, 57);
-            this.Btn_Quit.TabIndex = 4;
-            this.Btn_Quit.TextOffset = new System.Drawing.Point(16, 0);
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2Panel1.BackgroundImage")));
-            this.guna2Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.guna2Panel1.Location = new System.Drawing.Point(21, 3);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(161, 89);
-            this.guna2Panel1.TabIndex = 0;
+            this.Panel_Header.Controls.Add(this.Lbl_Role);
+            this.Panel_Header.Controls.Add(this.guna2Button1);
+            this.Panel_Header.Controls.Add(this.guna2Panel1);
+            this.Panel_Header.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Panel_Header.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(123)))), ((int)(((byte)(213)))));
+            this.Panel_Header.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(123)))), ((int)(((byte)(213)))));
+            this.Panel_Header.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(123)))), ((int)(((byte)(213)))));
+            this.Panel_Header.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
+            this.Panel_Header.Location = new System.Drawing.Point(0, 0);
+            this.Panel_Header.Name = "Panel_Header";
+            this.Panel_Header.Size = new System.Drawing.Size(1422, 95);
+            this.Panel_Header.TabIndex = 3;
             // 
             // guna2Button1
             // 
@@ -252,11 +211,42 @@
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
             this.guna2Button1.ImageSize = new System.Drawing.Size(38, 38);
-            this.guna2Button1.Location = new System.Drawing.Point(1253, 22);
+            this.guna2Button1.Location = new System.Drawing.Point(1327, 21);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(83, 57);
             this.guna2Button1.TabIndex = 5;
             this.guna2Button1.TextOffset = new System.Drawing.Point(16, 0);
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2Panel1.BackgroundImage")));
+            this.guna2Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.guna2Panel1.Location = new System.Drawing.Point(21, 3);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(161, 89);
+            this.guna2Panel1.TabIndex = 0;
+            // 
+            // Panel_Container
+            // 
+            this.Panel_Container.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Panel_Container.Location = new System.Drawing.Point(200, 95);
+            this.Panel_Container.Name = "Panel_Container";
+            this.Panel_Container.Size = new System.Drawing.Size(1222, 578);
+            this.Panel_Container.TabIndex = 5;
+            // 
+            // Lbl_Role
+            // 
+            this.Lbl_Role.AutoSize = true;
+            this.Lbl_Role.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_Role.Font = new System.Drawing.Font("Inter", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Role.ForeColor = System.Drawing.SystemColors.Control;
+            this.Lbl_Role.Location = new System.Drawing.Point(1228, 33);
+            this.Lbl_Role.Name = "Lbl_Role";
+            this.Lbl_Role.Size = new System.Drawing.Size(62, 36);
+            this.Lbl_Role.TabIndex = 6;
+            this.Lbl_Role.Text = "SM";
             // 
             // Form_SM
             // 
@@ -270,6 +260,7 @@
             this.Text = "SM Form";
             this.Panel_Side.ResumeLayout(false);
             this.Panel_Header.ResumeLayout(false);
+            this.Panel_Header.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -285,7 +276,7 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel Panel_Header;
         private Guna.UI2.WinForms.Guna2Panel Panel_Container;
         private Guna.UI2.WinForms.Guna2Button Btn_Logout;
-        private Guna.UI2.WinForms.Guna2Button Btn_Quit;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.Label Lbl_Role;
     }
 }

@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_HR));
             this.Panel_Dg = new Guna.UI2.WinForms.Guna2Panel();
             this.DG_AccountDetail = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Panel_Picture = new Guna.UI2.WinForms.Guna2Panel();
+            this.Btn_ChoosePic = new Guna.UI2.WinForms.Guna2Button();
             this.Picturebox_ProfilePic = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.CB_Position = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -45,12 +46,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Btn_UpdateBook = new Guna.UI2.WinForms.Guna2Button();
-            this.Btn_ResetTxt = new Guna.UI2.WinForms.Guna2Button();
-            this.Btn_DeleteBook = new Guna.UI2.WinForms.Guna2Button();
-            this.Btn_Save = new Guna.UI2.WinForms.Guna2Button();
-            this.Btn_ChoosePic = new Guna.UI2.WinForms.Guna2Button();
-            this.Btn_Newbook = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_update_account = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_canncel = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_delete_account = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_save = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_new_account = new Guna.UI2.WinForms.Guna2Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.Panel_Dg.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_AccountDetail)).BeginInit();
             this.Panel_Picture.SuspendLayout();
@@ -71,26 +72,26 @@
             // 
             // DG_AccountDetail
             // 
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            this.DG_AccountDetail.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DG_AccountDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.DG_AccountDetail.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DG_AccountDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DG_AccountDetail.ColumnHeadersHeight = 20;
             this.DG_AccountDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DG_AccountDetail.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DG_AccountDetail.DefaultCellStyle = dataGridViewCellStyle3;
             this.DG_AccountDetail.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DG_AccountDetail.Location = new System.Drawing.Point(128, 3);
             this.DG_AccountDetail.Name = "DG_AccountDetail";
@@ -120,6 +121,7 @@
             this.DG_AccountDetail.ThemeStyle.RowsStyle.Height = 24;
             this.DG_AccountDetail.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DG_AccountDetail.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.DG_AccountDetail.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_AccountDetail_CellClick);
             // 
             // Panel_Picture
             // 
@@ -132,6 +134,25 @@
             this.Panel_Picture.Name = "Panel_Picture";
             this.Panel_Picture.Size = new System.Drawing.Size(405, 267);
             this.Panel_Picture.TabIndex = 10;
+            // 
+            // Btn_ChoosePic
+            // 
+            this.Btn_ChoosePic.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_ChoosePic.BorderRadius = 12;
+            this.Btn_ChoosePic.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_ChoosePic.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_ChoosePic.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_ChoosePic.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_ChoosePic.FillColor = System.Drawing.Color.White;
+            this.Btn_ChoosePic.FocusedColor = System.Drawing.Color.Transparent;
+            this.Btn_ChoosePic.Font = new System.Drawing.Font("Inter Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_ChoosePic.ForeColor = System.Drawing.Color.Black;
+            this.Btn_ChoosePic.Location = new System.Drawing.Point(124, 236);
+            this.Btn_ChoosePic.Name = "Btn_ChoosePic";
+            this.Btn_ChoosePic.Size = new System.Drawing.Size(180, 28);
+            this.Btn_ChoosePic.TabIndex = 18;
+            this.Btn_ChoosePic.Text = "Choose Picture";
+            this.Btn_ChoosePic.Click += new System.EventHandler(this.Btn_ChoosePic_Click);
             // 
             // Picturebox_ProfilePic
             // 
@@ -175,6 +196,10 @@
             this.CB_Position.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.CB_Position.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.CB_Position.ItemHeight = 30;
+            this.CB_Position.Items.AddRange(new object[] {
+            "Admin",
+            "Nhân viên thu ngân",
+            "Quản lí kho"});
             this.CB_Position.Location = new System.Drawing.Point(231, 194);
             this.CB_Position.Name = "CB_Position";
             this.CB_Position.Size = new System.Drawing.Size(433, 36);
@@ -297,138 +322,127 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Username:";
             // 
-            // Btn_UpdateBook
+            // btn_update_account
             // 
-            this.Btn_UpdateBook.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_UpdateBook.BorderColor = System.Drawing.Color.Empty;
-            this.Btn_UpdateBook.BorderRadius = 10;
-            this.Btn_UpdateBook.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_UpdateBook.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_UpdateBook.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_UpdateBook.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Btn_UpdateBook.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Btn_UpdateBook.Enabled = false;
-            this.Btn_UpdateBook.FocusedColor = System.Drawing.Color.Transparent;
-            this.Btn_UpdateBook.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Btn_UpdateBook.ForeColor = System.Drawing.Color.Black;
-            this.Btn_UpdateBook.Image = ((System.Drawing.Image)(resources.GetObject("Btn_UpdateBook.Image")));
-            this.Btn_UpdateBook.ImageSize = new System.Drawing.Size(30, 30);
-            this.Btn_UpdateBook.Location = new System.Drawing.Point(309, 298);
-            this.Btn_UpdateBook.Name = "Btn_UpdateBook";
-            this.Btn_UpdateBook.PressedColor = System.Drawing.Color.White;
-            this.Btn_UpdateBook.Size = new System.Drawing.Size(45, 45);
-            this.Btn_UpdateBook.TabIndex = 17;
+            this.btn_update_account.BackColor = System.Drawing.Color.Transparent;
+            this.btn_update_account.BorderColor = System.Drawing.Color.Empty;
+            this.btn_update_account.BorderRadius = 10;
+            this.btn_update_account.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_update_account.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_update_account.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_update_account.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_update_account.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_update_account.FocusedColor = System.Drawing.Color.Transparent;
+            this.btn_update_account.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_update_account.ForeColor = System.Drawing.Color.Black;
+            this.btn_update_account.Image = ((System.Drawing.Image)(resources.GetObject("btn_update_account.Image")));
+            this.btn_update_account.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_update_account.Location = new System.Drawing.Point(309, 298);
+            this.btn_update_account.Name = "btn_update_account";
+            this.btn_update_account.PressedColor = System.Drawing.Color.White;
+            this.btn_update_account.Size = new System.Drawing.Size(45, 45);
+            this.btn_update_account.TabIndex = 17;
+            this.btn_update_account.Click += new System.EventHandler(this.btn_update_account_Click);
             // 
-            // Btn_ResetTxt
+            // btn_canncel
             // 
-            this.Btn_ResetTxt.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_ResetTxt.BorderRadius = 10;
-            this.Btn_ResetTxt.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_ResetTxt.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_ResetTxt.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_ResetTxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Btn_ResetTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Btn_ResetTxt.Enabled = false;
-            this.Btn_ResetTxt.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Btn_ResetTxt.ForeColor = System.Drawing.Color.White;
-            this.Btn_ResetTxt.Image = ((System.Drawing.Image)(resources.GetObject("Btn_ResetTxt.Image")));
-            this.Btn_ResetTxt.ImageSize = new System.Drawing.Size(18, 18);
-            this.Btn_ResetTxt.Location = new System.Drawing.Point(516, 298);
-            this.Btn_ResetTxt.Name = "Btn_ResetTxt";
-            this.Btn_ResetTxt.Size = new System.Drawing.Size(45, 45);
-            this.Btn_ResetTxt.TabIndex = 16;
+            this.btn_canncel.BackColor = System.Drawing.Color.Transparent;
+            this.btn_canncel.BorderRadius = 10;
+            this.btn_canncel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_canncel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_canncel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_canncel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_canncel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_canncel.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_canncel.ForeColor = System.Drawing.Color.White;
+            this.btn_canncel.Image = ((System.Drawing.Image)(resources.GetObject("btn_canncel.Image")));
+            this.btn_canncel.ImageSize = new System.Drawing.Size(18, 18);
+            this.btn_canncel.Location = new System.Drawing.Point(516, 298);
+            this.btn_canncel.Name = "btn_canncel";
+            this.btn_canncel.Size = new System.Drawing.Size(45, 45);
+            this.btn_canncel.TabIndex = 16;
+            this.btn_canncel.Click += new System.EventHandler(this.btn_canncel_Click);
             // 
-            // Btn_DeleteBook
+            // btn_delete_account
             // 
-            this.Btn_DeleteBook.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_DeleteBook.BorderRadius = 10;
-            this.Btn_DeleteBook.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_DeleteBook.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_DeleteBook.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_DeleteBook.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Btn_DeleteBook.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Btn_DeleteBook.Enabled = false;
-            this.Btn_DeleteBook.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Btn_DeleteBook.ForeColor = System.Drawing.Color.White;
-            this.Btn_DeleteBook.Image = ((System.Drawing.Image)(resources.GetObject("Btn_DeleteBook.Image")));
-            this.Btn_DeleteBook.ImageSize = new System.Drawing.Size(30, 30);
-            this.Btn_DeleteBook.Location = new System.Drawing.Point(420, 298);
-            this.Btn_DeleteBook.Name = "Btn_DeleteBook";
-            this.Btn_DeleteBook.Size = new System.Drawing.Size(45, 45);
-            this.Btn_DeleteBook.TabIndex = 15;
+            this.btn_delete_account.BackColor = System.Drawing.Color.Transparent;
+            this.btn_delete_account.BorderRadius = 10;
+            this.btn_delete_account.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_delete_account.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_delete_account.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_delete_account.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_delete_account.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_delete_account.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_delete_account.ForeColor = System.Drawing.Color.White;
+            this.btn_delete_account.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete_account.Image")));
+            this.btn_delete_account.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_delete_account.Location = new System.Drawing.Point(420, 298);
+            this.btn_delete_account.Name = "btn_delete_account";
+            this.btn_delete_account.Size = new System.Drawing.Size(45, 45);
+            this.btn_delete_account.TabIndex = 15;
+            this.btn_delete_account.Click += new System.EventHandler(this.btn_delete_account_Click);
             // 
-            // Btn_Save
+            // btn_save
             // 
-            this.Btn_Save.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_Save.BorderColor = System.Drawing.Color.Transparent;
-            this.Btn_Save.BorderRadius = 15;
-            this.Btn_Save.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Save.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_Save.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_Save.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Btn_Save.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Btn_Save.FocusedColor = System.Drawing.Color.Transparent;
-            this.Btn_Save.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Save.ForeColor = System.Drawing.Color.White;
-            this.Btn_Save.Location = new System.Drawing.Point(597, 305);
-            this.Btn_Save.Name = "Btn_Save";
-            this.Btn_Save.PressedColor = System.Drawing.Color.Transparent;
-            this.Btn_Save.Size = new System.Drawing.Size(169, 35);
-            this.Btn_Save.TabIndex = 46;
-            this.Btn_Save.Text = "Save";
+            this.btn_save.BackColor = System.Drawing.Color.Transparent;
+            this.btn_save.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_save.BorderRadius = 15;
+            this.btn_save.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_save.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_save.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_save.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_save.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_save.FocusedColor = System.Drawing.Color.Transparent;
+            this.btn_save.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_save.ForeColor = System.Drawing.Color.White;
+            this.btn_save.Location = new System.Drawing.Point(597, 305);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.PressedColor = System.Drawing.Color.Transparent;
+            this.btn_save.Size = new System.Drawing.Size(169, 35);
+            this.btn_save.TabIndex = 46;
+            this.btn_save.Text = "Save";
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
-            // Btn_ChoosePic
+            // btn_new_account
             // 
-            this.Btn_ChoosePic.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_ChoosePic.BorderRadius = 12;
-            this.Btn_ChoosePic.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_ChoosePic.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_ChoosePic.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Btn_ChoosePic.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Btn_ChoosePic.FillColor = System.Drawing.Color.White;
-            this.Btn_ChoosePic.FocusedColor = System.Drawing.Color.Transparent;
-            this.Btn_ChoosePic.Font = new System.Drawing.Font("Inter Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_ChoosePic.ForeColor = System.Drawing.Color.Black;
-            this.Btn_ChoosePic.Location = new System.Drawing.Point(124, 236);
-            this.Btn_ChoosePic.Name = "Btn_ChoosePic";
-            this.Btn_ChoosePic.Size = new System.Drawing.Size(180, 28);
-            this.Btn_ChoosePic.TabIndex = 18;
-            this.Btn_ChoosePic.Text = "Choose Picture";
+            this.btn_new_account.BackColor = System.Drawing.Color.Transparent;
+            this.btn_new_account.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_new_account.BorderRadius = 15;
+            this.btn_new_account.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_new_account.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_new_account.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_new_account.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_new_account.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_new_account.FocusedColor = System.Drawing.Color.Transparent;
+            this.btn_new_account.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_new_account.ForeColor = System.Drawing.Color.White;
+            this.btn_new_account.Location = new System.Drawing.Point(96, 300);
+            this.btn_new_account.Name = "btn_new_account";
+            this.btn_new_account.PressedColor = System.Drawing.Color.Transparent;
+            this.btn_new_account.Size = new System.Drawing.Size(150, 35);
+            this.btn_new_account.TabIndex = 47;
+            this.btn_new_account.Text = "New Account";
+            this.btn_new_account.Click += new System.EventHandler(this.btn_new_account_Click);
             // 
-            // Btn_Newbook
+            // openFileDialog1
             // 
-            this.Btn_Newbook.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_Newbook.BorderColor = System.Drawing.Color.Transparent;
-            this.Btn_Newbook.BorderRadius = 15;
-            this.Btn_Newbook.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Newbook.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_Newbook.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_Newbook.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Btn_Newbook.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Btn_Newbook.FocusedColor = System.Drawing.Color.Transparent;
-            this.Btn_Newbook.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Newbook.ForeColor = System.Drawing.Color.White;
-            this.Btn_Newbook.Location = new System.Drawing.Point(96, 300);
-            this.Btn_Newbook.Name = "Btn_Newbook";
-            this.Btn_Newbook.PressedColor = System.Drawing.Color.Transparent;
-            this.Btn_Newbook.Size = new System.Drawing.Size(137, 35);
-            this.Btn_Newbook.TabIndex = 47;
-            this.Btn_Newbook.Text = "New Book ";
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // UC_HR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.Btn_Newbook);
-            this.Controls.Add(this.Btn_Save);
-            this.Controls.Add(this.Btn_UpdateBook);
-            this.Controls.Add(this.Btn_ResetTxt);
-            this.Controls.Add(this.Btn_DeleteBook);
+            this.Controls.Add(this.btn_new_account);
+            this.Controls.Add(this.btn_save);
+            this.Controls.Add(this.btn_update_account);
+            this.Controls.Add(this.btn_canncel);
+            this.Controls.Add(this.btn_delete_account);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.Panel_Dg);
             this.Controls.Add(this.Panel_Picture);
             this.Name = "UC_HR";
             this.Size = new System.Drawing.Size(1222, 578);
+            this.Load += new System.EventHandler(this.UC_HR_Load);
             this.Panel_Dg.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DG_AccountDetail)).EndInit();
             this.Panel_Picture.ResumeLayout(false);
@@ -454,11 +468,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Button Btn_UpdateBook;
-        private Guna.UI2.WinForms.Guna2Button Btn_ResetTxt;
-        private Guna.UI2.WinForms.Guna2Button Btn_DeleteBook;
-        private Guna.UI2.WinForms.Guna2Button Btn_Save;
+        private Guna.UI2.WinForms.Guna2Button btn_update_account;
+        private Guna.UI2.WinForms.Guna2Button btn_canncel;
+        private Guna.UI2.WinForms.Guna2Button btn_delete_account;
+        private Guna.UI2.WinForms.Guna2Button btn_save;
         private Guna.UI2.WinForms.Guna2Button Btn_ChoosePic;
-        private Guna.UI2.WinForms.Guna2Button Btn_Newbook;
+        private Guna.UI2.WinForms.Guna2Button btn_new_account;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

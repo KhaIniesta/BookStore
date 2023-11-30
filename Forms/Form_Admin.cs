@@ -73,6 +73,7 @@ namespace BookStore
         {
             Btn_HRTab.Checked = true;
             UC_HR UC = new UC_HR();
+            UC.ReturnLoginForm += Btn_Logout_Click;
             AddUserControl(UC);
         }
 
@@ -86,6 +87,13 @@ namespace BookStore
         private void Btn_Quit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Btn_AuthorTab_Click(object sender, EventArgs e)
+        {
+            Btn_HRTab.Checked = true;
+            UC_Author UC = new UC_Author();
+            AddUserControl(UC);
         }
     }
 }
