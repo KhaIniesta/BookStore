@@ -38,13 +38,11 @@
             this.Btn_BookTab = new Guna.UI2.WinForms.Guna2Button();
             this.Btn_HomeTab = new Guna.UI2.WinForms.Guna2Button();
             this.Panel_Header = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.Btn_Quit = new Guna.UI2.WinForms.Guna2Button();
             this.Lbl_Role = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.Panel_Container = new Guna.UI2.WinForms.Guna2Panel();
-
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-
             this.Panel_Side.SuspendLayout();
             this.Panel_Header.SuspendLayout();
             this.SuspendLayout();
@@ -252,6 +250,16 @@
             this.Panel_Header.Size = new System.Drawing.Size(1422, 95);
             this.Panel_Header.TabIndex = 0;
             // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2Panel2.BackgroundImage")));
+            this.guna2Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.guna2Panel2.Location = new System.Drawing.Point(1253, 35);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(44, 34);
+            this.guna2Panel2.TabIndex = 7;
+            // 
             // Btn_Quit
             // 
             this.Btn_Quit.BackColor = System.Drawing.Color.Transparent;
@@ -285,35 +293,6 @@
             this.Lbl_Role.Size = new System.Drawing.Size(109, 36);
             this.Lbl_Role.TabIndex = 5;
             this.Lbl_Role.Text = "Admin";
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2Panel1.BackgroundImage")));
-            this.guna2Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.guna2Panel1.Location = new System.Drawing.Point(21, 3);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(161, 89);
-            this.guna2Panel1.TabIndex = 0;
-            // 
-            // Panel_Container
-            // 
-            this.Panel_Container.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Panel_Container.Location = new System.Drawing.Point(200, 95);
-            this.Panel_Container.Name = "Panel_Container";
-            this.Panel_Container.Size = new System.Drawing.Size(1222, 578);
-            this.Panel_Container.TabIndex = 2;
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2Panel2.BackgroundImage")));
-            this.guna2Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.guna2Panel2.Location = new System.Drawing.Point(1253, 35);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(44, 34);
-            this.guna2Panel2.TabIndex = 7;
             // 
             // guna2Panel1
             // 
