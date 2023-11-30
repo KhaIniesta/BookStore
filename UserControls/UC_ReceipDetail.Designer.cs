@@ -33,7 +33,7 @@
             this.flp_bookItems = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lbl_ReceiptID = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_datetime = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label11 = new System.Windows.Forms.Label();
@@ -79,7 +79,7 @@
             this.guna2GradientPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.guna2GradientPanel1.BorderRadius = 20;
             this.guna2GradientPanel1.Controls.Add(this.lbl_ReceiptID);
-            this.guna2GradientPanel1.Controls.Add(this.label2);
+            this.guna2GradientPanel1.Controls.Add(this.lbl_datetime);
             this.guna2GradientPanel1.Controls.Add(this.label1);
             this.guna2GradientPanel1.CustomizableEdges.BottomLeft = false;
             this.guna2GradientPanel1.CustomizableEdges.BottomRight = false;
@@ -101,15 +101,15 @@
             this.lbl_ReceiptID.Text = "HD01";
             this.lbl_ReceiptID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label2
+            // lbl_datetime
             // 
-            this.label2.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(32, 50);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(194, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "29/11/2023 11:48:40";
+            this.lbl_datetime.Font = new System.Drawing.Font("Inter Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_datetime.ForeColor = System.Drawing.Color.White;
+            this.lbl_datetime.Location = new System.Drawing.Point(32, 50);
+            this.lbl_datetime.Name = "lbl_datetime";
+            this.lbl_datetime.Size = new System.Drawing.Size(369, 20);
+            this.lbl_datetime.TabIndex = 1;
+            this.lbl_datetime.Text = "29/11/2023 11:48:40";
             // 
             // label1
             // 
@@ -171,15 +171,15 @@
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label9.Location = new System.Drawing.Point(596, 66);
+            this.label9.Location = new System.Drawing.Point(569, 64);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(45, 20);
+            this.label9.Size = new System.Drawing.Size(72, 20);
             this.label9.TabIndex = 20;
             this.label9.Text = "15%";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label8
             // 
@@ -191,18 +191,18 @@
             this.label8.Size = new System.Drawing.Size(106, 24);
             this.label8.TabIndex = 19;
             this.label8.Text = "0";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Inter Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(290, 93);
+            this.label7.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(270, 93);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(123, 28);
+            this.label7.Size = new System.Drawing.Size(143, 28);
             this.label7.TabIndex = 18;
             this.label7.Text = "20 000 Đ";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_Total
             // 
@@ -339,7 +339,7 @@
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2ImageButton btn_DeleteReceipt;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_datetime;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lbl_Subtotal;
