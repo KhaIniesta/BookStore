@@ -87,5 +87,12 @@ namespace BookStore
         {
             Application.Exit();
         }
+
+        private void Btn_AuthorTab_Click(object sender, EventArgs e)
+        {
+            Btn_HRTab.Checked = true;
+            UC_Author UC = new UC_Author();
+            AddUserControl(UC);
+        }
     }
 }
