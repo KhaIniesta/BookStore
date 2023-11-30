@@ -82,5 +82,19 @@ namespace BookStore.Forms
 
             DBConnection.Close();
         }
+
+        private void Form_Login_Load(object sender, EventArgs e)
+        {
+            this.KeyPreview = true;
+            this.KeyDown += Form_Login_KeyDown;
+        }
+
+        private void Form_Login_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btn_login_Click(sender, e);
+            }
+        }
     }
 }
