@@ -105,13 +105,15 @@ namespace BookStore.UserControls
         {
             ResetDataGridView();
 
-            CB_AuthorID.DataSource = DBC.GetTable("SELECT MaTG FROM TacGia");
-            CB_AuthorID.DisplayMember = "MaTG";
-            CB_AuthorID.ValueMember = "MaTG";
-
-            CB_PublisherID.DataSource = DBC.GetTable("SELECT MaNXB FROM NhaXuatBan");
             CB_PublisherID.DisplayMember = "MaNXB";
             CB_PublisherID.ValueMember = "MaNXB";
+            CB_PublisherID.DataSource = DBC.GetTable("SELECT MaNXB FROM NhaXuatBan");
+
+            DataTable AuthorIDsDT = DBC.GetTable("SELECT MaTG FROM TacGia");
+            foreach(DataRow Row in AuthorIDsDT.Rows)
+            {
+                CB_AuthorID.Items.Add(Row[0]);
+            }
         }
 
         private void DG_Books_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -149,8 +151,11 @@ namespace BookStore.UserControls
 
         private void Btn_ResetTxt_Click(object sender, EventArgs e)
         {
+            EnableTextbox();
             ResetTextbox();
+            DisableTextbox();
 
+            Btn_Newbook.Enabled = false;
             Btn_DeleteBook.Enabled = false;
             Btn_UpdateBook.Enabled = false;
         }
@@ -159,6 +164,9 @@ namespace BookStore.UserControls
         {
             StateControl = "update";
             EnableTextbox();
+            Txt_BookID.Enabled = false;
+            CB_PublisherID.Enabled = false;
+            Btn_Save.Enabled = true;
         }
 
         private void Btn_Save_Click(object sender, EventArgs e)
@@ -192,10 +200,13 @@ namespace BookStore.UserControls
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Bạn đã thêm sách thành công");
                     ResetTextbox();
+                    Btn_Save.Enabled = false;
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
+                    ResetTextbox();
+                    DisableTextbox();
                 }
             }
             else if(StateControl == "update")
@@ -232,6 +243,11 @@ namespace BookStore.UserControls
                     MessageBox.Show(ex.Message);
                 }
             }
+            else
+            {
+                ResetTextbox();
+                DisableTextbox();
+            }
 
             ResetDataGridView();
             StateControl = "none";
@@ -241,6 +257,8 @@ namespace BookStore.UserControls
         {
             StateControl = "add";
             EnableTextbox();
+            CB_PublisherID.Enabled = false;
+            Btn_Save.Enabled = true;
             ResetTextbox();
         }
 
@@ -284,6 +302,29 @@ namespace BookStore.UserControls
 
                 PictureBox.ImageLocation = openFileDialog1.FileName;
                 openFileDialog1.Dispose();
+            }
+        }
+
+        private void CB_AuthorID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string AuthorID = CB_AuthorID.SelectedItem.ToString();
+            CB_PublisherID.Text = DBC.GetTable("SELECT MaNXB FROM TacGia WHERE MaTG = '" + AuthorID.Trim() + "'").Rows[0].ItemArray[0].ToString();
+
+        }
+
+        private void Txt_Quantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != 127)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Txt_Price_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != 127)
+            {
+                e.Handled = true;
             }
         }
     }
