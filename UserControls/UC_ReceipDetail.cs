@@ -12,6 +12,7 @@ namespace BookStore.UserControls
         private DataTable dt;
         private SqlCommand cmd;
         public event EventHandler Btn_delete_receipt_click;
+        public event EventHandler QuantityOver;
         private void ResetDuLieu()
         {
             DBConnection.Open();
@@ -74,12 +75,10 @@ namespace BookStore.UserControls
                 cmd.Parameters.Add("@SoLuongBan", SqlDbType.Int).Value = Quantity.Trim();
 
                 int count = cmd.ExecuteNonQuery();
-                DBConnection.Close();
                 return count;
             }
             catch (Exception ex)
             {
-                DBConnection.Close();
                 MessageBox.Show(ex.Message, "Thông báo!");
             }
             finally
@@ -184,6 +183,7 @@ namespace BookStore.UserControls
                         uC_BookOrderItem.IncreaseButtonClicked += UpdateBookOrder;
                         uC_BookOrderItem.DescreaseButtonClicked += UpdateBookOrder;
                         uC_BookOrderItem.DeleteBookFromReceiptClicked += DeleteBookOrder;
+                        uC_BookOrderItem.QuantityOver += QuantityOver;
 
                         String Quantity = uC_BookOrderItem.GetBoughtQuantity();
                         int count = InsertBookIntoReceiptDetail(ReceiptID, BookID, Quantity);
@@ -192,8 +192,8 @@ namespace BookStore.UserControls
                         {
                             flp_bookItems.Controls.Add(uC_BookOrderItem);
                             UpdateTotalReceiptPrice(ReceiptID);
+                            UpdateTotalBill(ReceiptID);
                         }
-                        UpdateTotalBill(ReceiptID);
                     }
                 }
             }
@@ -221,6 +221,11 @@ namespace BookStore.UserControls
                 {
                     UpdateTotalReceiptPrice(ReceiptID);
                     UpdateTotalBill(ReceiptID);
+                }
+                else
+                {
+                    UC_BookOrderItem temp = (UC_BookOrderItem)sender;
+                    temp.SetBoughtQuantity();
                 }
             }
         }

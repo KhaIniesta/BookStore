@@ -36,10 +36,10 @@
             this.Btn_BookTab = new Guna.UI2.WinForms.Guna2Button();
             this.Btn_HomeTab = new Guna.UI2.WinForms.Guna2Button();
             this.Panel_Header = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.Lbl_Role = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.Panel_Container = new Guna.UI2.WinForms.Guna2Panel();
-            this.Lbl_Role = new System.Windows.Forms.Label();
             this.Panel_Side.SuspendLayout();
             this.Panel_Header.SuspendLayout();
             this.SuspendLayout();
@@ -195,6 +195,18 @@
             this.Panel_Header.Size = new System.Drawing.Size(1422, 95);
             this.Panel_Header.TabIndex = 3;
             // 
+            // Lbl_Role
+            // 
+            this.Lbl_Role.AutoSize = true;
+            this.Lbl_Role.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_Role.Font = new System.Drawing.Font("Inter", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Role.ForeColor = System.Drawing.SystemColors.Control;
+            this.Lbl_Role.Location = new System.Drawing.Point(1228, 33);
+            this.Lbl_Role.Name = "Lbl_Role";
+            this.Lbl_Role.Size = new System.Drawing.Size(62, 36);
+            this.Lbl_Role.TabIndex = 6;
+            this.Lbl_Role.Text = "SM";
+            // 
             // guna2Button1
             // 
             this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
@@ -236,18 +248,6 @@
             this.Panel_Container.Size = new System.Drawing.Size(1222, 578);
             this.Panel_Container.TabIndex = 5;
             // 
-            // Lbl_Role
-            // 
-            this.Lbl_Role.AutoSize = true;
-            this.Lbl_Role.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_Role.Font = new System.Drawing.Font("Inter", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Role.ForeColor = System.Drawing.SystemColors.Control;
-            this.Lbl_Role.Location = new System.Drawing.Point(1228, 33);
-            this.Lbl_Role.Name = "Lbl_Role";
-            this.Lbl_Role.Size = new System.Drawing.Size(62, 36);
-            this.Lbl_Role.TabIndex = 6;
-            this.Lbl_Role.Text = "SM";
-            // 
             // Form_SM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -257,6 +257,7 @@
             this.Controls.Add(this.Panel_Side);
             this.Controls.Add(this.Panel_Header);
             this.Name = "Form_SM";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SM Form";
             this.Panel_Side.ResumeLayout(false);
             this.Panel_Header.ResumeLayout(false);
