@@ -50,9 +50,18 @@ namespace BookStore.UserControls
             return _quantity;
         }
 
+        public void SetBoughtQuantity()
+        {
+            int quanNum = Convert.ToInt32(_quantity);
+            quanNum -= 1;
+            _quantity = quanNum.ToString();
+            lbl_BookQuantity.Text = _quantity;
+        }
+
         public event EventHandler IncreaseButtonClicked;
         public event EventHandler DescreaseButtonClicked;
         public event EventHandler DeleteBookFromReceiptClicked;
+        public event EventHandler QuantityOver;
         private void btn_IncreaseQuantity_Click(object sender, EventArgs e)
         {
             int newquantity = int.Parse(lbl_BookQuantity.Text) + 1;
