@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace BookStore.UserControls
@@ -270,6 +271,27 @@ namespace BookStore.UserControls
             DBConnection.Close();
 
             lbl_Total.Text = TotalBill.ToString();
+        }
+
+        private void txt_ReceivedMoney_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_ReceivedMoney_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string totalmoney = lbl_Total.Text.Trim();
+            string receivemoney = txt_ReceivedMoney.Text.Trim();
+            if (receivemoney != "" & receivemoney.All(char.IsNumber))
+            {
+                lbl_ChangeMoney.Text = (Convert.ToInt16(totalmoney) - Convert.ToInt16(receivemoney)).ToString();
+
+            }
+            else
+            {
+                MessageBox.Show("Nội dung không hợp lệ! Vui lòng nhập lại!", "Thông báo!");
+                txt_ReceivedMoney.Clear();
+            }
         }
     }
 }

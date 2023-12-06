@@ -201,7 +201,7 @@
             this.lbl_ChangeMoney.Name = "lbl_ChangeMoney";
             this.lbl_ChangeMoney.Size = new System.Drawing.Size(143, 28);
             this.lbl_ChangeMoney.TabIndex = 18;
-            this.lbl_ChangeMoney.Text = "20 000 Đ";
+            this.lbl_ChangeMoney.Text = "0";
             this.lbl_ChangeMoney.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_Total
@@ -289,6 +289,8 @@
             this.txt_ReceivedMoney.SelectedText = "";
             this.txt_ReceivedMoney.Size = new System.Drawing.Size(164, 36);
             this.txt_ReceivedMoney.TabIndex = 8;
+            this.txt_ReceivedMoney.Enter += new System.EventHandler(this.txt_ReceivedMoney_Enter);
+            this.txt_ReceivedMoney.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_ReceivedMoney_KeyPress);
             // 
             // guna2GradientButton1
             // 
