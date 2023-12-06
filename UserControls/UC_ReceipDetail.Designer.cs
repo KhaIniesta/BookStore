@@ -47,7 +47,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btn_DeleteReceipt = new Guna.UI2.WinForms.Guna2ImageButton();
             this.txt_ReceivedMoney = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btn_printReceipt = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -137,7 +137,7 @@
             this.guna2GradientPanel2.Controls.Add(this.label3);
             this.guna2GradientPanel2.Controls.Add(this.btn_DeleteReceipt);
             this.guna2GradientPanel2.Controls.Add(this.txt_ReceivedMoney);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientButton1);
+            this.guna2GradientPanel2.Controls.Add(this.btn_printReceipt);
             this.guna2GradientPanel2.CustomizableEdges.TopLeft = false;
             this.guna2GradientPanel2.CustomizableEdges.TopRight = false;
             this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(236)))), ((int)(((byte)(222)))));
@@ -291,26 +291,27 @@
             this.txt_ReceivedMoney.TabIndex = 8;
             this.txt_ReceivedMoney.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_ReceivedMoney_KeyDown);
             // 
-            // guna2GradientButton1
+            // btn_printReceipt
             // 
-            this.guna2GradientButton1.Animated = true;
-            this.guna2GradientButton1.AutoRoundedCorners = true;
-            this.guna2GradientButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton1.BorderRadius = 17;
-            this.guna2GradientButton1.DefaultAutoSize = true;
-            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton1.Font = new System.Drawing.Font("Inter SemiBold", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(460, 145);
-            this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.Size = new System.Drawing.Size(173, 36);
-            this.guna2GradientButton1.TabIndex = 3;
-            this.guna2GradientButton1.Text = "Export receipt";
+            this.btn_printReceipt.Animated = true;
+            this.btn_printReceipt.AutoRoundedCorners = true;
+            this.btn_printReceipt.BackColor = System.Drawing.Color.Transparent;
+            this.btn_printReceipt.BorderRadius = 17;
+            this.btn_printReceipt.DefaultAutoSize = true;
+            this.btn_printReceipt.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_printReceipt.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_printReceipt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_printReceipt.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_printReceipt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_printReceipt.Font = new System.Drawing.Font("Inter SemiBold", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_printReceipt.ForeColor = System.Drawing.Color.White;
+            this.btn_printReceipt.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
+            this.btn_printReceipt.Location = new System.Drawing.Point(460, 145);
+            this.btn_printReceipt.Name = "btn_printReceipt";
+            this.btn_printReceipt.Size = new System.Drawing.Size(173, 36);
+            this.btn_printReceipt.TabIndex = 3;
+            this.btn_printReceipt.Text = "Export receipt";
+            this.btn_printReceipt.Click += new System.EventHandler(this.btn_printReceipt_Click);
             // 
             // UC_ReceipDetail
             // 
@@ -337,7 +338,7 @@
         private System.Windows.Forms.FlowLayoutPanel flp_bookItems;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        private Guna.UI2.WinForms.Guna2GradientButton btn_printReceipt;
         private Guna.UI2.WinForms.Guna2TextBox txt_ReceivedMoney;
         private Guna.UI2.WinForms.Guna2ImageButton btn_DeleteReceipt;
         private System.Windows.Forms.Label lbl_datetime;

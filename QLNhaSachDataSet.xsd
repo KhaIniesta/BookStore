@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="QLNhaSachDataSet" targetNamespace="http://tempuri.org/QLNhaSachDataSet.xsd" xmlns:mstns="http://tempuri.org/QLNhaSachDataSet.xsd" xmlns="http://tempuri.org/QLNhaSachDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QLNhaSachConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QLNhaSachConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BookStore.Properties.Settings.GlobalReference.Default.QLNhaSachConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_HienChiTietSachTableAdapter" GeneratorDataComponentClassName="V_HienChiTietSachTableAdapter" Name="V_HienChiTietSach" UserDataComponentName="V_HienChiTietSachTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QLNhaSachConnectionString (Settings)" DbObjectName="QLNhaSach.dbo.V_HienChiTietSach" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT MaSach, Gia, TenSach FROM dbo.V_HienChiTietSach</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MaSach" DataSetColumn="MaSach" />
+              <Mapping SourceColumn="Gia" DataSetColumn="Gia" />
+              <Mapping SourceColumn="TenSach" DataSetColumn="TenSach" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="QLNhaSachDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="QLNhaSachDataSet" msprop:Generator_DataSetName="QLNhaSachDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="V_HienChiTietSach" msprop:Generator_RowEvHandlerName="V_HienChiTietSachRowChangeEventHandler" msprop:Generator_RowDeletedName="V_HienChiTietSachRowDeleted" msprop:Generator_RowDeletingName="V_HienChiTietSachRowDeleting" msprop:Generator_RowEvArgName="V_HienChiTietSachRowChangeEvent" msprop:Generator_TablePropName="V_HienChiTietSach" msprop:Generator_RowChangedName="V_HienChiTietSachRowChanged" msprop:Generator_RowChangingName="V_HienChiTietSachRowChanging" msprop:Generator_TableClassName="V_HienChiTietSachDataTable" msprop:Generator_RowClassName="V_HienChiTietSachRow" msprop:Generator_TableVarName="tableV_HienChiTietSach" msprop:Generator_UserTableName="V_HienChiTietSach">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MaSach" msprop:Generator_ColumnPropNameInRow="MaSach" msprop:Generator_ColumnPropNameInTable="MaSachColumn" msprop:Generator_ColumnVarNameInTable="columnMaSach" msprop:Generator_UserColumnName="MaSach">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Gia" msprop:Generator_ColumnPropNameInRow="Gia" msprop:Generator_ColumnPropNameInTable="GiaColumn" msprop:Generator_ColumnVarNameInTable="columnGia" msprop:Generator_UserColumnName="Gia" type="xs:decimal" />
+              <xs:element name="TenSach" msprop:Generator_ColumnPropNameInRow="TenSach" msprop:Generator_ColumnPropNameInTable="TenSachColumn" msprop:Generator_ColumnVarNameInTable="columnTenSach" msprop:Generator_UserColumnName="TenSach">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:V_HienChiTietSach" />
+      <xs:field xpath="mstns:MaSach" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
