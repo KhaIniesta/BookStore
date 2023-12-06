@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_aBook));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -114,7 +111,7 @@
             this.Txt_BookID.PlaceholderText = "";
             this.Txt_BookID.SelectedText = "";
             this.Txt_BookID.Size = new System.Drawing.Size(211, 36);
-            this.Txt_BookID.TabIndex = 29;
+            this.Txt_BookID.TabIndex = 2;
             // 
             // label7
             // 
@@ -173,7 +170,8 @@
             this.Txt_Price.PlaceholderText = "";
             this.Txt_Price.SelectedText = "";
             this.Txt_Price.Size = new System.Drawing.Size(211, 36);
-            this.Txt_Price.TabIndex = 26;
+            this.Txt_Price.TabIndex = 7;
+            this.Txt_Price.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Price_KeyPress);
             // 
             // Txt_Genre
             // 
@@ -196,7 +194,7 @@
             this.Txt_Genre.PlaceholderText = "";
             this.Txt_Genre.SelectedText = "";
             this.Txt_Genre.Size = new System.Drawing.Size(211, 36);
-            this.Txt_Genre.TabIndex = 25;
+            this.Txt_Genre.TabIndex = 6;
             // 
             // Txt_Quantity
             // 
@@ -219,7 +217,8 @@
             this.Txt_Quantity.PlaceholderText = "";
             this.Txt_Quantity.SelectedText = "";
             this.Txt_Quantity.Size = new System.Drawing.Size(211, 36);
-            this.Txt_Quantity.TabIndex = 24;
+            this.Txt_Quantity.TabIndex = 5;
+            this.Txt_Quantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Quantity_KeyPress);
             // 
             // label4
             // 
@@ -227,7 +226,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Inter", 11F);
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(25, 378);
+            this.label4.Location = new System.Drawing.Point(25, 325);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(104, 23);
             this.label4.TabIndex = 23;
@@ -239,7 +238,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Inter", 11F);
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(25, 326);
+            this.label3.Location = new System.Drawing.Point(25, 377);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(128, 23);
             this.label3.TabIndex = 22;
@@ -257,10 +256,11 @@
             this.CB_AuthorID.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.CB_AuthorID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.CB_AuthorID.ItemHeight = 30;
-            this.CB_AuthorID.Location = new System.Drawing.Point(168, 370);
+            this.CB_AuthorID.Location = new System.Drawing.Point(168, 317);
             this.CB_AuthorID.Name = "CB_AuthorID";
             this.CB_AuthorID.Size = new System.Drawing.Size(211, 36);
-            this.CB_AuthorID.TabIndex = 21;
+            this.CB_AuthorID.TabIndex = 3;
+            this.CB_AuthorID.SelectedIndexChanged += new System.EventHandler(this.CB_AuthorID_SelectedIndexChanged);
             // 
             // CB_PublisherID
             // 
@@ -274,10 +274,10 @@
             this.CB_PublisherID.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.CB_PublisherID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.CB_PublisherID.ItemHeight = 30;
-            this.CB_PublisherID.Location = new System.Drawing.Point(168, 319);
+            this.CB_PublisherID.Location = new System.Drawing.Point(168, 370);
             this.CB_PublisherID.Name = "CB_PublisherID";
             this.CB_PublisherID.Size = new System.Drawing.Size(211, 36);
-            this.CB_PublisherID.TabIndex = 20;
+            this.CB_PublisherID.TabIndex = 4;
             // 
             // label2
             // 
@@ -343,7 +343,7 @@
             this.Txt_Name.PlaceholderText = "";
             this.Txt_Name.SelectedText = "";
             this.Txt_Name.Size = new System.Drawing.Size(275, 36);
-            this.Txt_Name.TabIndex = 16;
+            this.Txt_Name.TabIndex = 1;
             // 
             // Btn_UpdateBook
             // 
@@ -424,27 +424,7 @@
             // 
             // DG_Books
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.DG_Books.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.DG_Books.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DG_Books.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.DG_Books.ColumnHeadersHeight = 35;
-            this.DG_Books.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DG_Books.DefaultCellStyle = dataGridViewCellStyle12;
+            this.DG_Books.AllowUserToResizeRows = false;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
             this.DG_Books.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.DG_Books.BackgroundColor = System.Drawing.Color.WhiteSmoke;
@@ -508,6 +488,7 @@
             this.Btn_Save.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.Btn_Save.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.Btn_Save.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_Save.Enabled = false;
             this.Btn_Save.FocusedColor = System.Drawing.Color.Transparent;
             this.Btn_Save.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Save.ForeColor = System.Drawing.Color.White;
