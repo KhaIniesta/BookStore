@@ -310,6 +310,8 @@ namespace BookStore.UserControls
             // 
             // dtg_receipt
             // 
+            this.dtg_receipt.AllowUserToResizeColumns = false;
+            this.dtg_receipt.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dtg_receipt.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtg_receipt.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
