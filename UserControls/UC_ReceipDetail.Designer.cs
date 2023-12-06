@@ -289,8 +289,7 @@
             this.txt_ReceivedMoney.SelectedText = "";
             this.txt_ReceivedMoney.Size = new System.Drawing.Size(164, 36);
             this.txt_ReceivedMoney.TabIndex = 8;
-            this.txt_ReceivedMoney.Enter += new System.EventHandler(this.txt_ReceivedMoney_Enter);
-            this.txt_ReceivedMoney.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_ReceivedMoney_KeyPress);
+            this.txt_ReceivedMoney.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_ReceivedMoney_KeyDown);
             // 
             // guna2GradientButton1
             // 

@@ -2,7 +2,6 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace BookStore.UserControls
@@ -13,7 +12,6 @@ namespace BookStore.UserControls
         private DataTable dt;
         private SqlCommand cmd;
         public event EventHandler Btn_delete_receipt_click;
-        public event EventHandler QuantityOver;
         private void ResetDuLieu()
         {
             DBConnection.Open();
@@ -76,10 +74,12 @@ namespace BookStore.UserControls
                 cmd.Parameters.Add("@SoLuongBan", SqlDbType.Int).Value = Quantity.Trim();
 
                 int count = cmd.ExecuteNonQuery();
+                DBConnection.Close();
                 return count;
             }
             catch (Exception ex)
             {
+                DBConnection.Close();
                 MessageBox.Show(ex.Message, "Thông báo!");
             }
             finally
@@ -184,7 +184,6 @@ namespace BookStore.UserControls
                         uC_BookOrderItem.IncreaseButtonClicked += UpdateBookOrder;
                         uC_BookOrderItem.DescreaseButtonClicked += UpdateBookOrder;
                         uC_BookOrderItem.DeleteBookFromReceiptClicked += DeleteBookOrder;
-                        uC_BookOrderItem.QuantityOver += QuantityOver;
 
                         String Quantity = uC_BookOrderItem.GetBoughtQuantity();
                         int count = InsertBookIntoReceiptDetail(ReceiptID, BookID, Quantity);
@@ -223,11 +222,6 @@ namespace BookStore.UserControls
                     UpdateTotalReceiptPrice(ReceiptID);
                     UpdateTotalBill(ReceiptID);
                 }
-                else
-                {
-                    UC_BookOrderItem temp = (UC_BookOrderItem)sender;
-                    temp.SetBoughtQuantity();
-                }
             }
         }
         public void DeleteBookOrder(object sender, EventArgs e)
@@ -250,15 +244,15 @@ namespace BookStore.UserControls
         public void UpdateTotalBill(String ReceiptID)
         {
             double subtotalbill = double.Parse(lbl_Subtotal.Text);
-            if (subtotalbill >= 1000000)
+            if (subtotalbill >= 750000)
             {
                 lbl_Sale.Text = "10%";
             }
-            else if (subtotalbill >= 2500000)
+            else if (subtotalbill >= 1500000)
             {
                 lbl_Sale.Text = "20%";
             }
-            else if (subtotalbill >= 3500000)
+            else if (subtotalbill >= 2000000)
             {
                 lbl_Sale.Text = "30%";
             }
@@ -278,25 +272,26 @@ namespace BookStore.UserControls
             lbl_Total.Text = TotalBill.ToString();
         }
 
-        private void txt_ReceivedMoney_Enter(object sender, EventArgs e)
+        private void txt_ReceivedMoney_KeyDown(object sender, KeyEventArgs e)
         {
-
-        }
-
-        private void txt_ReceivedMoney_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string totalmoney = lbl_Total.Text.Trim();
-            string receivemoney = txt_ReceivedMoney.Text.Trim();
-            if (receivemoney != "" & receivemoney.All(char.IsNumber))
+            try
             {
-                lbl_ChangeMoney.Text = (Convert.ToInt16(totalmoney) - Convert.ToInt16(receivemoney)).ToString();
 
+                string totalmoney = lbl_Total.Text.Trim();
+                string receivemoney = txt_ReceivedMoney.Text.Trim();
+                if (receivemoney != "" & e.KeyCode == Keys.Enter)
+                {
+                    lbl_ChangeMoney.Text = (int.Parse(receivemoney) - int.Parse(totalmoney)).ToString();
+
+                }
             }
-            else
+            catch
             {
                 MessageBox.Show("Nội dung không hợp lệ! Vui lòng nhập lại!", "Thông báo!");
-                txt_ReceivedMoney.Clear();
             }
+
+
+
         }
     }
 }
