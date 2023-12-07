@@ -62,10 +62,34 @@ namespace BookStore.UserControls
             btn_update.Enabled = true;
             btn_delete.Enabled = true;
             btn_cancel.Enabled = false;
-        }  
+        }
+        private bool CheckInputData()
+        {
+            if (txt_receiptid.Text.Trim() == "")
+            {
+                MessageBox.Show("Mã phiếu nhập không được trống!");
+                return false;
+            }
+            if (cb_publisherid.Text.Trim() == "")
+            {
+                MessageBox.Show("Mã nhà xuất bản không được trống!");
+                return false;
+            }
+            if (int.TryParse(txt_receiptid.Text, out int receiptid) && receiptid < 0)
+            {
+                MessageBox.Show("Mã phiếu nhập không được nhập số âm!");
+                return false;
+            }
+            return true;
+        }
 
         private void btn_save_Click(object sender, EventArgs e)
         {
+            if (!CheckInputData())
+            {
+                ResetText();
+                return;
+            }
             if (IsInsertData() == false)
             {
                 ResetData();

@@ -87,6 +87,16 @@ namespace BookStore.UserControls
                 MessageBox.Show("Số lượng nhập không được trống!");
                 return false;
             }
+            if (!int.TryParse(txt_quantity.Text, out int quantity))
+            {
+                MessageBox.Show("Số lượng nhập phải là số!");
+                return false;
+            }
+            if (quantity <= 0)
+            {
+                MessageBox.Show("Số lượng nhập phải là số nguyên dương!");
+                return false;
+            }
             return true;
         }
 
