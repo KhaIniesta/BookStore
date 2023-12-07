@@ -224,6 +224,11 @@ namespace BookStore.UserControls
                     UpdateTotalReceiptPrice(ReceiptID);
                     UpdateTotalBill(ReceiptID);
                 }
+                else
+                {
+                    UC_BookOrderItem temp = (UC_BookOrderItem)sender;
+                    temp.SetBoughtQuantity();
+                }
             }
         }
         public void DeleteBookOrder(object sender, EventArgs e)
