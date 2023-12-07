@@ -121,7 +121,7 @@
             this.btn_DecreaseQuantity.ForeColor = System.Drawing.Color.White;
             this.btn_DecreaseQuantity.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             this.btn_DecreaseQuantity.Image = ((System.Drawing.Image)(resources.GetObject("btn_DecreaseQuantity.Image")));
-            this.btn_DecreaseQuantity.Location = new System.Drawing.Point(70, 0);
+            this.btn_DecreaseQuantity.Location = new System.Drawing.Point(0, 0);
             this.btn_DecreaseQuantity.Name = "btn_DecreaseQuantity";
             this.btn_DecreaseQuantity.Size = new System.Drawing.Size(29, 29);
             this.btn_DecreaseQuantity.TabIndex = 1;
@@ -138,7 +138,7 @@
             this.btn_IncreaseQuantity.ForeColor = System.Drawing.Color.White;
             this.btn_IncreaseQuantity.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
             this.btn_IncreaseQuantity.Image = ((System.Drawing.Image)(resources.GetObject("btn_IncreaseQuantity.Image")));
-            this.btn_IncreaseQuantity.Location = new System.Drawing.Point(10, 0);
+            this.btn_IncreaseQuantity.Location = new System.Drawing.Point(81, 0);
             this.btn_IncreaseQuantity.Name = "btn_IncreaseQuantity";
             this.btn_IncreaseQuantity.Size = new System.Drawing.Size(29, 29);
             this.btn_IncreaseQuantity.TabIndex = 0;
