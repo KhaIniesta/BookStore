@@ -81,21 +81,16 @@ namespace BookStore.UserControls
                 return false;
 
             }
-            // Check for negative value in MaTG
             if (int.TryParse(txt_maTG.Text, out int maTG) && maTG < 0)
             {
                 MessageBox.Show("Mã tác giả không được nhập số âm!");
                 return false;
             }
-
-            // Check for numeric value in TenTG
             if (int.TryParse(txt_name.Text, out _))
             {
                 MessageBox.Show("Tên tác giả không được nhập số!");
                 return false;
             }
-
-            // Check for numeric value in LienHe
             if (int.TryParse(txt_lienHe.Text, out int lienHe) && lienHe < 0)
             {
                 MessageBox.Show("Liên hệ không được nhập số âm!");
