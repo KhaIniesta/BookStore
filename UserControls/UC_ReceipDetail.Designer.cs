@@ -37,9 +37,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label11 = new System.Windows.Forms.Label();
-            this.lbl_Subtotal = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.lbl_Sale = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lbl_Subtotal = new System.Windows.Forms.Label();
             this.lbl_ChangeMoney = new System.Windows.Forms.Label();
             this.lbl_Total = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -127,9 +127,9 @@
             this.guna2GradientPanel2.BorderColor = System.Drawing.Color.Red;
             this.guna2GradientPanel2.BorderRadius = 15;
             this.guna2GradientPanel2.Controls.Add(this.label11);
-            this.guna2GradientPanel2.Controls.Add(this.lbl_Subtotal);
+            this.guna2GradientPanel2.Controls.Add(this.label20);
             this.guna2GradientPanel2.Controls.Add(this.lbl_Sale);
-            this.guna2GradientPanel2.Controls.Add(this.label8);
+            this.guna2GradientPanel2.Controls.Add(this.lbl_Subtotal);
             this.guna2GradientPanel2.Controls.Add(this.lbl_ChangeMoney);
             this.guna2GradientPanel2.Controls.Add(this.lbl_Total);
             this.guna2GradientPanel2.Controls.Add(this.label5);
@@ -158,16 +158,16 @@
             this.label11.TabIndex = 22;
             this.label11.Text = "Sale : ";
             // 
-            // lbl_Subtotal
+            // label20
             // 
-            this.lbl_Subtotal.AutoSize = true;
-            this.lbl_Subtotal.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_Subtotal.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Subtotal.Location = new System.Drawing.Point(420, 13);
-            this.lbl_Subtotal.Name = "lbl_Subtotal";
-            this.lbl_Subtotal.Size = new System.Drawing.Size(103, 20);
-            this.lbl_Subtotal.TabIndex = 21;
-            this.lbl_Subtotal.Text = "Subtotal : ";
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(420, 13);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(103, 20);
+            this.label20.TabIndex = 21;
+            this.label20.Text = "Subtotal : ";
             // 
             // lbl_Sale
             // 
@@ -181,17 +181,17 @@
             this.lbl_Sale.Text = "15%";
             this.lbl_Sale.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label8
+            // lbl_Subtotal
             // 
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label8.Location = new System.Drawing.Point(535, 12);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 24);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "0";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_Subtotal.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Subtotal.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Subtotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.lbl_Subtotal.Location = new System.Drawing.Point(535, 12);
+            this.lbl_Subtotal.Name = "lbl_Subtotal";
+            this.lbl_Subtotal.Size = new System.Drawing.Size(106, 24);
+            this.lbl_Subtotal.TabIndex = 19;
+            this.lbl_Subtotal.Text = "0";
+            this.lbl_Subtotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_ChangeMoney
             // 
@@ -344,9 +344,9 @@
         private System.Windows.Forms.Label lbl_datetime;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label lbl_Subtotal;
+        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label lbl_Sale;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbl_Subtotal;
         private System.Windows.Forms.Label lbl_ChangeMoney;
         private System.Windows.Forms.Label lbl_Total;
         private System.Windows.Forms.Label label5;
