@@ -37,9 +37,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label11 = new System.Windows.Forms.Label();
-            this.lbl_Subtotal = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.lbl_Sale = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lbl_Subtotal = new System.Windows.Forms.Label();
             this.lbl_ChangeMoney = new System.Windows.Forms.Label();
             this.lbl_Total = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -47,7 +47,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btn_DeleteReceipt = new Guna.UI2.WinForms.Guna2ImageButton();
             this.txt_ReceivedMoney = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btn_printReceipt = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -127,9 +127,9 @@
             this.guna2GradientPanel2.BorderColor = System.Drawing.Color.Red;
             this.guna2GradientPanel2.BorderRadius = 15;
             this.guna2GradientPanel2.Controls.Add(this.label11);
-            this.guna2GradientPanel2.Controls.Add(this.lbl_Subtotal);
+            this.guna2GradientPanel2.Controls.Add(this.label20);
             this.guna2GradientPanel2.Controls.Add(this.lbl_Sale);
-            this.guna2GradientPanel2.Controls.Add(this.label8);
+            this.guna2GradientPanel2.Controls.Add(this.lbl_Subtotal);
             this.guna2GradientPanel2.Controls.Add(this.lbl_ChangeMoney);
             this.guna2GradientPanel2.Controls.Add(this.lbl_Total);
             this.guna2GradientPanel2.Controls.Add(this.label5);
@@ -137,7 +137,7 @@
             this.guna2GradientPanel2.Controls.Add(this.label3);
             this.guna2GradientPanel2.Controls.Add(this.btn_DeleteReceipt);
             this.guna2GradientPanel2.Controls.Add(this.txt_ReceivedMoney);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientButton1);
+            this.guna2GradientPanel2.Controls.Add(this.btn_printReceipt);
             this.guna2GradientPanel2.CustomizableEdges.TopLeft = false;
             this.guna2GradientPanel2.CustomizableEdges.TopRight = false;
             this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(236)))), ((int)(((byte)(222)))));
@@ -158,16 +158,16 @@
             this.label11.TabIndex = 22;
             this.label11.Text = "Sale : ";
             // 
-            // lbl_Subtotal
+            // label20
             // 
-            this.lbl_Subtotal.AutoSize = true;
-            this.lbl_Subtotal.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_Subtotal.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Subtotal.Location = new System.Drawing.Point(420, 13);
-            this.lbl_Subtotal.Name = "lbl_Subtotal";
-            this.lbl_Subtotal.Size = new System.Drawing.Size(103, 20);
-            this.lbl_Subtotal.TabIndex = 21;
-            this.lbl_Subtotal.Text = "Subtotal : ";
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(420, 13);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(103, 20);
+            this.label20.TabIndex = 21;
+            this.label20.Text = "Subtotal : ";
             // 
             // lbl_Sale
             // 
@@ -181,17 +181,17 @@
             this.lbl_Sale.Text = "15%";
             this.lbl_Sale.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label8
+            // lbl_Subtotal
             // 
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label8.Location = new System.Drawing.Point(535, 12);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 24);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "0";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_Subtotal.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Subtotal.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Subtotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.lbl_Subtotal.Location = new System.Drawing.Point(535, 12);
+            this.lbl_Subtotal.Name = "lbl_Subtotal";
+            this.lbl_Subtotal.Size = new System.Drawing.Size(106, 24);
+            this.lbl_Subtotal.TabIndex = 19;
+            this.lbl_Subtotal.Text = "0";
+            this.lbl_Subtotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_ChangeMoney
             // 
@@ -201,7 +201,7 @@
             this.lbl_ChangeMoney.Name = "lbl_ChangeMoney";
             this.lbl_ChangeMoney.Size = new System.Drawing.Size(143, 28);
             this.lbl_ChangeMoney.TabIndex = 18;
-            this.lbl_ChangeMoney.Text = "20 000 Đ";
+            this.lbl_ChangeMoney.Text = "0";
             this.lbl_ChangeMoney.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_Total
@@ -289,27 +289,29 @@
             this.txt_ReceivedMoney.SelectedText = "";
             this.txt_ReceivedMoney.Size = new System.Drawing.Size(164, 36);
             this.txt_ReceivedMoney.TabIndex = 8;
+            this.txt_ReceivedMoney.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_ReceivedMoney_KeyDown);
             // 
-            // guna2GradientButton1
+            // btn_printReceipt
             // 
-            this.guna2GradientButton1.Animated = true;
-            this.guna2GradientButton1.AutoRoundedCorners = true;
-            this.guna2GradientButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton1.BorderRadius = 17;
-            this.guna2GradientButton1.DefaultAutoSize = true;
-            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton1.Font = new System.Drawing.Font("Inter SemiBold", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(460, 145);
-            this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.Size = new System.Drawing.Size(173, 36);
-            this.guna2GradientButton1.TabIndex = 3;
-            this.guna2GradientButton1.Text = "Export receipt";
+            this.btn_printReceipt.Animated = true;
+            this.btn_printReceipt.AutoRoundedCorners = true;
+            this.btn_printReceipt.BackColor = System.Drawing.Color.Transparent;
+            this.btn_printReceipt.BorderRadius = 17;
+            this.btn_printReceipt.DefaultAutoSize = true;
+            this.btn_printReceipt.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_printReceipt.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_printReceipt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_printReceipt.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_printReceipt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_printReceipt.Font = new System.Drawing.Font("Inter SemiBold", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_printReceipt.ForeColor = System.Drawing.Color.White;
+            this.btn_printReceipt.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
+            this.btn_printReceipt.Location = new System.Drawing.Point(460, 145);
+            this.btn_printReceipt.Name = "btn_printReceipt";
+            this.btn_printReceipt.Size = new System.Drawing.Size(173, 36);
+            this.btn_printReceipt.TabIndex = 3;
+            this.btn_printReceipt.Text = "Export receipt";
+            this.btn_printReceipt.Click += new System.EventHandler(this.btn_printReceipt_Click);
             // 
             // UC_ReceipDetail
             // 
@@ -336,15 +338,15 @@
         private System.Windows.Forms.FlowLayoutPanel flp_bookItems;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        private Guna.UI2.WinForms.Guna2GradientButton btn_printReceipt;
         private Guna.UI2.WinForms.Guna2TextBox txt_ReceivedMoney;
         private Guna.UI2.WinForms.Guna2ImageButton btn_DeleteReceipt;
         private System.Windows.Forms.Label lbl_datetime;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label lbl_Subtotal;
+        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label lbl_Sale;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbl_Subtotal;
         private System.Windows.Forms.Label lbl_ChangeMoney;
         private System.Windows.Forms.Label lbl_Total;
         private System.Windows.Forms.Label label5;
