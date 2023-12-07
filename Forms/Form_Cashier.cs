@@ -1,4 +1,5 @@
-﻿using BookStore.UserControls;
+﻿using BookStore.Report;
+using BookStore.UserControls;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -7,10 +8,6 @@ namespace BookStore.Forms
 {
     public partial class Form_Cashier : Form
     {
-        public static void LoadBookDetail(DataRow dr)
-        {
-
-        }
         private void AddUserControl(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
@@ -49,6 +46,29 @@ namespace BookStore.Forms
             UC_Cashier uC_Cashier = new UC_Cashier();
             uC_Cashier.Btn_receipt_detail_click += Btn_receipt_detail_click;
             AddUserControl(uC_Cashier);
+        }
+
+        private void Txt_Searchbox_KeyDown(object sender, KeyEventArgs e)
+       {
+            if (e.KeyCode == Keys.Enter)
+            {
+                String searchContent = Txt_Searchbox.Text;
+
+                if (pn_container.Controls.Count == 1)
+                {
+                    Control containedControl = pn_container.Controls[0];
+                    if (containedControl is UC_Cashier)
+                    {
+                        UC_Cashier uc_casher = (UC_Cashier)containedControl;
+                        uc_casher.LoadDataWithSearchContent(searchContent);
+                    }
+                    else if (containedControl is UC_ReceipDetail)
+                    {
+                        UC_ReceipDetail uc_receipt_detail = (UC_ReceipDetail)containedControl;
+                        uc_receipt_detail.LoadDataWithSearchContent(searchContent);
+                    }
+                }
+            }
         }
     }
 }
