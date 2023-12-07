@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_aPublisher));
             this.dtg_nxb = new Guna.UI2.WinForms.Guna2DataGridView();
             this.col_maNXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,9 +49,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txt_name = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.txt_diaChi = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_lienHe = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_nxb)).BeginInit();
             this.Panel_BookDesc.SuspendLayout();
             this.SuspendLayout();
@@ -60,18 +60,18 @@
             // 
             this.dtg_nxb.AllowUserToResizeColumns = false;
             this.dtg_nxb.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dtg_nxb.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.dtg_nxb.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dtg_nxb.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtg_nxb.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtg_nxb.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtg_nxb.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dtg_nxb.ColumnHeadersHeight = 35;
             this.dtg_nxb.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dtg_nxb.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -79,29 +79,29 @@
             this.col_tenNXB,
             this.col_diaChi,
             this.col_lienHe});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(8);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtg_nxb.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(8);
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtg_nxb.DefaultCellStyle = dataGridViewCellStyle7;
             this.dtg_nxb.Dock = System.Windows.Forms.DockStyle.Left;
             this.dtg_nxb.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtg_nxb.Location = new System.Drawing.Point(0, 0);
             this.dtg_nxb.Margin = new System.Windows.Forms.Padding(6);
             this.dtg_nxb.Name = "dtg_nxb";
             this.dtg_nxb.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtg_nxb.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtg_nxb.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dtg_nxb.RowHeadersVisible = false;
             this.dtg_nxb.RowHeadersWidth = 51;
             this.dtg_nxb.RowTemplate.Height = 24;
@@ -164,6 +164,8 @@
             // 
             // Panel_BookDesc
             // 
+            this.Panel_BookDesc.Controls.Add(this.txt_lienHe);
+            this.Panel_BookDesc.Controls.Add(this.txt_diaChi);
             this.Panel_BookDesc.Controls.Add(this.txt_maNXB);
             this.Panel_BookDesc.Controls.Add(this.btn_huy);
             this.Panel_BookDesc.Controls.Add(this.btn_sua);
@@ -174,8 +176,6 @@
             this.Panel_BookDesc.Controls.Add(this.label6);
             this.Panel_BookDesc.Controls.Add(this.txt_name);
             this.Panel_BookDesc.Controls.Add(this.label5);
-            this.Panel_BookDesc.Controls.Add(this.txt_diaChi);
-            this.Panel_BookDesc.Controls.Add(this.txt_lienHe);
             this.Panel_BookDesc.Controls.Add(this.label3);
             this.Panel_BookDesc.Dock = System.Windows.Forms.DockStyle.Right;
             this.Panel_BookDesc.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(249)))), ((int)(((byte)(252)))));
@@ -326,9 +326,9 @@
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label6.Location = new System.Drawing.Point(20, 263);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(95, 23);
+            this.label6.Size = new System.Drawing.Size(92, 23);
             this.label6.TabIndex = 42;
-            this.label6.Text = "Address :";
+            this.label6.Text = "Contact :";
             // 
             // txt_name
             // 
@@ -351,7 +351,7 @@
             this.txt_name.PlaceholderText = "";
             this.txt_name.SelectedText = "";
             this.txt_name.Size = new System.Drawing.Size(278, 36);
-            this.txt_name.TabIndex = 30;
+            this.txt_name.TabIndex = 51;
             // 
             // label5
             // 
@@ -361,9 +361,21 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.Location = new System.Drawing.Point(20, 196);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 23);
+            this.label5.Size = new System.Drawing.Size(95, 23);
             this.label5.TabIndex = 41;
-            this.label5.Text = "Contact :";
+            this.label5.Text = "Address :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Inter", 11F);
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(20, 127);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(128, 23);
+            this.label3.TabIndex = 35;
+            this.label3.Text = "Publisher ID :";
             // 
             // txt_diaChi
             // 
@@ -379,14 +391,14 @@
             this.txt_diaChi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_diaChi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_diaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_diaChi.Location = new System.Drawing.Point(163, 256);
+            this.txt_diaChi.Location = new System.Drawing.Point(163, 189);
             this.txt_diaChi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_diaChi.Name = "txt_diaChi";
             this.txt_diaChi.PasswordChar = '\0';
             this.txt_diaChi.PlaceholderText = "";
             this.txt_diaChi.SelectedText = "";
             this.txt_diaChi.Size = new System.Drawing.Size(211, 36);
-            this.txt_diaChi.TabIndex = 39;
+            this.txt_diaChi.TabIndex = 51;
             // 
             // txt_lienHe
             // 
@@ -402,26 +414,14 @@
             this.txt_lienHe.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_lienHe.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_lienHe.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_lienHe.Location = new System.Drawing.Point(163, 188);
+            this.txt_lienHe.Location = new System.Drawing.Point(163, 255);
             this.txt_lienHe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_lienHe.Name = "txt_lienHe";
             this.txt_lienHe.PasswordChar = '\0';
             this.txt_lienHe.PlaceholderText = "";
             this.txt_lienHe.SelectedText = "";
             this.txt_lienHe.Size = new System.Drawing.Size(211, 36);
-            this.txt_lienHe.TabIndex = 38;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Inter", 11F);
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(20, 127);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 23);
-            this.label3.TabIndex = 35;
-            this.label3.Text = "Publisher ID :";
+            this.txt_lienHe.TabIndex = 52;
             // 
             // UC_aPublisher
             // 
@@ -457,8 +457,8 @@
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2TextBox txt_name;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox txt_diaChi;
         private Guna.UI2.WinForms.Guna2TextBox txt_lienHe;
-        private System.Windows.Forms.Label label3;
     }
 }
