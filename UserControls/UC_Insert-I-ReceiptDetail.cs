@@ -27,7 +27,16 @@ namespace BookStore.UserControls
             cb_bookID.SelectedIndex = -1;
             txt_quantity.Text = string.Empty;
         }
-
+        public void ResetButton()
+        {
+            cb_receiptID.Enabled = false;
+            cb_bookID.Enabled = false;
+            txt_quantity.Enabled = false;
+            btn_insert.Enabled = true;
+            btn_update.Enabled = true;
+            btn_delete.Enabled = true;
+            btn_cancel.Enabled = false;
+        }
         private void ResetData()
         {
             string sql = "SELECT * FROM ChiTietPhieuNhap";
@@ -39,11 +48,13 @@ namespace BookStore.UserControls
 
             cb_receiptID.DisplayMember = "MaPhieuNhap";
             cb_receiptID.ValueMember = "MaPhieuNhap";
-            cb_receiptID.DataSource = dataCon.GetTable("SELECT MaPhieuNhap FROM PhieuNhap");    
+            cb_receiptID.DataSource = dataCon.GetTable("SELECT MaPhieuNhap FROM PhieuNhap");
+
             control = "empty";
             clearInput();
             cb_receiptID.SelectedIndex = -1;
             cb_bookID.SelectedIndex = -1;
+            ResetButton();
         }
 
         private void UpdateBookIDDataSource(string selectedReceiptID)
@@ -58,52 +69,6 @@ namespace BookStore.UserControls
             ResetData();
         }
 
-        private void btn_insert_Click(object sender, EventArgs e)
-        {
-            cb_receiptID.Enabled = true;
-            txt_quantity.Enabled = true;
-            cb_bookID.Enabled = true;
-            clearInput();
-            control = "insert";
-        }
-
-        private void btn_update_Click(object sender, EventArgs e)
-        {
-            cb_receiptID.Enabled = true;
-            txt_quantity.Enabled = true;
-            cb_bookID.Enabled = true;
-            control = "update";
-        }
-
-        private void btn_delete_Click(object sender, EventArgs e)
-        {
-            control = "delete";
-            dataCon.Open();
-
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = dataCon.GetConnection();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "Proc_XoaChiTietPhieuNhap";
-
-            String maPhieuNhap = cb_receiptID.Text.Trim();
-            String maSach = cb_bookID.Text.Trim();
-
-            cmd.Parameters.AddWithValue("@MaPhieuNhap", maPhieuNhap);
-            cmd.Parameters.AddWithValue("@MaSach", maSach);
-
-            try
-            {
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Bạn đã xóa chi tiết phiếu nhập thành công");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-            ResetData();
-            dataCon.Close();
-        }
 
         private bool IsInsertData()
         {
@@ -122,10 +87,97 @@ namespace BookStore.UserControls
                 MessageBox.Show("Số lượng nhập không được trống!");
                 return false;
             }
-
+            if (!int.TryParse(txt_quantity.Text, out int quantity))
+            {
+                MessageBox.Show("Số lượng nhập phải là số!");
+                return false;
+            }
+            if (quantity <= 0)
+            {
+                MessageBox.Show("Số lượng nhập phải là số nguyên dương!");
+                return false;
+            }
             return true;
         }
-        private void btn_add_Click(object sender, EventArgs e)
+
+        private void dtg_insertreceiptdetail_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataTable dt = (DataTable)dtg_insertreceiptdetail.DataSource;
+            int chiSo = dtg_insertreceiptdetail.SelectedCells[0].RowIndex;
+            DataRow dr = dt.Rows[chiSo];
+
+            cb_receiptID.Text = dr["MaPhieuNhap"].ToString();
+            cb_bookID.Text = dr["MaSach"].ToString();
+            txt_quantity.Text = dr["SoLuongNhap"].ToString();
+        }
+
+        private void cb_receiptID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateBookIDDataSource(cb_receiptID.Text);
+
+        }
+
+        private void btn_insert_Click_1(object sender, EventArgs e)
+        {
+            cb_receiptID.Enabled = true;
+            txt_quantity.Enabled = true;
+            cb_bookID.Enabled = true;
+            btn_update.Enabled = false;
+            btn_delete.Enabled = false;
+            btn_cancel.Enabled = true;
+            btn_save.Enabled = true;
+            clearInput();
+            control = "insert";
+        }
+
+        private void btn_delete_Click_1(object sender, EventArgs e)
+        {
+            control = "delete";
+            dataCon.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = dataCon.GetConnection();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "Proc_XoaChiTietPhieuNhap";
+
+            String maPhieuNhap = cb_receiptID.Text.Trim();
+            String maSach = cb_bookID.Text.Trim();
+
+            cmd.Parameters.AddWithValue("@MaPhieuNhap", maPhieuNhap);
+            cmd.Parameters.AddWithValue("@MaSach", maSach);
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Bạn đã xóa chi tiết phiếu nhập thành công");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            ResetData();
+            dataCon.Close();
+        }
+
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+            cb_receiptID.Enabled = false;
+            txt_quantity.Enabled = true;
+            cb_bookID.Enabled = false;
+            btn_insert.Enabled = false;
+            btn_delete.Enabled = false;
+            btn_cancel.Enabled = true;
+            btn_save.Enabled = true;
+            control = "update";
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            clearInput();
+            ResetButton();
+        }
+
+        private void btn_save_Click(object sender, EventArgs e)
         {
             if (IsInsertData() == false)
             {
@@ -179,30 +231,14 @@ namespace BookStore.UserControls
             }
             ResetData();
             dataCon.Close();
+
         }
 
-        private void dtg_insertreceiptdetail_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataTable dt = (DataTable)dtg_insertreceiptdetail.DataSource;
-            int chiSo = dtg_insertreceiptdetail.SelectedCells[0].RowIndex;
-            DataRow dr = dt.Rows[chiSo];
-
-            cb_receiptID.Text = dr["MaPhieuNhap"].ToString();
-            cb_bookID.Text = dr["MaSach"].ToString();
-            txt_quantity.Text = dr["SoLuongNhap"].ToString();
-        }
-
-        private void btn_save_Click(object sender, EventArgs e)
+        private void btn_return_Click(object sender, EventArgs e)
         {
             UC_I_Receipt ucReceipt = new UC_I_Receipt();
             this.Controls.Clear();
             this.Controls.Add(ucReceipt);
-        }
-
-        private void cb_receiptID_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            UpdateBookIDDataSource(cb_receiptID.Text);
-
         }
     }
 }

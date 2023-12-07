@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BookStore.Report;
+using CrystalDecisions.CrystalReports.Engine;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -192,8 +194,8 @@ namespace BookStore.UserControls
                         {
                             flp_bookItems.Controls.Add(uC_BookOrderItem);
                             UpdateTotalReceiptPrice(ReceiptID);
+                            UpdateTotalBill(ReceiptID);
                         }
-                        UpdateTotalBill(ReceiptID);
                     }
                 }
             }
@@ -244,15 +246,15 @@ namespace BookStore.UserControls
         public void UpdateTotalBill(String ReceiptID)
         {
             double subtotalbill = double.Parse(lbl_Subtotal.Text);
-            if (subtotalbill >= 1000000)
+            if (subtotalbill >= 750000)
             {
                 lbl_Sale.Text = "10%";
             }
-            else if (subtotalbill >= 2500000)
+            else if (subtotalbill >= 1500000)
             {
                 lbl_Sale.Text = "20%";
             }
-            else if (subtotalbill >= 3500000)
+            else if (subtotalbill >= 2000000)
             {
                 lbl_Sale.Text = "30%";
             }
@@ -270,6 +272,70 @@ namespace BookStore.UserControls
             DBConnection.Close();
 
             lbl_Total.Text = TotalBill.ToString();
+        }
+
+        private void txt_ReceivedMoney_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+
+                string totalmoney = lbl_Total.Text.Trim();
+                string receivemoney = txt_ReceivedMoney.Text.Trim();
+                if (receivemoney != "" & e.KeyCode == Keys.Enter)
+                {
+                    lbl_ChangeMoney.Text = (int.Parse(receivemoney) - int.Parse(totalmoney)).ToString();
+
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Nội dung không hợp lệ! Vui lòng nhập lại!", "Thông báo!");
+            }
+
+
+
+        }
+
+        private void btn_printReceipt_Click(object sender, EventArgs e)
+        {
+            // Cập nhật lại thời gian hóa đơn
+            cmd = new SqlCommand("Proc_CapNhatHoaDon", DBConnection.GetConnection());
+            DBConnection.Open();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@MaHD", SqlDbType.NChar).Value = lbl_ReceiptID.Text;
+            cmd.Parameters.Add("@TongHD", SqlDbType.Money).Value = lbl_Total.Text;
+            cmd.ExecuteNonQuery();
+            DBConnection.Close();
+
+            // Xuất hóa đơn
+            cmd = new SqlCommand("Proc_XuatHoaDon", DBConnection.GetConnection());
+            DBConnection.Open();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@MaHD", SqlDbType.NChar).Value = lbl_ReceiptID.Text;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable datatable = new DataTable();
+            da.Fill(datatable);
+            DBConnection.Close();
+
+            // Gán dữ liệu cho report
+            report_ReceiptDetail receiptDetail = new report_ReceiptDetail();
+            receiptDetail.SetDataSource(datatable);
+
+            // Gán các label vào report
+            // Tạo một trường cho CrystalReport
+            TextObject subtotal_obj = (TextObject)receiptDetail.ReportDefinition.Sections["Section4"].ReportObjects["subtotal"];
+            subtotal_obj.Text = lbl_Subtotal.Text;
+            TextObject sale_obj = (TextObject)receiptDetail.ReportDefinition.Sections["Section4"].ReportObjects["sale"];
+            sale_obj.Text = lbl_Sale.Text;
+            TextObject receive_obj = (TextObject)receiptDetail.ReportDefinition.Sections["Section4"].ReportObjects["receive"];
+            receive_obj.Text = txt_ReceivedMoney.Text;
+            TextObject change_obj = (TextObject)receiptDetail.ReportDefinition.Sections["Section4"].ReportObjects["change"];
+            change_obj.Text = lbl_ChangeMoney.Text;
+
+            // Hiển thị báo cáo
+            Form_ReceiptDetailReport f = new Form_ReceiptDetailReport();
+            f.rpt_Receipt.ReportSource = receiptDetail;
+            f.ShowDialog();
         }
     }
 }

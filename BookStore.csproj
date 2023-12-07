@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
@@ -44,6 +48,7 @@
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Windows.Forms.DataVisualization.Design" />
     <Reference Include="System.Xml.Linq" />
@@ -85,6 +90,31 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLNhaSachDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLNhaSachDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ds_receiptdetail.cs">
+      <DependentUpon>ds_receiptdetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ds_receiptdetail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_receiptdetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Form_ReceiptDetailReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Form_ReceiptDetailReport.Designer.cs">
+      <DependentUpon>Form_ReceiptDetailReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\report_ReceiptDetail.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>report_ReceiptDetail.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UserControls\UC_aBook.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -187,6 +217,13 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\Form_ReceiptDetailReport.resx">
+      <DependentUpon>Form_ReceiptDetailReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\report_ReceiptDetail.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>report_ReceiptDetail.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_aBook.resx">
       <DependentUpon>UC_aBook.cs</DependentUpon>
     </EmbeddedResource>
@@ -252,6 +289,28 @@
     <None Include="assets\icon _home 2_.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="QLNhaSachDataSet.xsc">
+      <DependentUpon>QLNhaSachDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLNhaSachDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLNhaSachDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLNhaSachDataSet.xss">
+      <DependentUpon>QLNhaSachDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Report\ds_receiptdetail.xsc">
+      <DependentUpon>ds_receiptdetail.xsd</DependentUpon>
+    </None>
+    <None Include="Report\ds_receiptdetail.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_receiptdetail.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\ds_receiptdetail.xss">
+      <DependentUpon>ds_receiptdetail.xsd</DependentUpon>
+    </None>
     <None Include="Resources\viewdetail.png" />
   </ItemGroup>
   <ItemGroup>
@@ -291,8 +350,12 @@
     <Content Include="assets\delete-3.png" />
     <Content Include="assets\minus-icon.png" />
     <Content Include="assets\plus-icon.png" />
+    <None Include="Resources\Green-Add-Button-PNG.png" />
     <None Include="Resources\Plus%28white%29.png" />
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -62,7 +62,43 @@ namespace BookStore.UserControls
             LoadDataTG();
             
         }
+        private bool 
+        ()
+        {
+            if (txt_name.Text.Trim() == "")
+            {
+                MessageBox.Show("Tên tác giả không được trống!");
+                return false;
+            }
+            if (cb_maNXB.Text.Trim() == "")
+            {
+                MessageBox.Show("Mã nhà xuất bản không được trống!");
+                return false;
 
+            }
+            if (txt_maTG.Text.Trim() == "")
+            {
+                MessageBox.Show("Mã tác giả không được trống!");
+                return false;
+
+            }
+            if (int.TryParse(txt_maTG.Text, out int maTG) && maTG < 0)
+            {
+                MessageBox.Show("Mã tác giả không được nhập số âm!");
+                return false;
+            }
+            if (int.TryParse(txt_name.Text, out _))
+            {
+                MessageBox.Show("Tên tác giả không được nhập số!");
+                return false;
+            }
+            if (int.TryParse(txt_lienHe.Text, out int lienHe) && lienHe < 0)
+            {
+                MessageBox.Show("Liên hệ không được nhập số âm!");
+                return false;
+            }
+            return true;
+        }
         private void dtg_tacgia_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             cb_maNXB.SelectedIndex = -1;
@@ -192,6 +228,13 @@ namespace BookStore.UserControls
                 MessageBox.Show("Lỗi: " + errormessage);
             }
             else if (dieuKhien == "them")
+
+            if (!CheckInputData())
+            {
+                ResetText();
+                return;
+            }
+            if (dieuKhien == "them")
             {
                 try
                 {
