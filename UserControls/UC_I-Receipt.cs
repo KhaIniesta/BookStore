@@ -23,11 +23,6 @@ namespace BookStore.UserControls
         private DatabaseConnection dataCon = new DatabaseConnection();
         private String control = "empty";
 
-        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void clearInput()
         {
             txt_receiptid.Text = string.Empty;
@@ -49,10 +44,7 @@ namespace BookStore.UserControls
             control = "empty";
             clearInput();
             cb_publisherid.SelectedIndex = -1;
-        }
-        private void dtg_receipt_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            ResetButton();
         }
 
         private void UC_I_Receipt_Load(object sender, EventArgs e)
@@ -60,69 +52,17 @@ namespace BookStore.UserControls
             ResetData();
         }
 
-        private void btn_insert_Click(object sender, EventArgs e)
+        public void ResetButton()
         {
-            txt_receiptid.Enabled = true;
-            cb_publisherid.Enabled = true;
-            dtp_date.Enabled = true;
-            clearInput();
-            control = "insert";
-        }
-
-        private void btn_delete_Click(object sender, EventArgs e)
-        {
-            control = "delete";
-            dataCon.Open();
-
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = dataCon.GetConnection();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "Proc_XoaPhieuNhap";
-
-            String receiptid = txt_receiptid.Text.Trim();
-            cmd.Parameters.AddWithValue("@MaPhieuNhap", receiptid);
-            try
-            {
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Bạn đã xóa sách thành công");
-            }
-            catch (Exception ex)
-            {
-                DialogResult dr = MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (dr == DialogResult.Yes)
-                {
-                    
-                    SqlCommand ctpnCmd = new SqlCommand();
-                    ctpnCmd.Connection = dataCon.GetConnection();
-                    ctpnCmd.CommandType = CommandType.StoredProcedure;
-                    ctpnCmd.CommandText = "Proc_XoaChiTietPhieuNhapTheoMaPhieuNhap";
-                    ctpnCmd.Parameters.AddWithValue("@MaPhieuNhap", receiptid);
-                    try
-                    {
-                        ctpnCmd.ExecuteNonQuery();
-                        MessageBox.Show($"Bạn đã xóa tất cả các CTPN có mã phiếu nhập là {receiptid}");
-                        cmd.ExecuteNonQuery();
-                    }
-                    catch (Exception)
-                    {
-                        MessageBox.Show("Xóa thất bại!");
-
-                    }
-                }
-            }
-
-            ResetData();
-            dataCon.Close();
-        }
-
-        private void btn_update_Click(object sender, EventArgs e)
-        {
-            cb_publisherid.Enabled = true;
-            dtp_date.Enabled = true;
-
-            control = "update";
-        }
+            txt_receiptid.Enabled = false;
+            cb_publisherid.Enabled = false;
+            dtp_date.Enabled = false;
+            btn_save.Enabled = false;
+            btn_insert.Enabled = true;
+            btn_update.Enabled = true;
+            btn_delete.Enabled = true;
+            btn_cancel.Enabled = false;
+        }  
 
         private void btn_save_Click(object sender, EventArgs e)
         {
@@ -203,7 +143,6 @@ namespace BookStore.UserControls
                 MessageBox.Show("Mã nhà xuất bản nhập không được trống!");
                 return false;
             }
-
             return true;
         }
 
@@ -238,10 +177,84 @@ namespace BookStore.UserControls
                 ucViewAllReceipt.Dock = DockStyle.Fill;
                 ucViewAllReceipt.BringToFront();
             }
-
             ucViewAllReceipt.Show();
 
-        }    
-     
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            clearInput();
+            ResetButton();
+        }
+
+        private void btn_insert_Click(object sender, EventArgs e)
+        {
+            txt_receiptid.Enabled = true;
+            cb_publisherid.Enabled = true;
+            dtp_date.Enabled = true;
+            btn_update.Enabled = false;
+            btn_delete.Enabled = false;
+            btn_cancel.Enabled = true;
+            btn_save.Enabled = true;
+            clearInput();
+            control = "insert";
+
+        }
+
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+            cb_publisherid.Enabled = true;
+            dtp_date.Enabled = true;
+            btn_delete.Enabled = false;
+            btn_insert.Enabled = false;
+            btn_cancel.Enabled = true;
+            btn_save.Enabled = true;
+            control = "update";
+        }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            control = "delete";
+            dataCon.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = dataCon.GetConnection();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "Proc_XoaPhieuNhap";
+
+            String receiptid = txt_receiptid.Text.Trim();
+            cmd.Parameters.AddWithValue("@MaPhieuNhap", receiptid);
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Bạn đã xóa sách thành công");
+            }
+            catch (Exception ex)
+            {
+                DialogResult dr = MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (dr == DialogResult.Yes)
+                {
+
+                    SqlCommand ctpnCmd = new SqlCommand();
+                    ctpnCmd.Connection = dataCon.GetConnection();
+                    ctpnCmd.CommandType = CommandType.StoredProcedure;
+                    ctpnCmd.CommandText = "Proc_XoaChiTietPhieuNhapTheoMaPhieuNhap";
+                    ctpnCmd.Parameters.AddWithValue("@MaPhieuNhap", receiptid);
+                    try
+                    {
+                        ctpnCmd.ExecuteNonQuery();
+                        MessageBox.Show($"Bạn đã xóa tất cả các CTPN có mã phiếu nhập là {receiptid}");
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Xóa thất bại!");
+                    }
+                }
+            }
+            ResetData();
+            dataCon.Close();
+        }
     }
 }

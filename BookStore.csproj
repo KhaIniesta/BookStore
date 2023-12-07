@@ -350,6 +350,7 @@
     <Content Include="assets\delete-3.png" />
     <Content Include="assets\minus-icon.png" />
     <Content Include="assets\plus-icon.png" />
+    <None Include="Resources\Green-Add-Button-PNG.png" />
     <None Include="Resources\Plus%28white%29.png" />
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
