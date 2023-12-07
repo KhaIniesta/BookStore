@@ -18,6 +18,8 @@ namespace BookStore
         {
             InitializeComponent();
         }
+        UC_Revenue UC_Rev;
+        UC_AllReceiptDetail UC_AllRecDetail;
 
         private void AddUserControl(UserControl UC)
         {
@@ -65,8 +67,7 @@ namespace BookStore
         private void Btn_RevenueTab_Click(object sender, EventArgs e)
         {
             Btn_RevenueTab.Checked = true;
-            UC_Revenue UC = new UC_Revenue();
-            AddUserControl(UC);
+            InitUCsForRevenueTab();
         }
 
         private void Btn_HRTab_Click(object sender, EventArgs e)
@@ -95,5 +96,28 @@ namespace BookStore
             UC_Author UC = new UC_Author();
             AddUserControl(UC);
         }
+
+        // followings for change UC
+        private void InitUCsForRevenueTab()
+        {
+            UC_Rev = new UC_Revenue();
+            UC_Rev.ChangeUCClicked += UC_Rev_ChangeClicked;
+
+            UC_AllRecDetail = new UC_AllReceiptDetail();;
+            UC_AllRecDetail.ChangeUCClicked += UC_AllRecDetail_ChangeClicked;
+
+            UC_Rev.SetUC_AllRecDetail_Reference(UC_AllRecDetail);
+
+            AddUserControl(UC_Rev);
+        }
+        private void UC_Rev_ChangeClicked(object sender, EventArgs e)
+        {
+            AddUserControl(UC_AllRecDetail);
+        }
+        private void UC_AllRecDetail_ChangeClicked(object sender, EventArgs e)
+        {
+            AddUserControl(UC_Rev);
+        }
+
     }
 }
