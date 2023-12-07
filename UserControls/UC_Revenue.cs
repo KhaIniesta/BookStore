@@ -21,13 +21,14 @@ namespace BookStore.UserControls
         }
         private DatabaseConnection DBC = new DatabaseConnection();
         SqlConnection conn = new SqlConnection("Data Source=.;Initial Catalog=QLNhaSach;User ID=sa;Password=1234");
-        DataTable dt = null;
         SqlCommand cmd = null;
-        SqlDataAdapter da = null;
+
+        public event EventHandler ChangeUCClicked;
+        UC_AllReceiptDetail UC_AllRecDetail;
 
         private void UC_Revenue_Load(object sender, EventArgs e)
         {
-
+            Btn_Month_Click(sender, e);
         }
         private void ResetChart()
         {
@@ -105,6 +106,25 @@ namespace BookStore.UserControls
             {
                 Chart_Revenue.Series["Revenue"].Points.AddXY(i, MonthRevenue(i, DateTimePicker.Value.Year));
             }
+        }
+
+        private void Btn_Details_Click(object sender, EventArgs e)
+        {
+            ChangeUCClicked?.Invoke(this, EventArgs.Empty); // change UC
+            int selectedrowindex = DG_RevenueDetail.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = DG_RevenueDetail.Rows[selectedrowindex];
+            string cellValue = Convert.ToString(selectedRow.Cells["Receipt ID"].Value);
+            UC_AllRecDetail?.ShowDetails(cellValue);
+        }
+
+        private void DG_RevenueDetail_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Btn_Details.Enabled = true;
+        }
+
+        public void SetUC_AllRecDetail_Reference(UC_AllReceiptDetail UC)
+        {
+            this.UC_AllRecDetail = UC;
         }
     }
 }
