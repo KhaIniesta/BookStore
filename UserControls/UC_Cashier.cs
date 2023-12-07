@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -11,15 +12,9 @@ namespace BookStore.UserControls
         private DataTable dt;
         public event EventHandler Btn_receipt_detail_click;
 
-        private void ResetDuLieu()
+        private void RenderPanelCasher()
         {
-            DBConnection.Open();
-            pn_Cashier.Dock = DockStyle.Fill;
             pn_Cashier.Controls.Clear();
-
-            string sql = "Select * from V_HienChiTietSach";
-            dt = DBConnection.GetTable(sql);
-
             foreach (DataRow dr in dt.Rows)
             {
                 String BookID = dr["MaSach"].ToString();
@@ -41,7 +36,40 @@ namespace BookStore.UserControls
                 uC_BookItem.Clicked += UC_BookItem_Clicked;
                 pn_Cashier.Controls.Add(uC_BookItem);
             }
+        }
+
+        public void LoadDataWithSearchContent(string searchContent)
+        {
+            dt = new DataTable();
+            if (searchContent != null && searchContent != "")
+            {
+                DBConnection.Open();
+                SqlCommand cmd = new SqlCommand("Proc_TimKiemSach", DBConnection.GetConnection());
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@TuKhoa", SqlDbType.NVarChar).Value = searchContent;
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dt);
+                DBConnection.Close();
+
+                RenderPanelCasher();
+            }
+            else
+            {
+                ResetDuLieu();
+            }
+        }
+
+        private void ResetDuLieu()
+        {
+            DBConnection.Open();
+            pn_Cashier.Dock = DockStyle.Fill;
+            pn_Cashier.Controls.Clear();
+
+            string sql = "Select * from V_HienChiTietSach";
+            dt = DBConnection.GetTable(sql);
             DBConnection.Close();
+
+            RenderPanelCasher();
         }
 
         public UC_Cashier()

@@ -14,15 +14,10 @@ namespace BookStore.UserControls
         private DataTable dt;
         private SqlCommand cmd;
         public event EventHandler Btn_delete_receipt_click;
-        private void ResetDuLieu()
+
+        private void RenderPanelBookItems()
         {
-            DBConnection.Open();
-            //pn_bookItems.Dock = DockStyle.Fill;
             pn_bookItems.Controls.Clear();
-
-            string sql = "Select * from V_HienChiTietSach";
-            dt = DBConnection.GetTable(sql);
-
             foreach (DataRow dr in dt.Rows)
             {
                 String BookID = dr["MaSach"].ToString();
@@ -44,6 +39,38 @@ namespace BookStore.UserControls
                 pn_bookItems.Controls.Add(uC_BookItem);
                 uC_BookItem.Clicked += UC_BookItem_Clicked;
             }
+        }
+
+        public void LoadDataWithSearchContent(string searchContent)
+        {
+            dt = new DataTable();
+            if (searchContent != null && searchContent != "")
+            {
+                DBConnection.Open();
+                cmd = new SqlCommand("Proc_TimKiemSach", DBConnection.GetConnection());
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@TuKhoa", SqlDbType.NVarChar).Value = searchContent;
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dt);
+                DBConnection.Close();
+
+                RenderPanelBookItems();
+            }
+            else
+            {
+                ResetDuLieu();
+            }
+        }
+
+        private void ResetDuLieu()
+        {
+            DBConnection.Open();
+            //pn_bookItems.Dock = DockStyle.Fill;
+            pn_bookItems.Controls.Clear();
+
+            string sql = "Select * from V_HienChiTietSach";
+            dt = DBConnection.GetTable(sql);
+            RenderPanelBookItems();
             DBConnection.Close();
         }
         public UC_ReceipDetail()

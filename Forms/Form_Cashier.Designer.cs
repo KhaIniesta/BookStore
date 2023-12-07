@@ -127,6 +127,7 @@
             this.Txt_Searchbox.SelectedText = "";
             this.Txt_Searchbox.Size = new System.Drawing.Size(472, 48);
             this.Txt_Searchbox.TabIndex = 1;
+            this.Txt_Searchbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_Searchbox_KeyDown);
             // 
             // guna2Panel1
             // 
