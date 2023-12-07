@@ -97,6 +97,7 @@ namespace BookStore.UserControls
             txt_maTG.Enabled = false;
             txt_lienHe.Enabled = true;
             txt_name.Enabled = true;
+            btn_sua.Enabled = false;
             btn_luu.Enabled = false;
             btn_xoa.Enabled = false;
             btn_luu.Enabled = true;
@@ -134,10 +135,63 @@ namespace BookStore.UserControls
 
             kn.Close();
         }
+        private bool IsValidPhoneNumber(string phoneNumber)
+        {
+            // Sử dụng biểu thức chính quy để kiểm tra số điện thoại
+            // Đơn giản cho mục đích ví dụ, bạn có thể điều chỉnh để phù hợp với định dạng số điện thoại thực tế
+            return System.Text.RegularExpressions.Regex.IsMatch(phoneNumber, @"^\d{10}$");
+        }
 
+        private bool IsValidEmail(string email)
+        {
+            // Sử dụng biểu thức chính quy để kiểm tra định dạng email
+            return System.Text.RegularExpressions.Regex.IsMatch(email, @"^\S+@\S+\.\S+$");
+        }
+
+        private bool IsValidLienHe()
+        {
+            string lienHe = txt_lienHe.Text.Trim();
+            // Kiểm tra nếu là số điện thoại
+            if (IsValidPhoneNumber(lienHe))
+            {
+                return true;
+            }
+            // Kiểm tra nếu là email
+            else if (IsValidEmail(lienHe))
+            {
+                return true;
+            }
+            // Nếu không phải số điện thoại hoặc email, trả về false
+            else
+            {
+                return false;
+            }
+        }
+        private bool IsValidName()
+        {
+            string name = txt_name.Text.Trim();
+            return System.Text.RegularExpressions.Regex.IsMatch(name, @"^[\p{L}\s\p{M}]+$");
+        }
         private void btn_luu_Click(object sender, EventArgs e)
         {
-            if (dieuKhien == "them")
+            string errormessage = "";
+            bool haserror = false;
+            if (IsValidName() == false)
+            {
+                errormessage += "Nhập sai tên. \n";
+                haserror = true;
+                
+            }
+            if (IsValidLienHe() == false)
+            {
+                errormessage += "       Nhập sai số điện thoại hoặc email. \n";
+                haserror = true;
+            }
+            if (haserror == true)
+            {
+                MessageBox.Show("Lỗi: " + errormessage);
+            }
+            else if (dieuKhien == "them")
             {
                 try
                 {
