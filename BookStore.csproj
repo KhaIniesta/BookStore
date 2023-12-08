@@ -109,10 +109,22 @@
     <Compile Include="Report\Form_ReceiptDetailReport.Designer.cs">
       <DependentUpon>Form_ReceiptDetailReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\Form_RevenueReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Form_RevenueReport.Designer.cs">
+      <DependentUpon>Form_RevenueReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\report_ReceiptDetail.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>report_ReceiptDetail.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\report_Revenue.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>report_Revenue.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UserControls\UC_aBook.cs">
@@ -220,9 +232,16 @@
     <EmbeddedResource Include="Report\Form_ReceiptDetailReport.resx">
       <DependentUpon>Form_ReceiptDetailReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\Form_RevenueReport.resx">
+      <DependentUpon>Form_RevenueReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\report_ReceiptDetail.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>report_ReceiptDetail.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\report_Revenue.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>report_Revenue.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_aBook.resx">
       <DependentUpon>UC_aBook.cs</DependentUpon>

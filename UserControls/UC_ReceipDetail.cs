@@ -84,7 +84,7 @@ namespace BookStore.UserControls
             DBConnection.Open();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@MaHD", SqlDbType.NChar).Value = ReceiptID.Trim();
-            ;
+            
             string total = cmd.ExecuteScalar()?.ToString();
             lbl_Subtotal.Text = total;
             DBConnection.Close();
@@ -213,6 +213,7 @@ namespace BookStore.UserControls
                         uC_BookOrderItem.IncreaseButtonClicked += UpdateBookOrder;
                         uC_BookOrderItem.DescreaseButtonClicked += UpdateBookOrder;
                         uC_BookOrderItem.DeleteBookFromReceiptClicked += DeleteBookOrder;
+                        uC_BookOrderItem.TextBoxEnter += UpdateBookOrder;
 
                         String Quantity = uC_BookOrderItem.GetBoughtQuantity();
                         int count = InsertBookIntoReceiptDetail(ReceiptID, BookID, Quantity);
@@ -310,22 +311,31 @@ namespace BookStore.UserControls
         {
             try
             {
-
                 string totalmoney = lbl_Total.Text.Trim();
                 string receivemoney = txt_ReceivedMoney.Text.Trim();
-                if (receivemoney != "" & e.KeyCode == Keys.Enter)
-                {
-                    lbl_ChangeMoney.Text = (int.Parse(receivemoney) - int.Parse(totalmoney)).ToString();
 
+                if (receivemoney != "" && e.KeyCode == Keys.Enter)
+                {
+                    int change = int.Parse(receivemoney) - int.Parse(totalmoney);
+                    if (int.Parse(receivemoney) - int.Parse(totalmoney) < 0)
+                    {
+                        lbl_ChangeMoney.ForeColor = Color.Red;
+                        lbl_ChangeMoney.Text = $"Khách đưa thiếu {-change}";
+                        btn_printReceipt.Enabled = false;
+                    }
+                    else
+                    {
+                        lbl_ChangeMoney.ForeColor = Color.Black;
+                        lbl_ChangeMoney.Text = change.ToString();
+                        btn_printReceipt.Enabled = true;
+                    }
                 }
+                
             }
             catch
             {
                 MessageBox.Show("Nội dung không hợp lệ! Vui lòng nhập lại!", "Thông báo!");
             }
-
-
-
         }
 
         private void btn_printReceipt_Click(object sender, EventArgs e)
@@ -368,6 +378,7 @@ namespace BookStore.UserControls
             Form_ReceiptDetailReport f = new Form_ReceiptDetailReport();
             f.rpt_Receipt.ReportSource = receiptDetail;
             f.ShowDialog();
+            ReturnUC_Casher?.Invoke(this, EventArgs.Empty);
         }
     }
 }
