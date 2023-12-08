@@ -203,7 +203,7 @@
             this.CB_Position.Location = new System.Drawing.Point(231, 194);
             this.CB_Position.Name = "CB_Position";
             this.CB_Position.Size = new System.Drawing.Size(433, 36);
-            this.CB_Position.TabIndex = 10;
+            this.CB_Position.TabIndex = 4;
             // 
             // Txt_Name
             // 
@@ -226,7 +226,7 @@
             this.Txt_Name.PlaceholderText = "";
             this.Txt_Name.SelectedText = "";
             this.Txt_Name.Size = new System.Drawing.Size(433, 40);
-            this.Txt_Name.TabIndex = 7;
+            this.Txt_Name.TabIndex = 3;
             // 
             // Txt_Password
             // 
@@ -249,7 +249,7 @@
             this.Txt_Password.PlaceholderText = "";
             this.Txt_Password.SelectedText = "";
             this.Txt_Password.Size = new System.Drawing.Size(433, 40);
-            this.Txt_Password.TabIndex = 8;
+            this.Txt_Password.TabIndex = 2;
             // 
             // Txt_Username
             // 
@@ -272,7 +272,7 @@
             this.Txt_Username.PlaceholderText = "";
             this.Txt_Username.SelectedText = "";
             this.Txt_Username.Size = new System.Drawing.Size(433, 40);
-            this.Txt_Username.TabIndex = 9;
+            this.Txt_Username.TabIndex = 1;
             // 
             // label4
             // 

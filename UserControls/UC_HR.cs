@@ -91,6 +91,7 @@ namespace BookStore.UserControls
             btn_update_account.Enabled = false;
             clearInput();
             ControlState = "insert";
+            Txt_Username.Focus();
         }
 
         private void btn_canncel_Click(object sender, EventArgs e)
@@ -228,6 +229,17 @@ namespace BookStore.UserControls
 
         private void btn_delete_account_Click(object sender, EventArgs e)
         {
+            DialogResult dl = MessageBox.Show(
+                $"Xác nhận xóa tài khoản {Txt_Username.Text} của nhân viên {Txt_Name.Text}, nhấn Ok để xác nhận!",
+                "Thông báo",
+                MessageBoxButtons.OKCancel,
+                MessageBoxIcon.Question);
+
+            if (dl != DialogResult.OK)
+            {
+                return;
+            }
+
             ControlState = "delete";
             DBConnection.Open();
 
@@ -254,6 +266,17 @@ namespace BookStore.UserControls
 
         private void DG_AccountDetail_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            Txt_Username.Enabled = false;
+            Txt_Password.Enabled = false;
+            Txt_Name.Enabled = false;
+            CB_Position.Enabled = false;
+            Btn_ChoosePic.Enabled = false;
+            btn_canncel.Enabled = false;
+            btn_delete_account.Enabled = false;
+            btn_new_account.Enabled = true;
+            btn_update_account.Enabled = false;
+            ControlState = "none";
+
             DataTable dt = (DataTable)DG_AccountDetail.DataSource;
             int chiSo = DG_AccountDetail.SelectedCells[0].RowIndex;
             DataRow dr = dt.Rows[chiSo];
