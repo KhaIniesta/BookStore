@@ -47,17 +47,22 @@
             this.Panel_Dg = new Guna.UI2.WinForms.Guna2Panel();
             this.DG_RevenueDetail = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Btn_Details = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_printReceipt = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.ds_receiptdetail1 = new BookStore.Report.ds_receiptdetail();
+            this.txt_sumrevenue = new Guna.UI2.WinForms.Guna2TextBox();
             this.Panel_Date.SuspendLayout();
             this.Panel_Chart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Chart_Revenue)).BeginInit();
             this.Panel_Dg.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_RevenueDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ds_receiptdetail1)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel_Date
             // 
             this.Panel_Date.BackColor = System.Drawing.Color.Transparent;
             this.Panel_Date.BorderRadius = 12;
+            this.Panel_Date.Controls.Add(this.btn_printReceipt);
             this.Panel_Date.Controls.Add(this.Lbl_Role);
             this.Panel_Date.Controls.Add(this.DateTimePicker);
             this.Panel_Date.Controls.Add(this.Btn_Year);
@@ -199,6 +204,7 @@
             // 
             this.Panel_Dg.BackColor = System.Drawing.Color.Transparent;
             this.Panel_Dg.BorderRadius = 12;
+            this.Panel_Dg.Controls.Add(this.txt_sumrevenue);
             this.Panel_Dg.Controls.Add(this.DG_RevenueDetail);
             this.Panel_Dg.Controls.Add(this.Btn_Details);
             this.Panel_Dg.FillColor = System.Drawing.Color.White;
@@ -281,6 +287,56 @@
             this.Btn_Details.Text = "Details";
             this.Btn_Details.Click += new System.EventHandler(this.Btn_Details_Click);
             // 
+            // btn_printReceipt
+            // 
+            this.btn_printReceipt.Animated = true;
+            this.btn_printReceipt.AutoRoundedCorners = true;
+            this.btn_printReceipt.BackColor = System.Drawing.Color.Transparent;
+            this.btn_printReceipt.BorderRadius = 17;
+            this.btn_printReceipt.DefaultAutoSize = true;
+            this.btn_printReceipt.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_printReceipt.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_printReceipt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_printReceipt.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_printReceipt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_printReceipt.Font = new System.Drawing.Font("Inter SemiBold", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_printReceipt.ForeColor = System.Drawing.Color.White;
+            this.btn_printReceipt.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
+            this.btn_printReceipt.Location = new System.Drawing.Point(299, 9);
+            this.btn_printReceipt.Name = "btn_printReceipt";
+            this.btn_printReceipt.Size = new System.Drawing.Size(98, 36);
+            this.btn_printReceipt.TabIndex = 4;
+            this.btn_printReceipt.Text = "Export";
+            this.btn_printReceipt.Click += new System.EventHandler(this.btn_printRevenue);
+            // 
+            // ds_receiptdetail1
+            // 
+            this.ds_receiptdetail1.DataSetName = "ds_receiptdetail";
+            this.ds_receiptdetail1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // txt_sumrevenue
+            // 
+            this.txt_sumrevenue.BackColor = System.Drawing.Color.Transparent;
+            this.txt_sumrevenue.BorderRadius = 10;
+            this.txt_sumrevenue.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_sumrevenue.DefaultText = "";
+            this.txt_sumrevenue.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_sumrevenue.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_sumrevenue.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_sumrevenue.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_sumrevenue.Enabled = false;
+            this.txt_sumrevenue.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_sumrevenue.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_sumrevenue.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_sumrevenue.Location = new System.Drawing.Point(984, 14);
+            this.txt_sumrevenue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_sumrevenue.Name = "txt_sumrevenue";
+            this.txt_sumrevenue.PasswordChar = '\0';
+            this.txt_sumrevenue.PlaceholderText = "";
+            this.txt_sumrevenue.SelectedText = "";
+            this.txt_sumrevenue.Size = new System.Drawing.Size(152, 36);
+            this.txt_sumrevenue.TabIndex = 31;
+            // 
             // UC_Revenue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -299,6 +355,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Chart_Revenue)).EndInit();
             this.Panel_Dg.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DG_RevenueDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ds_receiptdetail1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -317,5 +374,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataVisualization.Charting.Chart Chart_Revenue;
         private Guna.UI2.WinForms.Guna2Button Btn_Details;
+        private Guna.UI2.WinForms.Guna2GradientButton btn_printReceipt;
+        private Guna.UI2.WinForms.Guna2TextBox txt_sumrevenue;
+        private Report.ds_receiptdetail ds_receiptdetail1;
     }
 }
