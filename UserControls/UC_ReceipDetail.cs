@@ -223,8 +223,32 @@ namespace BookStore.UserControls
                             flp_bookItems.Controls.Add(uC_BookOrderItem);
                             UpdateTotalReceiptPrice(ReceiptID);
                             UpdateTotalBill(ReceiptID);
+
+                            CheckReceiveMoneyAgain();
                         }
                     }
+                }
+            }
+        }
+
+        public void CheckReceiveMoneyAgain()
+        {
+            if (txt_ReceivedMoney.Text != "")
+            {
+                string totalmoney = lbl_Total.Text.Trim();
+                string receivemoney = txt_ReceivedMoney.Text.Trim();
+                int change = int.Parse(receivemoney) - int.Parse(totalmoney);
+                if (int.Parse(receivemoney) - int.Parse(totalmoney) < 0)
+                {
+                    lbl_ChangeMoney.ForeColor = Color.Red;
+                    lbl_ChangeMoney.Text = $"Khách đưa thiếu {-change}";
+                    btn_printReceipt.Enabled = false;
+                }
+                else
+                {
+                    lbl_ChangeMoney.ForeColor = Color.Black;
+                    lbl_ChangeMoney.Text = change.ToString();
+                    btn_printReceipt.Enabled = true;
                 }
             }
         }
@@ -251,6 +275,8 @@ namespace BookStore.UserControls
                 {
                     UpdateTotalReceiptPrice(ReceiptID);
                     UpdateTotalBill(ReceiptID);
+
+                    CheckReceiveMoneyAgain();
                 }
                 else
                 {
@@ -272,6 +298,8 @@ namespace BookStore.UserControls
                 {
                     UpdateTotalReceiptPrice(ReceiptID);
                     UpdateTotalBill(ReceiptID);
+
+                    CheckReceiveMoneyAgain();
                 }
             }
         }
@@ -379,6 +407,22 @@ namespace BookStore.UserControls
             f.rpt_Receipt.ReportSource = receiptDetail;
             f.ShowDialog();
             ReturnUC_Casher?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void txt_ReceivedMoney_TextChanged(object sender, EventArgs e)
+        {
+            if (txt_ReceivedMoney.Text == "00")
+            {
+                txt_ReceivedMoney.Text = "";
+            }
+        }
+
+        private void txt_ReceivedMoney_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != 127)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

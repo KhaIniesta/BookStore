@@ -59,6 +59,13 @@ namespace BookStore
             UC_I_Receipt UC = new UC_I_Receipt();
             AddUserControl(UC);
         }
+
+        private void Form_SM_Load(object sender, EventArgs e)
+        {
+            Btn_HomeTab.Checked = true;
+            UC_aHome UC = new UC_aHome();
+            AddUserControl(UC);
+        }
     }
 
 }

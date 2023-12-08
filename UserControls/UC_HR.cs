@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,22 @@ namespace BookStore.UserControls
         public UC_HR()
         {
             InitializeComponent();
+        }
+
+        static string ConvertToTitleCase(string input)
+        {
+            string[] words = input.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            for (int i = 0; i < words.Length; i++)
+            {
+                string word = words[i].ToLower(); // Chuyển đổi tất cả thành chữ thường
+                if (!string.IsNullOrEmpty(word))
+                {
+                    char firstChar = char.ToUpper(word[0], CultureInfo.CurrentCulture);
+                    words[i] = firstChar + word.Substring(1);
+                }
+            }
+            string result = string.Join(" ", words);
+            return result;
         }
 
         private bool CheckInput()
@@ -89,6 +106,7 @@ namespace BookStore.UserControls
             btn_delete_account.Enabled = false;
             btn_new_account.Enabled = false;
             btn_update_account.Enabled = false;
+            Picturebox_ProfilePic.Image = null;
             clearInput();
             ControlState = "insert";
             Txt_Username.Focus();
@@ -321,6 +339,19 @@ namespace BookStore.UserControls
                 Picturebox_ProfilePic.ImageLocation = openFileDialog1.FileName;
                 openFileDialog1.Dispose();
             }
+        }
+
+        private void Txt_Name_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != 127)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Txt_Name_Leave(object sender, EventArgs e)
+        {
+            Txt_Name.Text = ConvertToTitleCase(Txt_Name.Text);
         }
     }
 }
