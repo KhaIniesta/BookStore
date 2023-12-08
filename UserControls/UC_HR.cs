@@ -21,6 +21,11 @@ namespace BookStore.UserControls
             InitializeComponent();
         }
 
+        private bool IsValidUsername(string username)
+        {
+            return System.Text.RegularExpressions.Regex.IsMatch(username, @"^[^\p{M}\s]+$");
+        }
+
         static string ConvertToTitleCase(string input)
         {
             string[] words = input.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
@@ -352,6 +357,24 @@ namespace BookStore.UserControls
         private void Txt_Name_Leave(object sender, EventArgs e)
         {
             Txt_Name.Text = ConvertToTitleCase(Txt_Name.Text);
+        }
+
+        private void Txt_Username_Leave(object sender, EventArgs e)
+        {
+            if (!IsValidUsername(Txt_Username.Text.Trim()))
+            {
+                MessageBox.Show("Username không chấp nhận có dấu và khoảng trắng!");
+                Txt_Username.Text = "";
+            }
+        }
+
+        private void Txt_Password_Leave(object sender, EventArgs e)
+        {
+            if (!IsValidUsername(Txt_Password.Text.Trim()))
+            {
+                MessageBox.Show("Password không chấp nhận có dấu và khoảng trắng!");
+                Txt_Password.Text = "";
+            }
         }
     }
 }

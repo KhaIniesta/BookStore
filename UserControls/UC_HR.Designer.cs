@@ -252,6 +252,7 @@
             this.Txt_Password.SelectedText = "";
             this.Txt_Password.Size = new System.Drawing.Size(433, 40);
             this.Txt_Password.TabIndex = 2;
+            this.Txt_Password.Leave += new System.EventHandler(this.Txt_Password_Leave);
             // 
             // Txt_Username
             // 
@@ -275,6 +276,7 @@
             this.Txt_Username.SelectedText = "";
             this.Txt_Username.Size = new System.Drawing.Size(433, 40);
             this.Txt_Username.TabIndex = 1;
+            this.Txt_Username.Leave += new System.EventHandler(this.Txt_Username_Leave);
             // 
             // label4
             // 
