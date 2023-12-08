@@ -118,7 +118,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(32, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 24);
+            this.label1.Size = new System.Drawing.Size(121, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "New order";
             // 
@@ -154,7 +154,7 @@
             this.label11.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(422, 60);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(59, 20);
+            this.label11.Size = new System.Drawing.Size(66, 20);
             this.label11.TabIndex = 22;
             this.label11.Text = "Sale : ";
             // 
@@ -165,7 +165,7 @@
             this.label20.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(420, 13);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(92, 20);
+            this.label20.Size = new System.Drawing.Size(103, 20);
             this.label20.TabIndex = 21;
             this.label20.Text = "Subtotal : ";
             // 
@@ -209,9 +209,9 @@
             this.lbl_Total.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Total.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Total.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lbl_Total.Location = new System.Drawing.Point(242, 14);
+            this.lbl_Total.Location = new System.Drawing.Point(208, 14);
             this.lbl_Total.Name = "lbl_Total";
-            this.lbl_Total.Size = new System.Drawing.Size(140, 28);
+            this.lbl_Total.Size = new System.Drawing.Size(164, 28);
             this.lbl_Total.TabIndex = 17;
             this.lbl_Total.Text = "0";
             this.lbl_Total.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -223,7 +223,7 @@
             this.label5.Font = new System.Drawing.Font("Inter Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(84, 14);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 24);
+            this.label5.Size = new System.Drawing.Size(80, 24);
             this.label5.TabIndex = 16;
             this.label5.Text = "Total : ";
             // 
@@ -234,7 +234,7 @@
             this.label4.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(84, 103);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 20);
+            this.label4.Size = new System.Drawing.Size(97, 20);
             this.label4.TabIndex = 15;
             this.label4.Text = "Change : ";
             // 
@@ -245,7 +245,7 @@
             this.label3.Font = new System.Drawing.Font("Inter Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(84, 60);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 20);
+            this.label3.Size = new System.Drawing.Size(111, 20);
             this.label3.TabIndex = 14;
             this.label3.Text = "Received : ";
             // 
@@ -289,7 +289,9 @@
             this.txt_ReceivedMoney.SelectedText = "";
             this.txt_ReceivedMoney.Size = new System.Drawing.Size(164, 36);
             this.txt_ReceivedMoney.TabIndex = 8;
+            this.txt_ReceivedMoney.TextChanged += new System.EventHandler(this.txt_ReceivedMoney_TextChanged);
             this.txt_ReceivedMoney.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_ReceivedMoney_KeyDown);
+            this.txt_ReceivedMoney.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_ReceivedMoney_KeyPress);
             // 
             // btn_printReceipt
             // 

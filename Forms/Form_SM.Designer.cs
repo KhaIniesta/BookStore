@@ -259,6 +259,7 @@
             this.Name = "Form_SM";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SM Form";
+            this.Load += new System.EventHandler(this.Form_SM_Load);
             this.Panel_Side.ResumeLayout(false);
             this.Panel_Header.ResumeLayout(false);
             this.Panel_Header.PerformLayout();
