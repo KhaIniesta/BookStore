@@ -33,7 +33,7 @@
             this.lbl_BookName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbl_BookPrice = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.lbl_BookQuantity = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txt_BookQuantity = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_DecreaseQuantity = new Guna.UI2.WinForms.Guna2Button();
             this.btn_IncreaseQuantity = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel1.SuspendLayout();
@@ -90,7 +90,7 @@
             // 
             this.guna2GradientPanel1.BorderColor = System.Drawing.Color.Black;
             this.guna2GradientPanel1.BorderRadius = 20;
-            this.guna2GradientPanel1.Controls.Add(this.lbl_BookQuantity);
+            this.guna2GradientPanel1.Controls.Add(this.txt_BookQuantity);
             this.guna2GradientPanel1.Controls.Add(this.btn_DecreaseQuantity);
             this.guna2GradientPanel1.Controls.Add(this.btn_IncreaseQuantity);
             this.guna2GradientPanel1.CustomizableEdges.BottomRight = false;
@@ -100,15 +100,30 @@
             this.guna2GradientPanel1.Size = new System.Drawing.Size(110, 29);
             this.guna2GradientPanel1.TabIndex = 3;
             // 
-            // lbl_BookQuantity
+            // txt_BookQuantity
             // 
-            this.lbl_BookQuantity.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_BookQuantity.Font = new System.Drawing.Font("Inter Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BookQuantity.Location = new System.Drawing.Point(46, 4);
-            this.lbl_BookQuantity.Name = "lbl_BookQuantity";
-            this.lbl_BookQuantity.Size = new System.Drawing.Size(12, 18);
-            this.lbl_BookQuantity.TabIndex = 2;
-            this.lbl_BookQuantity.Text = "5";
+            this.txt_BookQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_BookQuantity.DefaultText = "5";
+            this.txt_BookQuantity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_BookQuantity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_BookQuantity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_BookQuantity.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_BookQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_BookQuantity.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_BookQuantity.ForeColor = System.Drawing.Color.Black;
+            this.txt_BookQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_BookQuantity.Location = new System.Drawing.Point(27, -2);
+            this.txt_BookQuantity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_BookQuantity.Name = "txt_BookQuantity";
+            this.txt_BookQuantity.PasswordChar = '\0';
+            this.txt_BookQuantity.PlaceholderText = "";
+            this.txt_BookQuantity.SelectedText = "";
+            this.txt_BookQuantity.Size = new System.Drawing.Size(53, 33);
+            this.txt_BookQuantity.TabIndex = 4;
+            this.txt_BookQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_BookQuantity.TextChanged += new System.EventHandler(this.txt_BookQuantity_TextChanged);
+            this.txt_BookQuantity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_BookQuantity_KeyDown);
+            this.txt_BookQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_BookQuantity_KeyPress);
             // 
             // btn_DecreaseQuantity
             // 
@@ -156,7 +171,6 @@
             this.Name = "UC_BookOrderItem";
             this.Size = new System.Drawing.Size(634, 51);
             this.guna2GradientPanel1.ResumeLayout(false);
-            this.guna2GradientPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -169,6 +183,6 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2Button btn_IncreaseQuantity;
         private Guna.UI2.WinForms.Guna2Button btn_DecreaseQuantity;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lbl_BookQuantity;
+        private Guna.UI2.WinForms.Guna2TextBox txt_BookQuantity;
     }
 }

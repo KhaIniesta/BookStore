@@ -9,6 +9,7 @@ namespace BookStore.UserControls
         {
             InitializeComponent();
             CustomClickEventForAllControl();
+            txt_BookQuantity.KeyDown += new KeyEventHandler(txt_BookQuantity_KeyDown);
         }
         private String _bookID;
         private String _quantity;
@@ -26,10 +27,10 @@ namespace BookStore.UserControls
             InitializeComponent();
             CustomClickEventForAllControl();
             lbl_BookPrice.Text = Price.ToString();
-            lbl_BookQuantity.Text = "1";
+            txt_BookQuantity.Text = "1";
             lbl_BookName.Text = name.ToString();
             this._bookID = BookID;
-            this._quantity = lbl_BookQuantity.Text.Trim();
+            this._quantity = txt_BookQuantity.Text.Trim();
         }
 
 
@@ -47,38 +48,40 @@ namespace BookStore.UserControls
 
         public String GetBoughtQuantity()
         {
-            return _quantity;
+            return txt_BookQuantity.Text;
         }
 
         public void SetBoughtQuantity()
         {
             int quanNum = Convert.ToInt32(_quantity);
-            quanNum -= 1;
+            quanNum = 1;
             _quantity = quanNum.ToString();
-            lbl_BookQuantity.Text = _quantity;
+            txt_BookQuantity.Text = _quantity;
         }
 
         public event EventHandler IncreaseButtonClicked;
         public event EventHandler DescreaseButtonClicked;
         public event EventHandler DeleteBookFromReceiptClicked;
         public event EventHandler QuantityOver;
+        public event EventHandler TextBoxEnter;
+
         private void btn_IncreaseQuantity_Click(object sender, EventArgs e)
         {
-            int newquantity = int.Parse(lbl_BookQuantity.Text) + 1;
-            lbl_BookQuantity.Text = Convert.ToString(newquantity);
-            _quantity = lbl_BookQuantity.Text.Trim();
+            int newquantity = int.Parse(txt_BookQuantity.Text) + 1;
+            txt_BookQuantity.Text = Convert.ToString(newquantity);
+            _quantity = txt_BookQuantity.Text.Trim();
 
             IncreaseButtonClicked?.Invoke(this, EventArgs.Empty);
         }
 
         private void btn_DecreaseQuantity_Click(object sender, EventArgs e)
         {
-            int newquantity = int.Parse(lbl_BookQuantity.Text);
+            int newquantity = int.Parse(txt_BookQuantity.Text);
             if (newquantity > 1)
             {
                 newquantity -= 1;
-                lbl_BookQuantity.Text = Convert.ToString(newquantity);
-                _quantity = lbl_BookQuantity.Text.Trim();
+                txt_BookQuantity.Text = Convert.ToString(newquantity);
+                _quantity = txt_BookQuantity.Text.Trim();
             }
             DescreaseButtonClicked?.Invoke(this, EventArgs.Empty);
         }
@@ -86,6 +89,31 @@ namespace BookStore.UserControls
         private void btn_DeleteBook_Click(object sender, EventArgs e)
         {
             DeleteBookFromReceiptClicked?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void txt_BookQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != 127)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_BookQuantity_TextChanged(object sender, EventArgs e)
+        {
+            if(txt_BookQuantity.Text == "" || txt_BookQuantity.Text == "00")
+            {
+                txt_BookQuantity.Text = "1";
+            }
+        }
+
+        private void txt_BookQuantity_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                TextBoxEnter?.Invoke(this, EventArgs.Empty);
+            }
         }
     }
 }
