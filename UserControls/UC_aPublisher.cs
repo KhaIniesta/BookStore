@@ -157,26 +157,34 @@ namespace BookStore.UserControls
         private bool IsValidLienHe()
         {
             string lienHe = txt_lienHe.Text.Trim();
-            // Kiểm tra nếu là số điện thoại
-            if (IsValidPhoneNumber(lienHe))
+            if (lienHe.Length != 0)
             {
-                return true;
+                // Kiểm tra nếu là số điện thoại
+                if (IsValidPhoneNumber(lienHe))
+                {
+                    return true;
+                }
+                // Kiểm tra nếu là email
+                else if (IsValidEmail(lienHe))
+                {
+                    return true;
+                }
+                // Nếu không phải số điện thoại hoặc email, trả về false
+                else
+                {
+                    return false;
+                }
             }
-            // Kiểm tra nếu là email
-            else if (IsValidEmail(lienHe))
-            {
-                return true;
-            }
-            // Nếu không phải số điện thoại hoặc email, trả về false
-            else
-            {
-                return false;
-            }
+            return true;
         }
         private bool IsValidName()
         {
             string name = txt_name.Text.Trim();
-            return System.Text.RegularExpressions.Regex.IsMatch(name, @"^[\p{L}\s\p{M}]+$");
+            if (name.Length != 0)
+            {
+                return System.Text.RegularExpressions.Regex.IsMatch(name, @"^[\p{L}\s\p{M}]+$");
+            }
+            return true;
         }
 
         private void btn_luu_Click(object sender, EventArgs e)
