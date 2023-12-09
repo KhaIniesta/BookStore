@@ -99,6 +99,11 @@ namespace BookStore.UserControls
                 MessageBox.Show("Giá sách không được trống!");
                 return false;
             }
+            else if (Txt_Price.Text.Trim() == "0")
+            {
+                MessageBox.Show("Giá sách phải lớn hơn 0!");
+                return false;
+            }
             return true;
         }
         private void UC_aBook_Load(object sender, EventArgs e)
@@ -260,6 +265,7 @@ namespace BookStore.UserControls
             CB_PublisherID.Enabled = false;
             Btn_Save.Enabled = true;
             ResetTextbox();
+            PictureBox.Image = null;
         }
 
         private void Btn_DeleteBook_Click(object sender, EventArgs e)
